@@ -8,6 +8,6 @@ class Collection extends Model
 {
     public function boardgames()
     {
-        $this->belongsToMany('App\BoardGame');
+        return $this->belongsToMany('App\BoardGame');
     }
 }
