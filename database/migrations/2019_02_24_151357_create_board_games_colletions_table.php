@@ -13,7 +13,7 @@ class CreateBoardGamesColletionsTable extends Migration
      */
     public function up()
     {
-        Schema::create('board_games_collections', function (Blueprint $table) {
+        Schema::create('board_game_collection', function (Blueprint $table) {
             $table->increments('id');
             $table->unsignedInteger('board_game_id');
             $table->unsignedInteger('collection_id');

@@ -7,8 +7,8 @@
     <title>test</title>
 </head>
 <body>
-    @foreach ($boardgame->collections as $collection)
-        <p>{{$collection->id}}</p>
+    @foreach ($collection->boardgames as $boardgame)
+        <p>{{$boardgame->id}}</p>
     @endforeach
 </body>
 </html>
