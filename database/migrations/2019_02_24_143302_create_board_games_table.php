@@ -18,7 +18,8 @@ class CreateBoardGamesTable extends Migration
             $table->string('name');
             $table->smallInteger('play_time');
             $table->tinyInteger('age_range');
-            $table->tinyInteger('num_of_players');
+            $table->tinyInteger('min_players');
+            $table->tinyInteger('max_players');
             $table->timestamps();
         });
     }
