@@ -16,7 +16,6 @@ class Event extends Model
     public function boardgames()
     {
         return $this->belongsToMany('Boardgame');
-<<<<<<< HEAD
     }
 
     public function created_by_user()
@@ -32,8 +31,6 @@ class Event extends Model
     public function comments()
     {
         return $this->hasMany('Comment');
-=======
->>>>>>> a1cb654feea358c9d2560f91db5196bf6171dfff
     }
     
 }
