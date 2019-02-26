@@ -12,7 +12,7 @@ class GenreSeeder extends Seeder
      */
     public function run()
     {
-         $genres = [
+        $genres = [
                 [
                     "name" => "Children",
                     "description" => "Children's board games",
