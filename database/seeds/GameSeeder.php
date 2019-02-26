@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Database\Seeder;
-use App\BoardGame;
+//use App\BoardGame;
 
 class GameSeeder extends Seeder
 {
@@ -29,6 +29,6 @@ class GameSeeder extends Seeder
 
         // foreach($games as $game){
         //     BoardGame::create($game);
-        }
+        //}
     }
 }
