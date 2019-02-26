@@ -3,10 +3,6 @@
 namespace App;
 
 use Illuminate\Database\Eloquent\Model;
-use App\User;
-use App\Genre;
-use App\Event;
-use App\Offer;
 
 class BoardGame extends Model
 {
@@ -21,20 +17,20 @@ class BoardGame extends Model
     public function users()
     {
 
-        return $this->belongsToMany('User');
+        return $this->belongsToMany('App\User');
     }
 
     public function genres()
     {
-        return $this->belongsToMany('Genre');
+        return $this->belongsToMany('App\Genre');
     }
 
     public function events()
     {
-        return $this->belongsToMany('Event');
+        return $this->belongsToMany('App\Event');
     }   
     public function offer()
     {
-        return $this->belongsTo('Offer');
+        return $this->belongsTo('App\Offer');
     }
 }
