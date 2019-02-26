@@ -20,6 +20,7 @@ class CreateEventsTable extends Migration
             $table->text('title');
             $table->text('text');
             $table->date('date');
+            $table->time('time');
             $table->smallInteger('num_of_players');
             $table->timestamps();
         });

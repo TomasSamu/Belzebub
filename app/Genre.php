@@ -9,10 +9,10 @@ class Genre extends Model
 {
     public function boardgames()
     {
-        $this->belongsToMany('Boardgame');
+        return $this->belongsToMany('Boardgame');
     }
     public function users()
     {
-        $this->belongsToMany('User');
+        return $this->belongsToMany('User');
     }
 }

@@ -6,6 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 use App\User;
 use App\Genre;
 use App\Event;
+use App\Offer;
 
 class BoardGame extends Model
 {
@@ -31,5 +32,9 @@ class BoardGame extends Model
     public function events()
     {
         return $this->belongsToMany('Event');
+    }   
+    public function offer()
+    {
+        return $this->belongsTo('Offer');
     }
 }
