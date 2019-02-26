@@ -3,6 +3,9 @@
 namespace App;
 
 use Illuminate\Database\Eloquent\Model;
+use App\User;
+use App\Genre;
+use App\Event;
 
 class BoardGame extends Model
 {
@@ -14,8 +17,19 @@ class BoardGame extends Model
         'num_of_players',
     ];
 
-    public function collections()
+    public function users()
     {
-        return $this->belongsToMany('App\Collection');
+
+        return $this->belongsToMany('User');
+    }
+
+    public function genres()
+    {
+        return $this->belongsToMany('Genre');
+    }
+
+    public function events()
+    {
+        return $this->belongsToMany('Event');
     }
 }
