@@ -31,11 +31,10 @@ class User extends Authenticatable
         'password', 'remember_token',
     ];
 
-<<<<<<< HEAD
     public function boardgames()
     {
-        $this->belongsToMany('Boardgame');
-=======
+        return $this->belongsToMany('Boardgame');
+    }
 
     public function genres()
     {
@@ -45,6 +44,10 @@ class User extends Authenticatable
     public function events()
     {
         return $this->belongsToMany('Event');
->>>>>>> 14e4bf99f630c87eb3908da14a41f3b9aa3967dc
+    }
+
+    public function events_created_by()
+    {
+        return $this->hasMany('Event');
     }
 }
