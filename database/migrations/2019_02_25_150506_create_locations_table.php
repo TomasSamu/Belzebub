@@ -17,6 +17,10 @@ class CreateLocationsTable extends Migration
             $table->increments('id');
             $table->string('name');
             $table->text('description');
+            $table->text('street');
+            $table->integer('zip_code');
+            $table->text('city');
+            $table->text('country');
             $table->string('web')->nullable();
             $table->string('image')->nullable();
             $table->tinyInteger('rating')->nullable();

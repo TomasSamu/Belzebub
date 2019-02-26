@@ -1,3 +1,5 @@
+{{-- {{ dd($location->events)}} --}}
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,8 +9,8 @@
     <title>test</title>
 </head>
 <body>
-    @foreach ($collection->boardgames as $boardgame)
-        <p>{{$boardgame->id}}</p>
+    @foreach ($location->events as $event)
+        <p>{{$event->id}}</p>
     @endforeach
 </body>
 </html>

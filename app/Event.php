@@ -3,34 +3,31 @@
 namespace App;
 
 use Illuminate\Database\Eloquent\Model;
-use App\User;
-use App\Boardgame;
-use App\Location;
 
 class Event extends Model
 {
     public function users()
     {
-        return $this->belongsToMany('User');
+        return $this->belongsToMany('App\User');
     }
     public function boardgames()
     {
-        return $this->belongsToMany('Boardgame');
+        return $this->belongsToMany('App\Boardgame');
     }
 
     public function created_by_user()
     {
-        return $this->belongsTo('User');
+        return $this->belongsTo('App\User');
     }
 
     public function location()
     {
-        return $this->belongsTo('Location');
+        return $this->belongsTo('App\Location');
     }
 
     public function comments()
     {
-        return $this->hasMany('Comment');
+        return $this->hasMany('App\Comment');
     }
     
 }
