@@ -14,7 +14,7 @@ class PivotSeeder extends Seeder
         $boardgames = App\Boardgame::all();
         $users = App\User::all();
         foreach ($users as $user) {
-            $user->boardgames()->attach([(rand(1,$boardgames->count())),(rand(1,$boardgames->count())),(rand(1,$boardgames->count()))]);
+            $user->boardgames()->attach([(rand(1,$boardgames->count())),(rand(1,$boardgames->count())),(rand(1,$boardgames->count())),(rand(1,$boardgames->count())),(rand(1,$boardgames->count())),(rand(1,$boardgames->count()))]);
         }
 
     }

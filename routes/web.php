@@ -20,3 +20,6 @@ Route::get('/test', 'TestController@test');
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+
+Route::get('/games/list', 'GameController@list');
+Route::get('/games/detail/{id}', 'GameController@detail')->where(['id' => '\d+']);

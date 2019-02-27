@@ -10,7 +10,7 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
-        $this->call(GameSeeder::class);
+        // $this->call(GameSeeder::class);
         $this->call(GenreSeeder::class);
         $this->call(EventSeeder::class);
         $this->call(UserSeeder::class);
