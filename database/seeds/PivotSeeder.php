@@ -11,21 +11,11 @@ class PivotSeeder extends Seeder
      */
     public function run()
     {
-        $relationships = [
-                [
-                    "event_id" => "A maze in tchaiovna",
-                    "user_id" => "Teahouse at Hradcanska",
-                ],
-
-                [
-                    "event_id" => "A maze in tchaiovna",
-                    "user_id" => "Teahouse at Hradcanska",
-                ],
-            ];
-
-        foreach($relationships as $relationship)
-        {
-            Location::create($relationship);
+        $boardgames = App\Boardgame::all();
+        $users = App\User::all();
+        foreach ($users as $user) {
+            $user->boardgames()->attach([(rand(1,$boardgames->count())),(rand(1,$boardgames->count())),(rand(1,$boardgames->count()))]);
         }
+
     }
 }

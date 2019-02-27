@@ -15,5 +15,7 @@ class DatabaseSeeder extends Seeder
         $this->call(EventSeeder::class);
         $this->call(UserSeeder::class);
         $this->call(LocationSeeder::class);
+        $this->call(CSVGamesSeeder::class);
+        $this->call(PivotSeeder::class);
     }
 }
