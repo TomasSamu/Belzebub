@@ -10,7 +10,7 @@
 </head>
 <body>
     @foreach ($location->events as $event)
-        <p>{{$event->id}}</p>
+        <p>{{$event->title}}</p>
     @endforeach
 </body>
 </html>

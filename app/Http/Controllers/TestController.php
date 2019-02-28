@@ -9,7 +9,7 @@ class TestController extends Controller
 {
     public function test()
     {
-        $location = Location::find(1);
+        $location = Location::find(2);
         return view('test',compact('location'));
     }
 
