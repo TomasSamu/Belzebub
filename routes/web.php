@@ -19,9 +19,8 @@
 //Route::get('/test', 'TestController@test');
 
 Route::get('events/list', 'EventController@list');
-
-Route::get('events/create', 'EventController@create');
-Route::put('events/create', 'EventController@create');
+Route::get('/events/create', 'EventController@create');
+Route::post('/events', 'EventController@store');
 
 
 
