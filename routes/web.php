@@ -30,3 +30,6 @@ Route::get('/home', 'HomeController@index')->name('home');
 
 Route::get('/games/list', 'GameController@list');
 Route::get('/games/detail/{id}', 'GameController@detail')->where(['id' => '\d+']);
+
+
+Route::get('/users', 'UserController@list');
