@@ -1,9 +1,9 @@
 {{-- {{dd($locations)}} --}}
 
-@extends('layouts.app')
+@extends('layouts.home')
 @section('content')
 
-<head>
+{{-- <head> --}}
 
 {{-- ************date picker thingie ****** but doesnt work for some strange reason ****************
     <link rel="stylesheet" type="text/css" media="screen" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css" />
@@ -18,7 +18,7 @@
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 <script src="//cdn.rawgit.com/Eonasdan/bootstrap-datetimepicker/e8bddc60e73c1ec2475f827be36e1957af72e2ea/src/js/bootstrap-datetimepicker.js"></script>
  --}}
-</head>
+{{-- </head> --}}
     <div class="container">
 
         <form method="post" action="{{ action('EventController@store') }}">
