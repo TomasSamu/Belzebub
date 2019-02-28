@@ -8,10 +8,12 @@ class BoardGame extends Model
 {
 
     protected $fillable = [
-        'name',
-        'play_time',
-        'age_range',
-        'num_of_players',
+        "name",
+        "play_time",
+        "age_range",
+        "min_players",
+        "max_players",
+        "image"
     ];
 
     public function users()
