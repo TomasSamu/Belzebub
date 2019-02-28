@@ -7,8 +7,8 @@
 
         <div class="card-deck">
                 @foreach ($users as $user)
-            <div class="card m-3 p-2" style="width: 10rem;">
-              <img class="card-img-top" src="https://avataaars.io/?avatarStyle=Circle&topType=LongHairStraight&accessoriesType=Blank&hairColor=BrownDark&facialHairType=Blank&clotheType=BlazerShirt&eyeType=Default&eyebrowType=Default&mouthType=Default&skinColor=Light/10em" alt="Card image cap">
+            <div class="card m-3 p-2" style="width: 8rem;">
+              <img class="card-img-top" src="https://avataaars.io/?avatarStyle=Circle&topType=LongHairStraight&accessoriesType=Blank&hairColor=BrownDark&facialHairType=Blank&clotheType=BlazerShirt&eyeType=Default&eyebrowType=Default&mouthType=Default&skinColor=Light/5em" alt="Card image cap">
               <div class="card-body">
                 <h5 class="card-title">{{ $user->name}}</h5>
                 <h6 class="card-text">{{ $user->gender}}</h6>
