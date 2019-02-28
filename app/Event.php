@@ -11,6 +11,10 @@ class Event extends Model
         'title',
         'text',
         'num_of_players',
+        'user_id',
+        'location_id',
+        'date',
+        'time'
     ];
 
     public function users()

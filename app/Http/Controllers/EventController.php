@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Event;
 use App\Location;
+use App\User;
 
 class EventController extends Controller
 {
@@ -19,7 +20,8 @@ class EventController extends Controller
     {
 
         $locations = Location::all();
-        return view ('events.create', compact('locations'));
+        $users = User::all();
+        return view ('events.create', compact(['locations','users']));
     }
 
     public function store(Request $request)
