@@ -16,7 +16,7 @@
                         <div class="card-body">
                             <h4 class="card-title">{{$game->name}}</h4>
 
-                        <a href="{{action('GameController@detail', $game->id)}}" class="btn btn-primary">Detail of a game</a>
+                        <a href="{{action('GameController@detail', $game->id)}}" class="btn btn-primary">Detail</a>
                         </div>
                     </div>          
                 </div>
