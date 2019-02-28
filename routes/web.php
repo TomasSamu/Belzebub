@@ -11,13 +11,20 @@
 |
 */
 
-// Route::get('/', function () {
-//     return view('welcome');
-// });
-Route::get('/test', 'TestController@test');
+ Route::get('/', function () {
+     return view('welcome');
+ });
+ Auth::routes();
+
+//Route::get('/test', 'TestController@test');
+
+Route::get('events/list', 'EventController@list');
+
+Route::get('events/create', 'EventController@create');
+Route::put('events/create', 'EventController@create');
 
 
-Auth::routes();
+
 
 Route::get('/home', 'HomeController@index')->name('home');
 
