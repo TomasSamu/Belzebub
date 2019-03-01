@@ -30,14 +30,14 @@
                 <input type="text" name="title" class="form-control">
             </div>
 
-            <div class="form-group">
+{{--             <div class="form-group">
                 <label>User</label>
                 <select name="user_id" class="form-control">
                     @foreach ($users as $user)
                         <option value="{{$user->id}}"> {{$user->name}}</option>
                     @endforeach
                 </select>
-            </div>
+            </div> --}}
 
             <div class="form-group">
                 <label>Description</label>
@@ -67,13 +67,6 @@
                     @endforeach
                 </select>
             </div>
-
-
-
-
-
-
-
 
 {{-- ******** datepicker - doesnt work for some reason-- ***********}}
 

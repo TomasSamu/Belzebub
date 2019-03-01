@@ -12,7 +12,7 @@ class DatabaseSeeder extends Seeder
     {
         // $this->call(GameSeeder::class);
         $this->call(GenreSeeder::class);
-        $this->call(EventSeeder::class);
+        $this->call(EventSeeder::class); 
         $this->call(UserSeeder::class);
         $this->call(LocationSeeder::class);
         $this->call(CSVGamesSeeder::class);

@@ -2,6 +2,7 @@
 
 use Illuminate\Database\Seeder;
 use App\User;
+use Illuminate\Support\Facades\Hash;
 
 class UserSeeder extends Seeder
 {
@@ -13,7 +14,7 @@ class UserSeeder extends Seeder
     public function run()
     {
         $users = [
-            [
+             [
                 "name" => "Anuska Sampedro",
                 "username" => 'Anuska',
                 "email" => "anuska@gmail.com",
@@ -21,7 +22,7 @@ class UserSeeder extends Seeder
                 "gender" => 'undecided',
                 "city" => "Prague",
                 "country" => "Czechia",
-                "password" => "secret"
+                "password" => Hash::make("secret")
             ],
             [
                 "name" => "Kate Smith",
@@ -31,7 +32,7 @@ class UserSeeder extends Seeder
                 "gender" => 'female',
                 "city" => "Prague",
                 "country" => "Czechia",
-                "password" => "secret"
+                "password" => Hash::make("secret")
             ],
             [
                 "name" => "John Doe",
@@ -41,7 +42,7 @@ class UserSeeder extends Seeder
                 "gender" => 'male',
                 "city" => "Prague",
                 "country" => "Czechia",
-                "password" => "secret"
+                "password" => Hash::make("secret")
             ],
             [
                 "name" => "Petr Novak",
@@ -51,7 +52,7 @@ class UserSeeder extends Seeder
                 "gender" => 'male',
                 "city" => "Prague",
                 "country" => "Czechia",
-                "password" => "secret"
+                "password" => Hash::make("secret")
             ],
             [
                 "name" => "Milena Dvorakova",
@@ -61,8 +62,19 @@ class UserSeeder extends Seeder
                 "gender" => 'female',
                 "city" => "Prague",
                 "country" => "Czechia",
-                "password" => "secret"
+                "password" => Hash::make("secret")
             ],
+            [
+                "name" => "Bond",
+                "username" => 'JamesBond007',
+                "email" => "JB@gmail.com",
+                "year_of_birth" => 2018,
+                "gender" => 'undecided',
+                "city" => "Prague",
+                "country" => "Czechia",
+                "password" => Hash::make("secret")
+            ]
+            
         ];
 
         foreach($users as $user){

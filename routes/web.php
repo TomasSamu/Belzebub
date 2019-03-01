@@ -22,9 +22,6 @@ Route::get('events/list', 'EventController@list');
 Route::get('/events/create', 'EventController@create');
 Route::post('/events', 'EventController@store');
 
-
-
-
 Route::get('/home', 'HomeController@index')->name('home');
 
 Route::get('/games/list', 'GameController@list');
