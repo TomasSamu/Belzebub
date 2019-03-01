@@ -8,13 +8,13 @@ use App\BoardGame;
 class CSVGamesSeeder extends Seeder
 {
     /**
-     * Run the database seeds.
+
      *
      * @return void
      */
     public function run()
     {
-        $content = File::get(storage_path('boardgame.csv'));
+        $content = File::get(storage_path('our_database - our_database.csv'));
 
         $content = explode(PHP_EOL, $content);
 
@@ -25,12 +25,15 @@ class CSVGamesSeeder extends Seeder
             $line = explode(',', $line);
 
             BoardGame::create([
+                
                 "name" => $line[1],
-                "play_time" => $line[4],
-                "age_range" => $line[6],
                 "min_players" => $line[2],
                 "max_players" => $line[3],
-                "image" => $line[5]
+                "play_time" => $line[4],
+                "year" => $line[5],
+                "image_url" => $line[6],
+                "age_range" => $line[7],
+                "description" => $line[8]
             ]);
         }
     }

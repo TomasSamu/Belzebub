@@ -16,11 +16,13 @@ class CreateBoardGamesTable extends Migration
         Schema::create('board_games', function (Blueprint $table) {
             $table->increments('id');
             $table->string('name');
+            $table->smallInteger('min_players');
+            $table->smallInteger('max_players');
             $table->smallInteger('play_time');
+            $table->tinyInteger('year');
+            $table->string('image_url');
             $table->tinyInteger('age_range');
-            $table->tinyInteger('min_players');
-            $table->tinyInteger('max_players');
-            $table->string('image');
+            $table->string('description');
             $table->timestamps();
         });
     }
