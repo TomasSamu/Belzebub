@@ -10,7 +10,7 @@ class UserController extends Controller
     public function list()
     {   
         $users = User::all();
-        return view('users', compact('users'));
+        return view('users/users', compact('users'));
     }
 
 }
