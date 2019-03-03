@@ -18,23 +18,27 @@ class CSVGamesSeeder extends Seeder
 
         $content = explode(PHP_EOL, $content);
 
-        foreach($content as $i => $line) {
-            
-            if($i === 0) continue;
+        $fh = fopen(storage_path('our_database - our_database.csv'), 'r');
+        $i = 0;
+        while ($line = fgetcsv($fh, 0, ',', '"')) {
 
-            $line = explode(',', $line);
+            if($i++ === 0) continue;
 
-            BoardGame::create([
+            $data = [
                 
-                "name" => $line[1],
-                "min_players" => $line[2],
-                "max_players" => $line[3],
-                "play_time" => $line[4],
-                "year" => $line[5],
-                "image_url" => $line[6],
-                "age_range" => $line[7],
-                "description" => $line[8]
-            ]);
+                "name" => $line[0],
+                "min_players" => $line[1],
+                "max_players" => $line[2],
+                "play_time" => $line[3],
+                "year" => $line[4],
+                "image_url" => $line[5],
+                "age_range" => $line[6],
+                "description" => $line[7]
+            ];
+
+            BoardGame::create($data);
         }
+
+        fclose($fh);
     }
 }
