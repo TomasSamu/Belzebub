@@ -13,7 +13,10 @@ class BoardGame extends Model
         "age_range",
         "min_players",
         "max_players",
-        "image"
+        "image",
+        "year",
+        "image_url",
+        "description",
     ];
 
     public function users()

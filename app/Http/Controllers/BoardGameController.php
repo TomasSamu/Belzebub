@@ -38,8 +38,33 @@ class BoardGameController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $game = new Boardgame;
+        
+        
+
+
+        // $this->validate($request, [
+        //     'title' => 'required|min:10',
+        //     'text' => 'required',
+        //     'option1' => 'required',
+        //     'option2' => 'required'
+        // ]);
+
+        $game->fill($request->only([
+            'name',
+            'year',
+            'min_players',
+            'max_players',
+            'age_range',
+            'description',
+            'play_time',
+            'image_url', 
+        ]));    
+        $game->save();
+
+        return redirect(action('BoardGameController@index'));
     }
+    
 
     /**
      * Display the specified resource.
@@ -62,7 +87,9 @@ class BoardGameController extends Controller
      */
     public function edit($id)
     {
-        //
+        $game = Boardgame::find($id);
+        $form = view('games.edit',compact('game'));
+        return $form;
     }
 
     /**
@@ -74,7 +101,11 @@ class BoardGameController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $game = Boardgame::findOrFail($id);
+
+        $game->update($request->all());
+
+        return redirect(action('BoardGameController@edit',comapct('game')));
     }
 
     /**
