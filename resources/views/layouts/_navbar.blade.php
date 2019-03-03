@@ -17,8 +17,8 @@
           <a class="nav-link" href="{{ url('profile') }}">Profile</a>
         </li>
         <li class="nav-item">
-                <a class="nav-link" href="{{ url('events') }}">Events</a>
-              </li>
+          <a class="nav-link" href="{{ url('events/list') }}">Events</a>
+        </li>
         <li class="nav-item">
           <a class="nav-link" href="{{ url('games/list') }}">Games</a>
         </li>
