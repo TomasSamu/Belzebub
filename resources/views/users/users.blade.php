@@ -7,6 +7,8 @@
 
         <div class="card-deck">
                 @foreach ($users as $user)
+
+                {{-- pass to custom --}}
             <div class="card m-3 p-2" style="width: 8rem;">
               <img class="card-img-top" src="https://avataaars.io/?avatarStyle=Circle&topType=LongHairStraight&accessoriesType=Blank&hairColor=BrownDark&facialHairType=Blank&clotheType=BlazerShirt&eyeType=Default&eyebrowType=Default&mouthType=Default&skinColor=Light/5em" alt="Card image cap">
               <div class="card-body">
