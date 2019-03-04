@@ -1,11 +1,10 @@
 <?php
 
 namespace App\Http\Controllers;
-<<<<<<< HEAD
 
 use Illuminate\Http\Request;
-
-class UserController extends Controller
+use App\Location;
+class LocationController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -14,7 +13,10 @@ class UserController extends Controller
      */
     public function index()
     {
-        //
+        $locations = Location::paginate(6);
+        $list = view('locations.index', compact('locations'));
+
+        return $list;
     }
 
     /**
@@ -46,7 +48,9 @@ class UserController extends Controller
      */
     public function show($id)
     {
-        //
+        $location = Location::find($id);
+        $detail = view('locations.show',compact('location'));
+        return $detail;
     }
 
     /**
@@ -82,18 +86,4 @@ class UserController extends Controller
     {
         //
     }
-=======
-use Illuminate\Pagination\LengthAwarePaginator;
-use Illuminate\Http\Request;
-use App\User;
-
-class UserController extends Controller
-{
-    public function list()
-    {   
-        $users = User::all();
-        return view('users/users', compact('users'));
-    }
-
->>>>>>> ec434965eaaf8ce722217bde716cacd60996f505
 }

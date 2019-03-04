@@ -5,15 +5,25 @@
 <div class="jumbotron jumbotron-fluid">
     <div class="container">
         <h1 class="display-3">{{$game->name}}</h1>
-        <img src="{{$game->image}}" alt="image">
+        <img src="{{$game->image_url}}" alt="image">
         <p class="lead">
+            <h5>Published: {{$game->year}}</h5>
             <h5>Number of players: {{$game->min_players}} - {{$game->max_players}}</h5>
             <h5>Age: {{$game->age_range}}</h5>
             <h5>Average playtime: {{$game->play_time}}</h5>
-            <h5>Description:
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit temporibus ut tenetur, necessitatibus, voluptate ducimus harum ipsum sint fugiat, quod quia unde eos accusantium fuga eligendi nostrum nihil repudiandae blanditiis?</h5>
+            <h5>Description: <br>{{$game->description}}</h5>
         </p>
-        </div>
+        <form method="GET" action="{{action('BoardGameController@index',$game->id)}}">
+                @csrf
+        <input type="submit" value="Back"></form>
+        <form method="POST" action="{{action('BoardGameController@destroy',$game->id)}}">
+                @method('DELETE')
+                @csrf
+        <input type="submit" value="Delete"></form>
+        <form method="GET" action="{{action('BoardGameController@edit',$game->id)}}">
+                @csrf
+        <input type="submit" value="Edit"></form>
     </div>
+</div>
 
 @endsection
