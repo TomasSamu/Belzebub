@@ -24,7 +24,7 @@ class UserController extends Controller
      */
     public function create()
     {
-        //
+        // taken care of by laravel registration system
     }
 
     /**
@@ -35,7 +35,7 @@ class UserController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        // taken care of by laravel registration system
     }
 
     /**
@@ -46,7 +46,9 @@ class UserController extends Controller
      */
     public function show($id)
     {
-        //
+        $user = User::find($id);
+        $detail = view('users.show',compact('user'));
+        return $detail;
     }
 
     /**
@@ -57,7 +59,9 @@ class UserController extends Controller
      */
     public function edit($id)
     {
-        //
+        $user = User::find($id);
+        $form = view('users.edit',compact('user'));
+        return $form;
     }
 
     /**
@@ -69,7 +73,11 @@ class UserController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $user = User::findOrFail($id);
+
+        $user->update($request->all());
+
+        return redirect(action('UserController@edit',compact('user')))->with('success','you successfully updated user: '.$user->name);;
     }
 
     /**
@@ -80,7 +88,11 @@ class UserController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $user = User::findOrFail($id);
+
+        $user->delete();
+
+        return redirect(action('UserController@index'))->with('success','you successfully deleted your profile: '.$user->name);
     }
 }
 

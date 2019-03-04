@@ -116,6 +116,6 @@ class LocationController extends Controller
 
         $location->delete();
 
-        return redirect(action('LocationController@index'))->with('success','you successfully deleted location: '.$location->name);;
+        return redirect(action('LocationController@index'))->with('success','you successfully deleted location: '.$location->name);
     }
 }
