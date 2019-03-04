@@ -11,7 +11,6 @@
 <body>
 
     @include('layouts._navbar')
-    @include('layouts.alerts')
     <div class="container">
         @yield('content')
     </div>

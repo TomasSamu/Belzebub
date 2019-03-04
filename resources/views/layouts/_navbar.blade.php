@@ -26,3 +26,4 @@
       </ul>
     </div>
   </nav>
+  @include('layouts.alerts')
