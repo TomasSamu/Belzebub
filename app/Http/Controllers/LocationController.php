@@ -97,7 +97,11 @@ class LocationController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $location = Location::findOrFail($id);
+
+        $location->update($request->all());
+
+        return redirect(action('LocationController@edit',compact('location')));
     }
 
     /**
@@ -108,6 +112,10 @@ class LocationController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $location = Location::findOrFail($id);
+
+        $location->delete();
+
+        return redirect(action('LocationController@index'));
     }
 }
