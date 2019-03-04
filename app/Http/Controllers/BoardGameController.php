@@ -39,16 +39,13 @@ class BoardGameController extends Controller
     public function store(Request $request)
     {
         $game = new Boardgame;
-        
-        
 
-
-        // $this->validate($request, [
-        //     'title' => 'required|min:10',
-        //     'text' => 'required',
-        //     'option1' => 'required',
-        //     'option2' => 'required'
-        // ]);
+        $this->validate($request, [
+            'title' => 'required|min:10',
+            'text' => 'required',
+            'option1' => 'required',
+            'option2' => 'required'
+        ]);
 
         $game->fill($request->only([
             'name',

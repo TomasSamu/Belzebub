@@ -14,7 +14,7 @@ class UserSeeder extends Seeder
     public function run()
     {
         $users = [
-             [
+            [
                 "name" => "Anuska Sampedro",
                 "username" => 'Anuska',
                 "email" => "anuska@gmail.com",
@@ -22,7 +22,8 @@ class UserSeeder extends Seeder
                 "gender" => 'undecided',
                 "city" => "Prague",
                 "country" => "Czechia",
-                "password" => Hash::make("secret")
+                "password" => Hash::make("secret"),
+                "image" => "https://avataaars.io/?avatarStyle=Circle&topType=LongHairStraight&accessoriesType=Blank&hairColor=BrownDark&facialHairType=Blank&clotheType=BlazerShirt&eyeType=Default&eyebrowType=Default&mouthType=Default&skinColor=Light/5em"
             ],
             [
                 "name" => "Kate Smith",
@@ -32,7 +33,8 @@ class UserSeeder extends Seeder
                 "gender" => 'female',
                 "city" => "Prague",
                 "country" => "Czechia",
-                "password" => Hash::make("secret")
+                "password" => Hash::make("secret"),
+                "image" => "https://avataaars.io/?avatarStyle=Circle&topType=LongHairStraight&accessoriesType=Blank&hairColor=BrownDark&facialHairType=Blank&clotheType=BlazerShirt&eyeType=Default&eyebrowType=Default&mouthType=Default&skinColor=Light/5em"
             ],
             [
                 "name" => "John Doe",
@@ -42,7 +44,8 @@ class UserSeeder extends Seeder
                 "gender" => 'male',
                 "city" => "Prague",
                 "country" => "Czechia",
-                "password" => Hash::make("secret")
+                "password" => Hash::make("secret"),
+                "image" => "https://avataaars.io/?avatarStyle=Circle&topType=LongHairStraight&accessoriesType=Blank&hairColor=BrownDark&facialHairType=Blank&clotheType=BlazerShirt&eyeType=Default&eyebrowType=Default&mouthType=Default&skinColor=Light/5em"
             ],
             [
                 "name" => "Petr Novak",
@@ -52,7 +55,8 @@ class UserSeeder extends Seeder
                 "gender" => 'male',
                 "city" => "Prague",
                 "country" => "Czechia",
-                "password" => Hash::make("secret")
+                "password" => Hash::make("secret"),
+                "image" => "https://avataaars.io/?avatarStyle=Circle&topType=LongHairStraight&accessoriesType=Blank&hairColor=BrownDark&facialHairType=Blank&clotheType=BlazerShirt&eyeType=Default&eyebrowType=Default&mouthType=Default&skinColor=Light/5em"
             ],
             [
                 "name" => "Milena Dvorakova",
@@ -62,7 +66,8 @@ class UserSeeder extends Seeder
                 "gender" => 'female',
                 "city" => "Prague",
                 "country" => "Czechia",
-                "password" => Hash::make("secret")
+                "password" => Hash::make("secret"),
+                "image" => "https://avataaars.io/?avatarStyle=Circle&topType=LongHairStraight&accessoriesType=Blank&hairColor=BrownDark&facialHairType=Blank&clotheType=BlazerShirt&eyeType=Default&eyebrowType=Default&mouthType=Default&skinColor=Light/5em"
             ],
             [
                 "name" => "Bond",
@@ -72,9 +77,9 @@ class UserSeeder extends Seeder
                 "gender" => 'undecided',
                 "city" => "Prague",
                 "country" => "Czechia",
-                "password" => Hash::make("secret")
+                "password" => Hash::make("secret"),
+                "image" => "https://avataaars.io/?avatarStyle=Circle&topType=LongHairStraight&accessoriesType=Blank&hairColor=BrownDark&facialHairType=Blank&clotheType=BlazerShirt&eyeType=Default&eyebrowType=Default&mouthType=Default&skinColor=Light/5em"
             ]
-            
         ];
 
         foreach($users as $user){
