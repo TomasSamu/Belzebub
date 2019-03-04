@@ -34,3 +34,10 @@ Route::get('/home', 'HomeController@index')->name('home');
 Route::resource('/games', 'BoardGameController');
 Route::resource('/locations', 'LocationController');
 Route::resource('/users', 'UserController');
+
+
+Route::get('/first', function () {
+    return view('first');
+});
+
+

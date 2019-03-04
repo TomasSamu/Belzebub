@@ -1,0 +1,53 @@
+body 
+{
+    box-sizing: border-box;
+    margin: 0;
+    padding-top: 5em;
+}
+
+h2.title_welcome {
+    display: inline-block;
+    font-family: 'Roboto Slab', serif;
+    font-size: 4em;
+    background-color: black;
+    color: white;
+    padding: 0.2em;
+    margin: 1em;;
+}
+
+h3.subtitle_welcome {
+    font-family: 'Roboto Slab', serif;
+    font-size: 2em;
+    display: inline-block;
+    background-color: white;
+    color: black;
+    padding: 0.2em;
+    margin: 1em;
+}
+
+
+.logotag {
+    font-family: 'Roboto Slab', serif;
+    font-size: 2em;
+    text-align: center;
+}
+.welcome 
+{
+    height: 25em;
+    background-color: blue;
+}
+
+.section_events {
+    background:linear-gradient(45deg,rgba(0, 225, 255, 0.479),rgba(0, 60, 255, 0.3)), url('../img/board-game-529586_1280.jpg') no-repeat center;
+    background-size: cover;
+}
+
+.section_games {
+    background:linear-gradient(45deg,rgba(255, 0, 0, 0.479),rgba(255, 166, 0, 0.767)), url("../img/board-game-933165_1280.jpg")  no-repeat center;
+    background-size: cover;
+}
+
+.section_connect {
+    background:linear-gradient(45deg,rgba(51, 255, 0, 0.479),rgba(7, 51, 13, 0.767)), url("../img/game-340574_1280.jpg")  no-repeat center;
+    background-size: cover;
+}
