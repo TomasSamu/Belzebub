@@ -6,6 +6,10 @@ use Illuminate\Http\Request;
 use App\Boardgame;
 class BoardGameController extends Controller
 {
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
     /**
      * Display a listing of the resource.
      *
