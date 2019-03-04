@@ -23,7 +23,7 @@
         <form method="GET" action="{{action('BoardGameController@edit',$game->id)}}">
                 @csrf
         <input type="submit" value="Edit"></form>
-        </div>
     </div>
+</div>
 
 @endsection

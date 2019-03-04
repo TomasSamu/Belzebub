@@ -45,7 +45,10 @@
     <div class="form-group">
         <input type="submit" class="form-control" value="Update">
     </div>
+    
 
 </form>
-
+<form method="GET" action="{{action('BoardGameController@index',$game->id)}}">
+        @csrf
+<input type="submit" value="Back"></form>
 @endsection

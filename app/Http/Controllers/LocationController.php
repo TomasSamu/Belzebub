@@ -3,8 +3,8 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Boardgame;
-class BoardGameController extends Controller
+use App\Location;
+class LocationController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -13,8 +13,8 @@ class BoardGameController extends Controller
      */
     public function index()
     {
-        $games = Boardgame::paginate(6);
-        $list = view('games.list_of_games', compact('games'));
+        $locations = Location::paginate(6);
+        $list = view('locations.index', compact('locations'));
 
         return $list;
     }
@@ -26,8 +26,7 @@ class BoardGameController extends Controller
      */
     public function create()
     {
-        $form = view('games.create');
-        return $form;
+        //
     }
 
     /**
@@ -38,33 +37,8 @@ class BoardGameController extends Controller
      */
     public function store(Request $request)
     {
-        $game = new Boardgame;
-        
-        
-
-
-        // $this->validate($request, [
-        //     'title' => 'required|min:10',
-        //     'text' => 'required',
-        //     'option1' => 'required',
-        //     'option2' => 'required'
-        // ]);
-
-        $game->fill($request->only([
-            'name',
-            'year',
-            'min_players',
-            'max_players',
-            'age_range',
-            'description',
-            'play_time',
-            'image_url', 
-        ]));    
-        $game->save();
-
-        return redirect(action('BoardGameController@index'));
+        //
     }
-    
 
     /**
      * Display the specified resource.
@@ -74,8 +48,8 @@ class BoardGameController extends Controller
      */
     public function show($id)
     {
-        $game = Boardgame::find($id);
-        $detail = view('games.detail',compact('game'));
+        $location = Location::find($id);
+        $detail = view('locations.show',compact('location'));
         return $detail;
     }
 
@@ -87,9 +61,7 @@ class BoardGameController extends Controller
      */
     public function edit($id)
     {
-        $game = Boardgame::find($id);
-        $form = view('games.edit',compact('game'));
-        return $form;
+        //
     }
 
     /**
@@ -101,11 +73,7 @@ class BoardGameController extends Controller
      */
     public function update(Request $request, $id)
     {
-        $game = Boardgame::findOrFail($id);
-
-        $game->update($request->all());
-
-        return redirect(action('BoardGameController@edit',compact('game')));
+        //
     }
 
     /**
@@ -116,10 +84,6 @@ class BoardGameController extends Controller
      */
     public function destroy($id)
     {
-        $game = Boardgame::findOrFail($id);
-
-        $game->delete();
-
-        return redirect(action('BoardGameController@index'));
+        //
     }
 }
