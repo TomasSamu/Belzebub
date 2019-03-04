@@ -42,10 +42,13 @@
         <label for="formGroupExampleInput2">Image</label>
         <input type="text" class="form-control" id="image_url" name="image_url" value="{{$game->image_url}}">
     </div>
-    
+    <div class="form-group">
         <input type="submit" class="form-control" value="Update">
+    </div>
     
 
 </form>
-
+<form method="GET" action="{{action('BoardGameController@index',$game->id)}}">
+        @csrf
+<input type="submit" value="Back"></form>
 @endsection

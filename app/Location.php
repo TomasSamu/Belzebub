@@ -6,6 +6,18 @@ use Illuminate\Database\Eloquent\Model;
 
 class Location extends Model
 {
+    protected $fillable = [
+        "name",
+        "description",
+        "street",
+        "zip_code",
+        "city",
+        "country",
+        "web",
+        "image",
+        "rating",
+    ];
+    
     public function events()
     {
         return $this->hasMany('App\Event');
