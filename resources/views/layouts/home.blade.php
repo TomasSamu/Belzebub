@@ -10,12 +10,21 @@
 </head>
 <body>
 
-    @include('layouts._navbar')
-    @include('layouts.alerts')
     <div class="container">
-        @yield('content')
+        <div class="column">
+
+            @include('layouts._navbar')
+
+            @include('layouts.alerts')
+
+            @yield('content')
+
+            @include('layouts._footer')
+
+        </div>
     </div>
-    @include('layouts._footer')
+
+        
 
 </body>
 </html>
