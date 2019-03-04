@@ -59,7 +59,7 @@ class LocationController extends Controller
         ]));    
         $location->save();
 
-        return redirect(action('LocationController@index'));
+        return redirect(action('LocationController@index'))->with('success','you successfully created location: '.$request->name);
     }
 
     /**
@@ -101,7 +101,7 @@ class LocationController extends Controller
 
         $location->update($request->all());
 
-        return redirect(action('LocationController@edit',compact('location')));
+        return redirect(action('LocationController@edit',compact('location')))->with('success','you successfully updated location: '.$location->name);;
     }
 
     /**
@@ -116,6 +116,6 @@ class LocationController extends Controller
 
         $location->delete();
 
-        return redirect(action('LocationController@index'));
+        return redirect(action('LocationController@index'))->with('success','you successfully deleted location: '.$location->name);;
     }
 }

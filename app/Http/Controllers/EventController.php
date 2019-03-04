@@ -37,7 +37,7 @@ class EventController extends Controller
         $event->location_id = $request->location_id;
         $event->save();
 
-        return redirect(action('EventController@list'));
+        return redirect(action('EventController@list'))->with('success','you successfully created a new event');
 
 
 /***** also an option but user id filled from \Auth not from the request 
@@ -59,13 +59,13 @@ class EventController extends Controller
     {   
         $event = Event::findOrFail($id);
         $event -> update($request->all());
-        return redirect(action('EventController@list'));
+        return redirect(action('EventController@list'))->with('success','you successfully updated event: '.$request->title);
     }
 
     public function destroy($id)
     {
         $event = Event::findOrFail($id);
         $event->delete();
-        return redirect(action('EventController@list')); 
+        return redirect(action('EventController@list'))->with('success','you successfully deleted event: '.$event->title); 
     }
 }

@@ -1,6 +1,6 @@
 {{-- {{dd($locations)}} --}}
 
-@extends('layouts.app')
+@extends('layouts.home')
 @section('content')
 
 {{-- <head> --}}
