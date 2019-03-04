@@ -32,7 +32,5 @@ Route::get('/home', 'HomeController@index')->name('home');
 
 
 Route::resource('/games', 'BoardGameController');
-Route::resource('/location', 'LocationController');
-
-
-Route::get('/users', 'UserController@list');
+Route::resource('/locations', 'LocationController');
+Route::resource('/users', 'UserController');

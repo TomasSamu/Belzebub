@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-
+use App\User;
 class UserController extends Controller
 {
     /**
@@ -13,7 +13,8 @@ class UserController extends Controller
      */
     public function index()
     {
-        //
+        $users = User::all();
+        return view('users.index', compact('users'));
     }
 
     /**
@@ -80,12 +81,6 @@ class UserController extends Controller
     public function destroy($id)
     {
         //
-    }
-
-    public function list()
-    {   
-        $users = User::all();
-        return view('users/users', compact('users'));
     }
 }
 
