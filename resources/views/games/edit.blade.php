@@ -1,4 +1,4 @@
-@extends('layouts.main')
+@extends('layouts.home')
 
 @section('title', 'Edit a Game')
 {{-- @include('layouts.navigation') --}}

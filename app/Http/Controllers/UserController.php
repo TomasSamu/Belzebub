@@ -1,7 +1,6 @@
 <?php
 
 namespace App\Http\Controllers;
-<<<<<<< HEAD
 
 use Illuminate\Http\Request;
 
@@ -82,18 +81,11 @@ class UserController extends Controller
     {
         //
     }
-=======
-use Illuminate\Pagination\LengthAwarePaginator;
-use Illuminate\Http\Request;
-use App\User;
 
-class UserController extends Controller
-{
     public function list()
     {   
         $users = User::all();
         return view('users/users', compact('users'));
     }
-
->>>>>>> ec434965eaaf8ce722217bde716cacd60996f505
 }
+

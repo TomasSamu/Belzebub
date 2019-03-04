@@ -18,7 +18,10 @@
           <a class="nav-link" href="{{ url('events/list') }}">Events</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="{{ url('games/list') }}">Games</a>
+          <a class="nav-link" href="{{ action('BoardGameController@index') }}">Games</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="{{ action('LocationController@index') }}">Locations</a>
         </li>
       </ul>
     </div>
