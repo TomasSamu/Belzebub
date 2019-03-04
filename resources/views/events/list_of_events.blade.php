@@ -19,9 +19,10 @@
                 <form action="{{action('EventController@edit', $event->id)}}" method="POST" class="ml-2">
                     <a href="edit/{{$event->id}}" class="btn btn-primary">Edit</a>
                 </form>
+
                  <form action="{{action('EventController@destroy', $event->id)}}" method="POST" class="ml-2">
-                        @csrf
                         @method('DELETE')
+                        @csrf
                     <input type="submit" class="btn btn-danger" value="Delete">
                 </form>
             </div>
