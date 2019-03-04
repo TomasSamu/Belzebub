@@ -6,6 +6,17 @@ use Illuminate\Database\Eloquent\Model;
 
 class Event extends Model
 {
+
+    protected $fillable = [
+        'title',
+        'text',
+        'num_of_players',
+        'user_id',
+        'location_id',
+        'date',
+        'time'
+    ];
+
     public function users()
     {
         return $this->belongsToMany('App\User');

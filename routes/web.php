@@ -19,17 +19,20 @@
 //Route::get('/test', 'TestController@test');
 
 Route::get('events/list', 'EventController@list');
+Route::get('/events/create', 'EventController@create');
+Route::post('/events', 'EventController@store');
 
-Route::get('events/create', 'EventController@create');
-Route::put('events/create', 'EventController@create');
+Route::put('/events', 'EventController@destroy');
 
 
-
+Route::get('events/edit/{id}', 'EventController@edit')->where(['id' => '\d+']);
+Route::put('events/edit/{id}', 'EventController@update');
 
 Route::get('/home', 'HomeController@index')->name('home');
 
-// Route::get('/games/list', 'GameController@list');
-// Route::get('/games/detail/{id}', 'GameController@detail')->where(['id' => '\d+']);
+
 Route::resource('/games', 'BoardGameController');
 Route::resource('/location', 'LocationController');
 
+
+Route::get('/users', 'UserController@list');
