@@ -4,8 +4,6 @@
 
 <div class="container">
         <!-- Content here -->
-        
-    <div class="content">
         <div class="row">
             <!-- col- elements here -->
             @foreach ($games as $game)            
@@ -27,7 +25,6 @@
                     </div>
                 </div>
             </div>          
-        </div>
             
             @endforeach
             <form method="GET" action="{{action('BoardGameController@create')}}">

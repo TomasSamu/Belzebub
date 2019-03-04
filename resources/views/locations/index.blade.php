@@ -8,12 +8,9 @@
             @csrf
     <input type="submit" value="Add a new game"></form><br>
 
-    <div class="content">
             <div class="row">
                     <!-- col- elements here -->
                 @foreach ($locations as $location)
-                
-                {{-- trying to show only games with working image --}}
                 <div class="col-6">
                     <div class="card">
                             <img class="card-img-top" src="{{$location->image_url}}" alt="Card image cap">
@@ -36,8 +33,6 @@
                 
                 @endforeach
                 {{$locations->onEachSide(1)->links()}}
-                {{-- {{ $game->links()}} --}}
-        </div>
     </div>
 
 </div>
