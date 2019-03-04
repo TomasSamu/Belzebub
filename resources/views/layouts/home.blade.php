@@ -9,10 +9,13 @@
     <title>Board Game Project</title>
 </head>
 <body>
-    @include('layouts._navbar')
-            
-    @yield('content')
 
+    @include('layouts._navbar')
+    @include('layouts.alerts')
+    <div class="container">
+        @yield('content')
+    </div>
     @include('layouts._footer')
+
 </body>
 </html>

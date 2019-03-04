@@ -59,7 +59,7 @@ class BoardGameController extends Controller
         ]));    
         $game->save();
 
-        return redirect(action('BoardGameController@index'));
+        return redirect(action('BoardGameController@index'))->with('success','you successfully added game: '.$request->name);
     }
     
 
@@ -102,7 +102,7 @@ class BoardGameController extends Controller
 
         $game->update($request->all());
 
-        return redirect(action('BoardGameController@edit',compact('game')));
+        return redirect(action('BoardGameController@edit',compact('game')))->with('success','you successfully updated game: '.$request->name);
     }
 
     /**
@@ -117,6 +117,6 @@ class BoardGameController extends Controller
 
         $game->delete();
 
-        return redirect(action('BoardGameController@index'));
+        return redirect(action('BoardGameController@index'))->with('success','you successfully deleted game: '.$game->name);
     }
 }
