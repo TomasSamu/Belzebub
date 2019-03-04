@@ -1,4 +1,4 @@
-@extends('layouts.main')
+@extends('layouts.home  ')
 
 @section('title', 'Add new Game')
 {{-- @include('layouts.navigation') --}}
@@ -31,7 +31,7 @@
     </div>
     <div class="form-group">
         <label for="formGroupExampleInput2">Short description of the game</label>
-        <input type="text" class="form-control" id="description" name="description" placeholder="e.g. theme, mechanics">
+        <input type="textfield" class="form-control" id="description" name="description" placeholder="e.g. theme, mechanics">
     </div>
     <div class="form-group">
         <label for="formGroupExampleInput2">Average play time</label>

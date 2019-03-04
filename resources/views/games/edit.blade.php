@@ -1,4 +1,4 @@
-@extends('layouts.main')
+@extends('layouts.home')
 
 @section('title', 'Edit a Game')
 {{-- @include('layouts.navigation') --}}
@@ -9,10 +9,9 @@
 <form method="POST" action="{{action('BoardGameController@update', $game->id)}}">
     @method('PUT')
     @csrf
-
     <div class="form-group">
         <label for="formGroupExampleInput">Title</label>
-    <input type="text" class="form-control" name="name" id="name" value="{{$game->name}}">
+        <input type="text" class="form-control" name="name" id="name" value="{{$game->name}}">
     </div>
     <div class="form-group">
         <label for="formGroupExampleInput2">Publishing year</label>
@@ -46,7 +45,6 @@
         <input type="submit" class="form-control" value="Update">
     </div>
     
-
 </form>
 <form method="GET" action="{{action('BoardGameController@index',$game->id)}}">
         @csrf

@@ -82,13 +82,10 @@ class UserController extends Controller
         //
     }
 
-use Illuminate\Pagination\LengthAwarePaginator;
-use Illuminate\Http\Request;
-use App\User;
-
     public function list()
     {   
         $users = User::all();
         return view('users/users', compact('users'));
     }
 }
+

@@ -26,7 +26,8 @@ class LocationController extends Controller
      */
     public function create()
     {
-        //
+        $form = view('locations.create');
+        return $form;
     }
 
     /**
@@ -37,7 +38,28 @@ class LocationController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $location = new Location;
+
+        // $this->validate($request, [
+        //     'title' => 'required|min:10',
+        //     'text' => 'required',
+        //     'option1' => 'required',
+        //     'option2' => 'required'
+        // ]);
+
+        $location->fill($request->only([
+            "name",
+            "description",
+            "street",
+            "zip_code",
+            "city",
+            "country",
+            "web",
+            "image", 
+        ]));    
+        $location->save();
+
+        return redirect(action('LocationController@index'));
     }
 
     /**
@@ -61,7 +83,9 @@ class LocationController extends Controller
      */
     public function edit($id)
     {
-        //
+        $location = Location::find($id);
+        $form = view('locations.edit',compact('location'));
+        return $form;
     }
 
     /**
@@ -73,7 +97,11 @@ class LocationController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $location = Location::findOrFail($id);
+
+        $location->update($request->all());
+
+        return redirect(action('LocationController@edit',compact('location')));
     }
 
     /**
@@ -84,6 +112,10 @@ class LocationController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $location = Location::findOrFail($id);
+
+        $location->delete();
+
+        return redirect(action('LocationController@index'));
     }
 }
