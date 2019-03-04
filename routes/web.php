@@ -22,7 +22,7 @@ Route::get('events/list', 'EventController@list');
 Route::get('/events/create', 'EventController@create');
 Route::post('/events', 'EventController@store');
 
-Route::put('/events', 'EventController@destroy');
+Route::post('/events/list', 'EventController@destroy');
 
 
 Route::get('events/edit/{id}', 'EventController@edit')->where(['id' => '\d+']);
