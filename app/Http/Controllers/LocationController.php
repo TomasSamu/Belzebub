@@ -6,6 +6,10 @@ use Illuminate\Http\Request;
 use App\Location;
 class LocationController extends Controller
 {
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
     /**
      * Display a listing of the resource.
      *
@@ -116,6 +120,6 @@ class LocationController extends Controller
 
         $location->delete();
 
-        return redirect(action('LocationController@index'))->with('success','you successfully deleted location: '.$location->name);;
+        return redirect(action('LocationController@index'))->with('success','you successfully deleted location: '.$location->name);
     }
 }
