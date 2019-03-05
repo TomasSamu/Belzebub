@@ -40,12 +40,16 @@ class BoardGameController extends Controller
     {
         $game = new Boardgame;
 
-        $this->validate($request, [
-            'title' => 'required|min:10',
-            'text' => 'required',
-            'option1' => 'required',
-            'option2' => 'required'
-        ]);
+/*         $validator = $request->validate([
+            'name' => 'required',
+            'year' => 'required|digits:4',
+            'min_players' => 'required|numeric',
+            'max_players' => 'required|numeric',
+            'age_range' => 'required|numeric',
+            'description' => 'required|size:250',
+            'play_time' => 'required|numeric',
+            'image_url' => 'required|url',
+        ]); */
 
         $game->fill($request->only([
             'name',
