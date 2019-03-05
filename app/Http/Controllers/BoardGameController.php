@@ -17,7 +17,7 @@ class BoardGameController extends Controller
      */
     public function index()
     {
-        $games = Boardgame::paginate(6);
+        $games = Boardgame::paginate(24);
         $list = view('games.list_of_games', compact('games'));
 
         return $list;
