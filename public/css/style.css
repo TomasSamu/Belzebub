@@ -59,3 +59,38 @@ label {
     color: white;
     font-size: 0.6em;
 }
+
+/* footer */
+
+.footer {
+    background-color: rgb(32, 32, 32);
+    color: rgb(204, 204, 204);
+    font-size: 0.8em;
+    display: flex;
+    flex-direction: column;
+    padding: 1.5em;
+    justify-items: center;
+    text-align: center;
+}
+
+
+.footer_sections {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+
+}
+
+@media (max-width: 600px) {
+    .footer_sections {
+        display: flex;
+        flex-direction: column;
+    }
+  }
+
+.footer_section {
+    margin: 2em;
+    text-decoration: none;
+    list-style-type: none;
+    text-align: left;
+}
