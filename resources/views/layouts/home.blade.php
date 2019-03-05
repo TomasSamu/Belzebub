@@ -18,14 +18,7 @@
   @include('layouts._navbar')
     <div class="container">
         <div class="column">
-
-            
-
-            @include('layouts.alerts')
-
             @yield('content')
-
-
         </div>
     </div>
 

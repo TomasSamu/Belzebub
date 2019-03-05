@@ -44,16 +44,16 @@ class BoardGameController extends Controller
     {
         $game = new Boardgame;
 
-/*         $validator = $request->validate([
+         $validator = $request->validate([
             'name' => 'required',
             'year' => 'required|digits:4',
             'min_players' => 'required|numeric',
             'max_players' => 'required|numeric',
             'age_range' => 'required|numeric',
-            'description' => 'required|size:250',
+            'description' => 'required|max:250',
             'play_time' => 'required|numeric',
             'image_url' => 'required|url',
-        ]); */
+        ]); 
 
         $game->fill($request->only([
             'name',
@@ -92,6 +92,17 @@ class BoardGameController extends Controller
      */
     public function edit($id)
     {
+        $validator = $request->validate([
+            'name' => 'required',
+            'year' => 'required|digits:4',
+            'min_players' => 'required|numeric',
+            'max_players' => 'required|numeric',
+            'age_range' => 'required|numeric',
+            'description' => 'required|max:250',
+            'play_time' => 'required|numeric',
+            'image_url' => 'required|url',
+        ]);
+
         $game = Boardgame::find($id);
         $form = view('games.edit',compact('game'));
         return $form;

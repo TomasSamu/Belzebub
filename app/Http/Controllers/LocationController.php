@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Location;
+use App\Event;
 class LocationController extends Controller
 {
     public function __construct()
@@ -44,12 +45,16 @@ class LocationController extends Controller
     {
         $location = new Location;
 
-        // $this->validate($request, [
-        //     'title' => 'required|min:10',
-        //     'text' => 'required',
-        //     'option1' => 'required',
-        //     'option2' => 'required'
-        // ]);
+        $validator = $request->validate([
+            'name' => 'required',
+            'description' => 'required|max:250',
+            'street' => 'required',
+            'zip_code' => 'required:numeric',
+            'city' => 'required',
+            'country' => 'required',
+            /* 'web' => 'required',
+             'image' => 'required|url' */
+        ]);
 
         $location->fill($request->only([
             "name",
@@ -101,6 +106,17 @@ class LocationController extends Controller
      */
     public function update(Request $request, $id)
     {
+        $validator = $request->validate([
+            'name' => 'required',
+            'description' => 'required|max:250',
+            'street' => 'required',
+            'zip_code' => 'required:numeric',
+            'city' => 'required',
+            'country' => 'required',
+            /* 'web' => 'required',
+             'image' => 'required|url' */
+        ]);
+        
         $location = Location::findOrFail($id);
 
         $location->update($request->all());
@@ -117,8 +133,13 @@ class LocationController extends Controller
     public function destroy($id)
     {
         $location = Location::findOrFail($id);
-
         $location->delete();
+
+//******** delete the events associatet with the deleted location *******/
+/*         $events = Event::where('location_id', $id) ->get();
+        foreach($events as $event){
+            $event->delete(); 
+        } */
 
         return redirect(action('LocationController@index'))->with('success','you successfully deleted location: '.$location->name);
     }
