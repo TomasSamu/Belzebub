@@ -10,7 +10,7 @@
 </head>
 <body>
 
-   {{--  @include('layouts._navbar') --}}
+  @include('layouts._navbar')
     <div class="container">
         @yield('content')
     </div>
