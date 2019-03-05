@@ -31,7 +31,6 @@
                     @csrf
             <input type="submit" value="Add a new game"></form><br>
             {{$games->onEachSide(1)->links()}}
-            {{-- {{ $game->links()}} --}}
     </div>
 </div>
 

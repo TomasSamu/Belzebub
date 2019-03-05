@@ -6,7 +6,7 @@
         <!-- Content here -->
     <form method="GET" action="{{action('LocationController@create')}}">
             @csrf
-    <input type="submit" value="Add a new game"></form><br>
+    <input type="submit" value="Add a new location"></form><br>
 
             <div class="row">
                     <!-- col- elements here -->
