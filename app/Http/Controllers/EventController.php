@@ -128,4 +128,5 @@ class EventController extends Controller
         return redirect(action('EventController@index'))->with('success','you successfully deleted event: '.$event->title); 
 
     }
+
 }
