@@ -21,6 +21,10 @@
 {{-- </head> --}}
     <div class="container">
 
+        <form method="GET" action="{{action('EventController@index',$event->id)}}">
+                @csrf
+        <input type="submit" value="Back"></form>
+
         <form method="POST" action="{{ action('EventController@update', $event->id )}}">
 
             @csrf

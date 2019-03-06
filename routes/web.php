@@ -16,17 +16,16 @@
  });
  Auth::routes();
 
-//Route::get('/test', 'TestController@test');
+Route::resource('/events', 'EventController');
 
-Route::get('events/list', 'EventController@list');
+
+
+/* Route::get('events/list', 'EventController@list');
 Route::get('/events/create', 'EventController@create');
 Route::post('/events', 'EventController@store');
 Route::delete('/events/list/{id}', 'EventController@destroy');
 Route::get('events/edit/{id}', 'EventController@edit')->where(['id' => '\d+']);
-Route::put('events/edit/{id}', 'EventController@update');
-
-
-
+Route::put('events/edit/{id}', 'EventController@update'); */
 
 Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/first', 'HomeController@welcome')->name('welcome'); ////?????????????

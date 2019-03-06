@@ -92,16 +92,7 @@ class BoardGameController extends Controller
      */
     public function edit($id)
     {
-        $validator = $request->validate([
-            'name' => 'required',
-            'year' => 'required|digits:4',
-            'min_players' => 'required|numeric',
-            'max_players' => 'required|numeric',
-            'age_range' => 'required|numeric',
-            'description' => 'required|max:250',
-            'play_time' => 'required|numeric',
-            'image_url' => 'required|url',
-        ]);
+
 
         $game = Boardgame::find($id);
         $form = view('games.edit',compact('game'));
@@ -117,6 +108,18 @@ class BoardGameController extends Controller
      */
     public function update(Request $request, $id)
     {
+
+        $validator = $request->validate([
+            'name' => 'required',
+            'year' => 'required|digits:4',
+            'min_players' => 'required|numeric',
+            'max_players' => 'required|numeric',
+            'age_range' => 'required|numeric',
+            'description' => 'required|max:250',
+            'play_time' => 'required|numeric',
+            'image_url' => 'required|url',
+        ]);
+        
         $game = Boardgame::findOrFail($id);
 
         $game->update($request->all());

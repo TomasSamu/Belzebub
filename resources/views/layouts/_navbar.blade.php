@@ -21,7 +21,7 @@
                 <a class="nav-link" href="{{ action('UserController@index') }}">Users</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="{{ url('events/list') }}">Events</a>
+                <a class="nav-link" href="{{ action('EventController@index') }}">Events</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="{{ action('BoardGameController@index') }}">Games</a>

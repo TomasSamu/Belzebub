@@ -16,8 +16,14 @@
             <p class="card-text">{{$event->time}}</p>
 
             <div class="container d-flex flex-row">
-                <form action="{{action('EventController@edit', $event->id)}}" method="POST" class="ml-2">
-                    <a href="edit/{{$event->id}}" class="btn btn-primary">Edit</a>
+                <form action="{{action('EventController@edit', $event->id)}}" method="GET" class="ml-2">
+                    @csrf
+                    <input type="submit" value="Edit" class="btn btn-primary">
+                </form>
+
+                <form action="{{action('EventController@show', $event->id)}}" method="GET" class="ml-2">
+                    @csrf
+                    <input type="submit" value="Detail" class="btn btn-success">
                 </form>
 
                  <form action="{{action('EventController@destroy', $event->id)}}" method="POST" class="ml-2">
