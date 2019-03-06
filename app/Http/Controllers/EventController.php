@@ -27,6 +27,15 @@ class EventController extends Controller
     public function store(Request $request)
     {
 
+        $validator = $request->validate([
+            'title' => 'required',
+            'text' => 'required|max:250',
+            'num_of_players' => 'required|numeric',
+            'date' => 'required|date',
+            'time' => 'required',
+            'location_id' => 'required',
+        ]);
+
         $event = new Event;
         $event->title = $request->title;
         $event->user_id = \Auth::id();
@@ -47,16 +56,25 @@ class EventController extends Controller
 
     public function edit($id)
     {
-      $event = Event::findOrFail($id);
-      $location = Location::findOrFail($event->location_id);
-      $locations = Location::all();
+    $event = Event::findOrFail($id);
+    $location = Location::findOrFail($event->location_id);
+    $locations = Location::all();
 
-       return view('events.edit', compact(['event','location','locations']));
+    return view('events.edit', compact(['event','location','locations']));
 
     }
 
     public function update($id, Request $request)
     {   
+    $validator = $request->validate([
+        'title' => 'required',
+        'text' => 'required|max:250',
+        'num_of_players' => 'required|numeric',
+        'date' => 'required|date',
+        'time' => 'required',
+        'location_id' => 'required',
+    ]);
+
         $event = Event::findOrFail($id);
         $event -> update($request->all());
         return redirect(action('EventController@list'))->with('success','you successfully updated event: '.$request->title);

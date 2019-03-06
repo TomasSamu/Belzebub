@@ -1,25 +1,27 @@
+<footer class="footer">
+    <h3>More info</h3>
 
-    <div class="container-fluid bg-dark text-center text-white p-3">
-            <h3>Footer</h3>
-        <div class="row">
-            
-            <div class="col-sm-6 text-center">
-              <div class="card">
-                <div class="card-body bg-dark text-white">
-                    <li>One thing</li>
-                    <li>Another thing</li>
-                    <li>Third thing</li>
-                </div>
-              </div>
-            </div>
-    
-            <div class="col-sm-6">
-              <div class="card">
-                <div class="card-body text-center bg-dark text-white">
-                    <li>One left thing</li>
-                    <li>Another left thing</li>
-                    <li>Last third thing</li>
-                </div>
-              </div>
-            </div>
-          </div>
+    <div class="footer_sections">
+        <div class="footer_section">
+            <h4>Product</h4>
+            <li>FAQ</li>
+            <li>Terms and Conditions</li>
+            <li>Last third thing</li>
+        </div>
+
+        <div class="footer_section">
+            <h4>About Us</h4>
+            <li>Contact us</li>
+            <li>About us</li>
+            <li>Third thing</li>
+
+        </div>
+        <div class="footer_section">
+            <h4>Social Media</h4>
+            <li>Facebook</li>
+            <li>Twitter</li>
+            <li>Instagram</li>
+
+        </div>
+    </div>
+</footer>
