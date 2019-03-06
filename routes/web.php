@@ -16,16 +16,7 @@
  });
  Auth::routes();
 
-//Route::get('/test', 'TestController@test');
-
-Route::get('events/list', 'EventController@list');
-Route::get('/events/create', 'EventController@create');
-Route::post('/events', 'EventController@store');
-Route::delete('/events/list/{id}', 'EventController@destroy');
-Route::get('events/edit/{id}', 'EventController@edit')->where(['id' => '\d+']);
-Route::put('events/edit/{id}', 'EventController@update');
-
-
+Route::resource('/events', 'EventController');
 
 
 Route::get('/home', 'HomeController@index')->name('home');
@@ -35,6 +26,10 @@ Route::get('/first', 'HomeController@welcome')->name('welcome'); ////???????????
 Route::resource('/games', 'BoardGameController');
 Route::resource('/locations', 'LocationController');
 Route::resource('/users', 'UserController');
+
+Route::get('/events/{Event}', 'CommentController@store');
+Route::post('/events/{Event}', 'CommentController@store');
+
 
 
 
