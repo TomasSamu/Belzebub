@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Event;
 use App\Location;
+use App\Comment;
 
 class EventController extends Controller
 {
@@ -72,7 +73,8 @@ class EventController extends Controller
 
         $event = Event::find($id);
         $location = Location::find($event->location_id);
-        return view('events.detail',compact(['event','location']));
+        $comments = Comment::where('event_id',$id)->get();
+        return view('events.detail',compact(['event','location','comments']));
         
     }
 

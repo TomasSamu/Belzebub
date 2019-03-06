@@ -103,3 +103,32 @@ label {
 .shortpage {
     min-height: 100vh; 
 }
+
+.comment {
+    display: flex;
+}
+
+.comment .comment-left {
+    width: 30%;
+}
+
+.comment .comment-right {
+    width: 70%;
+}
+
+.comment .comment-right h2 {
+    border: solid #9199a1;
+    border-width: 0 0 1px 0;
+}
+
+.user-avatar {
+    max-width:100px;
+    margin: 0 auto;
+}
+
+.user-name {
+    text-align: center;
+    padding: .3rem 1rem;
+    font-size: 120%;
+    font-weight: 500;
+}

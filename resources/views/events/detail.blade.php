@@ -26,20 +26,39 @@
 
     <div class="container">
             @auth
-    <form action="{{action('CommentController@store', $event->id)}}" method="post">
-        @csrf
-            <div class="form-group">
-                <label for="text">Your answer:</label><br>
-                <textarea name="text" id="comment" cols="50" rows="5"></textarea>
-            </div>
-        
-            <div class="form-group">
-                <input type="submit" value="submit comment">
-            </div>
-    </form>
+            <form action="{{action('CommentController@store', $event->id)}}" method="post">
+            @csrf
+                <div class="form-group">
+                    <label for="text">Your answer:</label><br>
+                    <textarea name="text" id="comment" cols="50" rows="5"></textarea>
+                </div>
             
-        @endauth
-    </div>
+                <div class="form-group">
+                    <input type="submit" value="submit comment">
+                </div>
+            </form>
+            @endauth
+        </div>
+
+            @foreach ($comments as $comment)
+
+            <div class="comment">
+                <div class="comment-left">
+                    <div class="user-avatar">
+                        <img class="img-fluid"
+                            src="http://icons.iconarchive.com/icons/paomedia/small-n-flat/1024/user-male-icon.png"/>
+                    </div>
+                    <div class="user-name">{{ $comment->user->name }}</div>
+                </div>
+                <div class="comment-right">
+                    {{ $comment->text }}
+                </div>
+            </div>
+            @endforeach
+
+
+    
+
 </div>
 
 @endsection
