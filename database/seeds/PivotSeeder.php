@@ -1,6 +1,9 @@
 <?php
 
 use Illuminate\Database\Seeder;
+use  App\Boardgame;
+use App\User;
+use App\Genre;
 
 class PivotSeeder extends Seeder
 {
@@ -11,11 +14,14 @@ class PivotSeeder extends Seeder
      */
     public function run()
     {
-        $boardgames = App\Boardgame::all();
-        $users = App\User::all();
+        $boardgames = Boardgame::all();
+        $users = User::all();
         foreach ($users as $user) {
             $user->boardgames()->attach([(rand(1,$boardgames->count())),(rand(1,$boardgames->count())),(rand(1,$boardgames->count())),(rand(1,$boardgames->count())),(rand(1,$boardgames->count())),(rand(1,$boardgames->count()))]);
         }
 
+        // $genre = Genre::find(1);
+        // $boardgames = Boardgame::where('id',49);
+        // $genre->boardgames()->attach([$boardgames->id]);
     }
 }
