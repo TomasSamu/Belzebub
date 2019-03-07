@@ -44,7 +44,7 @@ class BoardGameController extends Controller
     {
         $game = new Boardgame;
 
-         $validator = $request->validate([
+        $validator = $request->validate([
             'name' => 'required',
             'year' => 'required|digits:4',
             'min_players' => 'required|numeric',
@@ -140,5 +140,11 @@ class BoardGameController extends Controller
         $game->delete();
 
         return redirect(action('BoardGameController@index'))->with('success','you successfully deleted game: '.$game->name);
+    }
+    public function addGameToCollection($id)
+    {
+        $game = Boardgame::find($id);
+        $user = User::find(Auth::id());
+        $user->sync($game->id);
     }
 }

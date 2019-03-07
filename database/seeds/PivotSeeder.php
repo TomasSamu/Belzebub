@@ -17,7 +17,12 @@ class PivotSeeder extends Seeder
         $boardgames = Boardgame::all();
         $users = User::all();
         foreach ($users as $user) {
-            $user->boardgames()->attach([(rand(1,$boardgames->count())),(rand(1,$boardgames->count())),(rand(1,$boardgames->count())),(rand(1,$boardgames->count())),(rand(1,$boardgames->count())),(rand(1,$boardgames->count()))]);
+            $user->boardgames()->sync([(rand(1,$boardgames->count())),(rand(1,$boardgames->count())),(rand(1,$boardgames->count())),(rand(1,$boardgames->count())),(rand(1,$boardgames->count())),(rand(1,$boardgames->count()))]);
+        }
+        $genre = Genre::all();
+        $users = User::all();
+        foreach ($users as $user) {
+            $user->genres()->sync([(rand(1,$genre->count())),(rand(1,$genre->count())),(rand(1,$genre->count())),(rand(1,$genre->count())),(rand(1,$genre->count())),(rand(1,$genre->count()))]);
         }
 
         $genre = Genre::find(1);

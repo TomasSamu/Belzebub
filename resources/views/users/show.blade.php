@@ -30,8 +30,34 @@
                 </div>
             </div>
         </div>
-    </div>
+        <div class="row">
+            
 
+            <div class="card">
+                <ul class="list-group list-group-flush">
+                    <h1>My Collection</h1>
+                    @foreach ($user->boardgames as $boardgame)
+                    <li class="list-group-item">
+                        <a href="{{action('BoardGameController@show',$boardgame->id )}}">
+                            {{$boardgame->name}}
+                        </a>
+                    </li>
+                    @endforeach
+                </ul>
+            </div> 
+            <div class="card">
+                <ul class="list-group list-group-flush">
+                    <h1>My Favourite Genres</h1>
+                    @foreach ($user->genres as $genre)
+                    <li class="list-group-item">
+                            {{$genre->name}}
+                    </li>
+                    @endforeach
+                </ul>
+            </div> 
+            
+        </div>
+    </div>
 </div>
 
 @endsection

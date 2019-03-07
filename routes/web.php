@@ -11,10 +11,10 @@
 |
 */
 
- Route::get('/', function () {
-     return view('welcome');
- });
- Auth::routes();
+Route::get('/', function () {
+    return view('welcome');
+});
+Auth::routes();
 
 Route::resource('/events', 'EventController');
 
@@ -23,6 +23,7 @@ Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/first', 'HomeController@welcome')->name('welcome'); ////?????????????
 
 
+Route::get('/games/add/{id}', 'BoardGameController@addGameToCollection');
 Route::resource('/games', 'BoardGameController');
 Route::resource('/locations', 'LocationController');
 Route::resource('/users', 'UserController');
