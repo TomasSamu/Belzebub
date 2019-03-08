@@ -24,7 +24,7 @@
                             <form method="GET" action="{{action('BoardGameController@edit',$game->id)}}">
                                 @csrf
                             <input type="submit" value="Edit"></form>
-                            <form method="GET" action="{{action('BoardGameController@addGameToCollection',$game->id)}}">
+                            <form method="GET" action="{{action('FeaturesController@addGameToCollection',$game->id)}}">
                                 @csrf
                             <input type="submit" value="Add to Collection"></form>
                         </div>

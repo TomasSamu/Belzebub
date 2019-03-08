@@ -141,10 +141,5 @@ class BoardGameController extends Controller
 
         return redirect(action('BoardGameController@index'))->with('success','you successfully deleted game: '.$game->name);
     }
-    public function addGameToCollection($id)
-    {
-        $game = Boardgame::find($id);
-        $user = User::find(Auth::id());
-        $user->sync($game->id);
-    }
+
 }

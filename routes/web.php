@@ -23,7 +23,8 @@ Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/first', 'HomeController@welcome')->name('welcome'); ////?????????????
 
 
-Route::get('/games/add/{id}', 'BoardGameController@addGameToCollection');
+Route::get('/add/{id}', 'FeaturesController@addGameToCollection');
+
 Route::resource('/games', 'BoardGameController');
 Route::resource('/locations', 'LocationController');
 Route::resource('/users', 'UserController');
