@@ -20,6 +20,7 @@
               <form method="GET" action="{{action('UserController@show',$user->id)}}">
                   @csrf
               <input type="submit" value="Detail"></form>
+              @can('admin')
               <form method="POST" action="{{action('UserController@destroy',$user->id)}}">
                       @method('DELETE')
                       @csrf
@@ -27,6 +28,7 @@
               <form method="GET" action="{{action('UserController@edit',$user->id)}}">
                       @csrf
               <input type="submit" value="Edit"></form>
+              @endcan
             </div>
             @endforeach
         </div>

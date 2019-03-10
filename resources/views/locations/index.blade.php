@@ -19,6 +19,7 @@
                                 <form method="GET" action="{{action('LocationController@show',$location->id)}}">
                                     @csrf
                                 <input type="submit" value="Detail"></form>
+                                @can('admin')
                                 <form method="POST" action="{{action('LocationController@destroy',$location->id)}}">
                                     @method('DELETE')
                                     @csrf
@@ -26,6 +27,7 @@
                                 <form method="GET" action="{{action('LocationController@edit',$location->id)}}">
                                     @csrf
                                 <input type="submit" value="Edit"></form>
+                                @endcan
                             </div>
                         </div>
                     </div>          

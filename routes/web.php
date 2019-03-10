@@ -32,6 +32,8 @@ Route::resource('/users', 'UserController');
 Route::get('/events/{Event}', 'CommentController@store');
 Route::post('/events/{Event}', 'CommentController@store');
 
+Route::get('logout', 'Auth\LoginController@logout');
+
 
 
 

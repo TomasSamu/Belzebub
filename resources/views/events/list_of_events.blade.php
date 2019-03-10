@@ -16,21 +16,21 @@
             <p class="card-text">{{$event->time}}</p>
 
             <div class="container d-flex flex-row">
-                <form action="{{action('EventController@edit', $event->id)}}" method="GET" class="ml-2">
-                    @csrf
-                    <input type="submit" value="Edit" class="btn btn-primary">
-                </form>
-
                 <form action="{{action('EventController@show', $event->id)}}" method="GET" class="ml-2">
                     @csrf
                     <input type="submit" value="Detail" class="btn btn-success">
                 </form>
-
+                @can('admin')
+                <form action="{{action('EventController@edit', $event->id)}}" method="GET" class="ml-2">
+                    @csrf
+                    <input type="submit" value="Edit" class="btn btn-primary">
+                </form>
                  <form action="{{action('EventController@destroy', $event->id)}}" method="POST" class="ml-2">
                         @method('DELETE')
                         @csrf
                     <input type="submit" class="btn btn-danger" value="Delete">
                 </form>
+                @endcan
             </div>
             
         </div>

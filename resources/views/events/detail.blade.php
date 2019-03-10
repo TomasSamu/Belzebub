@@ -10,7 +10,7 @@
             <h5>Number of players: {{$event->num_of_players}}</h5>
             <h5>Date: {{$event->date}}</h5>
             <h5>Time: {{$event->time}}</h5>
-            <h5>Location: {{$location->name}}</h5>
+            <h5>Location: {{$event->location->name}}</h5>
         </p>
         <form method="GET" action="{{action('EventController@index',$event->id)}}">
                 @csrf

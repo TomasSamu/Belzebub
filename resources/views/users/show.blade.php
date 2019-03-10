@@ -32,7 +32,6 @@
         </div>
         <div class="row">
             
-
             <div class="card">
                 <ul class="list-group list-group-flush">
                     <h1>My Collection</h1>

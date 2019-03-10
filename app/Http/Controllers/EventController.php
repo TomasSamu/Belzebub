@@ -72,9 +72,9 @@ class EventController extends Controller
     {
 
         $event = Event::find($id);
-        $location = Location::find($event->location_id);
+     /*    $location = Location::find($event->location_id); */
         $comments = Comment::where('event_id',$id)->get();
-        return view('events.detail',compact(['event','location','comments']));
+        return view('events.detail',compact(['event', 'comments']));
         
     }
 
