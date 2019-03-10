@@ -59,7 +59,7 @@ class EventController extends Controller
         $event->location_id = $request->location_id;
         $event->save();
 
-        return redirect(action('EventController@list'))->with('success','you successfully created a new event');
+        return redirect(action('EventController@index'))->with('success','you successfully created a new event');
 
     }
 
