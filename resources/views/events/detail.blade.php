@@ -10,7 +10,7 @@
             <h5>Number of players: {{$event->num_of_players}}</h5>
             <h5>Date: {{$event->date}}</h5>
             <h5>Time: {{$event->time}}</h5>
-            <h5>Location: {{$event->location->name}}</h5>
+            <h5>Organizer: {{$created_by->name}}</h5>
         </p>
         <form method="GET" action="{{action('EventController@index',$event->id)}}">
                 @csrf
@@ -40,7 +40,7 @@
             @endauth
         </div>
 
-            @foreach ($comments as $comment)
+            @foreach ($event->comments as $comment)
 
             <div class="comment">
                 <div class="comment-left">

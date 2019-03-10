@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Event;
 use App\Location;
 use App\Comment;
+use App\User;
 
 class EventController extends Controller
 {
@@ -14,10 +15,10 @@ class EventController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index() 
     {
         $events = Event::paginate(3);
-        return view('events.list_of_events', compact(['events']));
+         return view('events.list_of_events', compact(['events']));
     }
 
     /**
@@ -73,8 +74,9 @@ class EventController extends Controller
 
         $event = Event::find($id);
      /*    $location = Location::find($event->location_id); */
-        $comments = Comment::where('event_id',$id)->get();
-        return view('events.detail',compact(['event', 'comments']));
+        /* $comments = Comment::where('event_id',$id)->get(); */
+        $created_by = User::where('id', $id)->first();
+        return view('events.detail',compact(['event', 'created_by']));
         
     }
 

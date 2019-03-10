@@ -3,7 +3,12 @@
     
 <div class="container">
 
+<form action="{{action('EventController@create')}}" method="get">
+    <input type="submit" class= "btn btn-primary" value="Create New Event">
+</form>
+
     @foreach ($events as $event)
+    
 
         <div class="card d-flex flex-row mb-3">
 
@@ -12,8 +17,9 @@
         <div class="card-body">
             <h4 class="card-title">{{$event->title}}</h4>
             <h5 class="card-text">{{$event->text}}</h5>
-            <p class="card-text">{{$event->date}}</p>
-            <p class="card-text">{{$event->time}}</p>
+            <p class="card-text">Date: {{$event->date}}</p>
+            <p class="card-text">Time: {{$event->time}}</p>
+        <p class="card-text">Organizer: <a href="{{action('UserController@show', $event->user_id)}}">{{$event->users['name']}}</a></p>
 
             <div class="container d-flex flex-row">
                 <form action="{{action('EventController@show', $event->id)}}" method="GET" class="ml-2">
