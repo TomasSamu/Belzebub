@@ -25,8 +25,12 @@ Route::get('/first', 'HomeController@welcome')->name('welcome'); ////???????????
 
 Route::get('/add/{id}', 'FeaturesController@addGameToCollection');
 
+Route::get('/users/{user}/unattend', 'FeaturesController@unattendEvent');
+Route::delete('/users/{user}/unattend', 'FeaturesController@unattendEvent');
+
 Route::get('/events/attend/{event}', 'FeaturesController@attendEvent');
 Route::post('/events/attend/{event}', 'FeaturesController@attendEvent');
+
 
 Route::resource('/games', 'BoardGameController');
 Route::resource('/locations', 'LocationController');

@@ -59,10 +59,17 @@
                 <ul class="list-group list-group-flush">
                     <h1>I am organizing these events:</h1>
                     @foreach ($user->events as $event)
-                    <li class="list-group-item">
-                    <a href="{{action('EventController@show', $event->id)}}">{{$event->title}}
-                    </a>
-                    </li>
+                        <li class="list-group-item">
+                            <div class="row">
+                                <a href="{{action('EventController@show', $event->id)}}">{{$event->title}}
+                                </a> 
+                                <form method="POST"action="{{action('EventController@destroy', $event->id)}}">
+                                    @csrf
+                                    @method('DELETE')
+                                <input type="submit" value="delete" class="btn btn-danger">
+                                </form> 
+                            </div>  
+                        </li>
                     @endforeach
                 </ul>
             </div> 
@@ -71,10 +78,17 @@
                 <ul class="list-group list-group-flush">
                     <h1>I am attending these events:</h1>
                     @foreach ($user->attend_events as $event)
-                    <li class="list-group-item">
-                    <a href="{{action('EventController@show', $event->id)}}">{{$event->title}}
-                    </a>  
-                    </li>
+                        <li class="list-group-item">
+                            <div class="row">
+                                <a href="{{action('EventController@show', $event->id)}}">{{$event->title}}
+                                </a>  
+                            <form method="POST" action="{{action('FeaturesController@unattendEvent', $event->id)}}">
+                                @csrf
+                                @method('DELETE')
+                                <input type="submit" class="btn btn-primary" value="unattend">
+                            </form>
+                            </div>
+                        </li>
                     @endforeach
                 </ul>
             </div> 

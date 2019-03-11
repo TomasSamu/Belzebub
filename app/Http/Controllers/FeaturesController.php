@@ -30,12 +30,25 @@ public function attendEvent($id)
         $user = User::find(Auth::id());
 
         if ($user->attend_events()->where('event_id', $event->id)->exists()){
-            return redirect(action('EventController@index'));
+            return redirect(action('EventController@index'))->with('warning', 'You already confirmed attendance at '.$event->title);;
         } else {
             $user->attend_events()->attach($event->id);
-            return redirect(action('EventController@index'))->with('success', 'You are attending '.$event->title);
+             return redirect(action('EventController@index'))->with('success', 'You are attending '.$event->title);
         }
     }
+
+public function unattendEvent($id)
+{
+
+    
+    $event = Event::find($id);
+    $user = User::find(Auth::id());
+
+
+    $user->attend_events()->where('event_id',$event->id)->detach($event->id);
+    return redirect(action('UserController@show', Auth::id()))->with('warning', 'You have just unattended event: '.$event->title);;
+
+}
 
 }
 
