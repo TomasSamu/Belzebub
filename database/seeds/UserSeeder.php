@@ -34,7 +34,8 @@ class UserSeeder extends Seeder
                 "city" => "Prague",
                 "country" => "Czechia",
                 "password" => Hash::make("secret"),
-                "image" => "https://avataaars.io/?avatarStyle=Circle&topType=LongHairStraight&accessoriesType=Blank&hairColor=BrownDark&facialHairType=Blank&clotheType=BlazerShirt&eyeType=Default&eyebrowType=Default&mouthType=Default&skinColor=Light/5em"
+                "image" => "https://avataaars.io/?avatarStyle=Circle&topType=LongHairStraight&accessoriesType=Blank&hairColor=BrownDark&facialHairType=Blank&clotheType=BlazerShirt&eyeType=Default&eyebrowType=Default&mouthType=Default&skinColor=Light/5em",
+                "is_admin" => 1
             ],
             [
                 "name" => "John Doe",
