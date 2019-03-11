@@ -43,9 +43,9 @@ class User extends Authenticatable
         return $this->hasMany('App\Event');
     }
 
-    public function events_created_by()
+    public function attend_events()
     {
-        return $this->hasMany('App\Event');
+        return $this->belongsToMany('App\Event', 'event_user', 'attendee_id', 'event_id');
     }
 
     public function comments()

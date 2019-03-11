@@ -25,6 +25,9 @@ Route::get('/first', 'HomeController@welcome')->name('welcome'); ////???????????
 
 Route::get('/add/{id}', 'FeaturesController@addGameToCollection');
 
+Route::get('/events/attend/{event}', 'FeaturesController@attendEvent');
+Route::post('/events/attend/{event}', 'FeaturesController@attendEvent');
+
 Route::resource('/games', 'BoardGameController');
 Route::resource('/locations', 'LocationController');
 Route::resource('/users', 'UserController');
@@ -32,7 +35,7 @@ Route::resource('/users', 'UserController');
 Route::get('/events/{Event}', 'CommentController@store');
 Route::post('/events/{Event}', 'CommentController@store');
 
-Route::get('logout', 'Auth\LoginController@logout');
+/* Route::get('logout', 'Auth\LoginController@logout'); */
 
 
 

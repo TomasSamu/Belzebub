@@ -26,9 +26,9 @@ class Event extends Model
         return $this->belongsToMany('App\Boardgame');
     }
 
-    public function created_by_user()
+    public function attendees()
     {
-        return $this->belongsTo('App\User');
+        return $this->belongsToMany('App\User','event_user','event_id', 'attendee_id');
     }
 
     public function location()

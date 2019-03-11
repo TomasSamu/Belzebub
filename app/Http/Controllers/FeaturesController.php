@@ -5,6 +5,7 @@ use Illuminate\Support\Facades\Auth;
 use Illuminate\Http\Request;
 use App\Boardgame;
 use App\User;
+use App\Event;
 class FeaturesController extends Controller
 {
     public function addGameToCollection($id)
@@ -21,4 +22,20 @@ class FeaturesController extends Controller
         
     }
 
+
+public function attendEvent($id)
+    {
+
+        $event = Event::find($id);
+        $user = User::find(Auth::id());
+
+        if ($user->attend_events()->where('event_id', $event->id)->exists()){
+            return redirect(action('EventController@index'));
+        } else {
+            $user->attend_events()->attach($event->id);
+            return redirect(action('EventController@index'))->with('success', 'You are attending '.$event->title);
+        }
+    }
+
 }
+

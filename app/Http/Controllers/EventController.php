@@ -75,7 +75,7 @@ class EventController extends Controller
         $event = Event::find($id);
      /*    $location = Location::find($event->location_id); */
         /* $comments = Comment::where('event_id',$id)->get(); */
-        $created_by = User::where('id', $id)->first();
+        $created_by = User::where('id', $event->user_id)->first();
         return view('events.detail',compact(['event', 'created_by']));
         
     }
