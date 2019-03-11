@@ -26,15 +26,18 @@
                     @csrf
                     <input type="submit" value="Detail" class="btn btn-success">
                 </form>
+                @auth
                 <form action="{{action('FeaturesController@attendEvent', $event->id)}}" method="POST" class="ml-2">
                     @csrf
                 <input type="submit" class="btn btn-primary" value="Attend">
                 </form> 
+                @endauth
                 @can('admin')
                 <form action="{{action('EventController@edit', $event->id)}}" method="GET" class="ml-2">
                     @csrf
                     <input type="submit" value="Edit" class="btn btn-primary">
                 </form>
+
                  <form action="{{action('EventController@destroy', $event->id)}}" method="POST" class="ml-2">
                         @method('DELETE')
                         @csrf
