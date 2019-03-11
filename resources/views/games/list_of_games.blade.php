@@ -14,9 +14,11 @@
                             <img class="card-img-top" src="{{$game->image_url}}" alt="Card image cap">
                         <div class="card-body">
                             <h6 class="card-title">{{$game->name}}</h6>
+                            @auth
                             <form method="GET" action="{{action('FeaturesController@addGameToCollection',$game->id)}}">
                                     @csrf
                             <input type="submit" value="Add"></form>
+                            @endauth
                             <form method="GET" action="{{action('BoardGameController@show',$game->id)}}">
                                 @csrf
                             <input type="submit" value="Detail"></form>

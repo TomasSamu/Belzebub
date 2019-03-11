@@ -16,13 +16,16 @@
         <form method="GET" action="{{action('BoardGameController@index',$game->id)}}">
                 @csrf
         <input type="submit" value="Back"></form>
+        @auth
         <form method="POST" action="{{action('BoardGameController@destroy',$game->id)}}">
                 @method('DELETE')
                 @csrf
         <input type="submit" value="Delete"></form>
+
         <form method="GET" action="{{action('BoardGameController@edit',$game->id)}}">
                 @csrf
         <input type="submit" value="Edit"></form>
+        @endauth
     </div>
 </div>
 

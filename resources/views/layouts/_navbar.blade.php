@@ -14,9 +14,11 @@
         <!--maybe if else authentification somewhere here -->
 
         <ul class="navbar-nav  ml-auto">
+            @auth
             <li class="nav-item">
                 <a class="nav-link" href="{{ action('UserController@show', Auth::id() ? Auth::id() : 1) }}">Profile</a>
             </li>
+            @endauth
             <li class="nav-item">
                 <a class="nav-link" href="{{ action('UserController@index') }}">Users</a>
             </li>
