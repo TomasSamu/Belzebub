@@ -33,7 +33,7 @@ public function attendEvent($id)
             return redirect(action('EventController@index'))->with('warning', 'You already confirmed attendance at '.$event->title);;
         } else {
             $user->attend_events()->attach($event->id);
-             return redirect(action('EventController@index'))->with('success', 'You are attending '.$event->title);
+            return redirect(action('EventController@index'))->with('success', 'You are attending '.$event->title);
         }
     }
 
