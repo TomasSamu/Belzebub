@@ -11,6 +11,12 @@
             <h5>Date: {{$event->date}}</h5>
             <h5>Time: {{$event->time}}</h5>
             <h5>Organizer: {{$created_by->name}}</h5>
+            <h5>Attendees:</h5>
+             </ul>
+                @foreach ($event->attendees as $attendee)
+                    <li>{{$attendee->name}}</li>
+                @endforeach
+            </ul> 
         </p>
         <form method="GET" action="{{action('EventController@index',$event->id)}}">
                 @csrf

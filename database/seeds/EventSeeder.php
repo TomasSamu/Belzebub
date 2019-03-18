@@ -20,7 +20,7 @@ class EventSeeder extends Seeder
                 "text" => "Regular Monday session",
                 "time" => "19:00",
                 "date" => "2019-03-11",
-                "num_of_players" => "6"
+                "num_of_players" => "3"
             ],
             [
                 "user_id" => "1",

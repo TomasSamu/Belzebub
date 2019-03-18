@@ -9,7 +9,6 @@
 
     @foreach ($events as $event)
     
-
         <div class="card d-flex flex-row mb-3">
 
             {{-- Pass to custom --}}
@@ -19,6 +18,13 @@
             <h5 class="card-text">{{$event->text}}</h5>
             <p class="card-text">Date: {{$event->date}}</p>
             <p class="card-text">Time: {{$event->time}}</p>
+
+            @if ($event->attendees()->count() == $event->num_of_players)
+                <p class="card-text">Number of Attendees: {{$event->attendees()->count()}} (the event is full)</p>
+            @else
+                <p class="card-text">Number of Attendees: {{$event->attendees()->count()}}</p>
+            @endif
+            
         <p class="card-text">Organizer: <a href="{{action('UserController@show', $event->user_id)}}">{{$event->users['name']}}</a></p>
 
             <div class="container d-flex flex-row">
@@ -27,11 +33,14 @@
                     <input type="submit" value="Detail" class="btn btn-success">
                 </form>
                 @auth
-                <form action="{{action('FeaturesController@attendEvent', $event->id)}}" method="POST" class="ml-2">
-                    @csrf
-                <input type="submit" class="btn btn-primary" value="Attend">
-                </form> 
+                @if ($event->attendees()->count() < $event->num_of_players)
+                    <form action="{{action('FeaturesController@attendEvent', $event->id)}}" method="POST" class="ml-2">
+                        @csrf
+                    <input type="submit" class="btn btn-primary" value="Attend">
+                    </form> 
                 @endauth
+                @endif
+
                 @can('admin')
                 <form action="{{action('EventController@edit', $event->id)}}" method="GET" class="ml-2">
                     @csrf

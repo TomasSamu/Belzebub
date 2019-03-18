@@ -77,7 +77,6 @@ class FeaturesController extends Controller
     public function unattendEvent($id)
     {
 
-    
     $event = Event::find($id);
     $user = User::find(Auth::id());
 
