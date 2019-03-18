@@ -5,9 +5,16 @@ namespace App;
 use Illuminate\Database\Eloquent\Model;
 class Offer extends Model
 {
-    public function boardgames()
+    protected $fillable = [
+        "title",
+        "text",
+        "user_id",
+        "board_game_id"
+
+    ];
+    public function boardgame()
     {
-        return $this->hasMany('App\Boardgame');
+        return $this->belongsTo('App\Boardgame');
     }
     public function comments()
     {

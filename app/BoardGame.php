@@ -34,8 +34,8 @@ class BoardGame extends Model
     {
         return $this->belongsToMany('App\Event');
     }   
-    public function offer()
+    public function offers()
     {
-        return $this->belongsTo('App\Offer');
+        return $this->hasMany('App\Offer');
     }
 }

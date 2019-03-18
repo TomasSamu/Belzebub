@@ -43,6 +43,10 @@
                     <form method="POST" action="{{action('FeaturesController@removeGameFromCollection',$boardgame->id)}}">
                         @csrf
                     <input type="submit" value="remove"></form>
+                    <form method="POST" action="{{action('FeaturesController@createOffer',$boardgame->id)}}">
+                        @csrf
+                    <input type="submit" value="offer"></form>
+                    
                     </li>
                     @endforeach
                 </ul>
