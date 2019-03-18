@@ -31,6 +31,17 @@ class FeaturesController extends Controller
         $user->boardgames()->detach($game->id);
         return back();
     }
+    public function eventsIndex()
+    {
+        $offers = Offer::paginate(6);
+        $list = view('offers.index', compact('offers'));
+
+        return $list;
+    }
+    public function eventsShow($id)
+    {
+
+    }
 
     public function createOffer($id, Request $request)
     {
@@ -40,7 +51,7 @@ class FeaturesController extends Controller
             $offer = new Offer;
             $offer->user_id = $user->id;
             $offer->boardgame_id = $game->id;
-            $offer->title = $user->name .  " has put " . $game->name . " up for trade";
+            $offer->title =$user->name .  " has put " . $game->name . " up for trade";
             $offer->text = "";
             
             $offer->save();

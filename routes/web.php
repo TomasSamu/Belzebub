@@ -25,6 +25,7 @@ Route::get('/first', 'HomeController@welcome')->name('welcome'); ////???????????
 
 Route::get('/add/{id}', 'FeaturesController@addGameToCollection');
 Route::post('/remove/{id}', 'FeaturesController@removeGameFromCollection');
+Route::get('/offer/eventIndex', 'FeaturesController@eventsIndex');
 Route::post('/offer/{id}', 'FeaturesController@createOffer');
 
 Route::get('/users/{user}/unattend', 'FeaturesController@unattendEvent');

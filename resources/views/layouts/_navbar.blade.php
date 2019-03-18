@@ -23,6 +23,9 @@
                 <a class="nav-link" href="{{ action('UserController@index') }}">Users</a>
             </li>
             <li class="nav-item">
+                <a class="nav-link" href="{{ action('FeaturesController@eventsIndex') }}">Offers</a>
+            </li>
+            <li class="nav-item">
                 <a class="nav-link" href="{{ action('EventController@index') }}">Events</a>
             </li>
             <li class="nav-item">
