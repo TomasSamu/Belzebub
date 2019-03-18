@@ -16,6 +16,10 @@ class Offer extends Model
     {
         return $this->belongsTo('App\Boardgame');
     }
+    public function user()
+    {
+        return $this->belongsTo('App\User');
+    }
     public function comments()
     {
         return $this->hasMany('App\Comment');

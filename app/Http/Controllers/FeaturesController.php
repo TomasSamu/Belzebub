@@ -31,16 +31,18 @@ class FeaturesController extends Controller
         $user->boardgames()->detach($game->id);
         return back();
     }
-    public function eventsIndex()
+    public function offersIndex()
     {
         $offers = Offer::paginate(6);
         $list = view('offers.index', compact('offers'));
 
         return $list;
     }
-    public function eventsShow($id)
+    public function offersShow($id)
     {
-
+        $offer = Offer::find($id);
+        $detail = view('offers.show',compact('offer'));
+        return $detail;
     }
 
     public function createOffer($id, Request $request)

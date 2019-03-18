@@ -5,11 +5,12 @@
 
     @foreach ($offers as $offer)
     
-
+        <a href="{{action('FeaturesController@offersShow',$offer->id)}}">
         <div class="card d-flex flex-row mb-3">
         <div class="card-body">
             <h4 class="card-title">{{$offer->title}}</h4>
             <h5 class="card-text">{{$offer->text}}</h5>
+        </a>
         {{-- <p class="card-text">Trader: <a href="{{action('UserController@show', $offer->user)}}">{{$offer->users['name']}}</a></p> --}}
 
             {{-- <div class="container d-flex flex-row">

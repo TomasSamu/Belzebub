@@ -15,7 +15,7 @@
             </div>
         </a>
 
-        <a href="{{ action('FeaturesController@eventsIndex') }}">
+        <a href="{{ action('FeaturesController@offersIndex') }}">
             <div class="container-fluid welcome section_games">
                 <h2 class="title_welcome">Game trading</h2><br>
                 <h3 class="subtitle_welcome">Browse games available for trading from local gamers.</h3>
