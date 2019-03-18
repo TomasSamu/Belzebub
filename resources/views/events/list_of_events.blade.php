@@ -9,7 +9,6 @@
 
     @foreach ($events as $event)
     
-
         <div class="card d-flex flex-row mb-3">
 
             {{-- Pass to custom --}}
@@ -27,11 +26,14 @@
                     <input type="submit" value="Detail" class="btn btn-success">
                 </form>
                 @auth
-                <form action="{{action('FeaturesController@attendEvent', $event->id)}}" method="POST" class="ml-2">
-                    @csrf
-                <input type="submit" class="btn btn-primary" value="Attend">
-                </form> 
+                @if ($event->attendees()->count() < $event->num_of_players)
+                    <form action="{{action('FeaturesController@attendEvent', $event->id)}}" method="POST" class="ml-2">
+                        @csrf
+                    <input type="submit" class="btn btn-primary" value="Attend">
+                    </form> 
                 @endauth
+                @endif
+
                 @can('admin')
                 <form action="{{action('EventController@edit', $event->id)}}" method="GET" class="ml-2">
                     @csrf
