@@ -6,6 +6,8 @@ use Illuminate\Http\Request;
 use App\Boardgame;
 use App\User;
 use App\Event;
+use App\Offer;
+
 class FeaturesController extends Controller
 {
     public function addGameToCollection($id)
@@ -22,8 +24,32 @@ class FeaturesController extends Controller
         
     }
 
+    public function removeGameFromCollection($id)
+    {
+        $game = Boardgame::find($id);
+        $user = User::find(Auth::id());
+        $user->boardgames()->detach($game->id);
+        return back();
+    }
 
-public function attendEvent($id)
+    public function createOffer($id, Request $request)
+    {
+        $game = Boardgame::find($id);
+        $user = User::find(Auth::id());
+
+            $offer = new Offer;
+            $offer->user_id = $user->id;
+            $offer->boardgame_id = $game->id;
+            $offer->title = $user->name .  " has put " . $game->name . " up for trade";
+            $offer->text = "";
+            
+            $offer->save();
+    
+            return back()->with('success','you have successfully put a game up for trade: '.$game->name);
+    }
+        
+
+    public function attendEvent($id)
     {
 
         $event = Event::find($id);
@@ -33,12 +59,12 @@ public function attendEvent($id)
             return redirect(action('EventController@index'))->with('warning', 'You already confirmed attendance at '.$event->title);;
         } else {
             $user->attend_events()->attach($event->id);
-             return redirect(action('EventController@index'))->with('success', 'You are attending '.$event->title);
+            return redirect(action('EventController@index'))->with('success', 'You are attending '.$event->title);
         }
     }
 
-public function unattendEvent($id)
-{
+    public function unattendEvent($id)
+    {
 
     $event = Event::find($id);
     $user = User::find(Auth::id());
@@ -46,7 +72,8 @@ public function unattendEvent($id)
 
     $user->attend_events()->where('event_id',$event->id)->detach($event->id);
     return redirect(action('UserController@show', Auth::id()))->with('warning', 'You have just unattended event: '.$event->title);;
-}
+
+    }
 
 }
 
