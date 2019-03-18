@@ -1,0 +1,39 @@
+
+
+.user-avatar {
+    max-width:100px;
+    margin: 0 auto;
+}
+
+.user-name {
+    text-align: center;
+    padding: .3rem 1rem;
+    font-size: 120%;
+    font-weight: 500;
+}
+
+
+.user_card {
+    display: flex;
+    justify-content: center;
+}
+
+.buttons_user {
+    display: flex;
+    flex-direction: row;
+}
+.buttons_user input {
+    margin: 1em
+}
+
+.user_sections {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.user.sections, .card {
+    height: 15em;
+    margin: 1em;
+
+}

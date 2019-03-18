@@ -18,12 +18,12 @@ class UserSeeder extends Seeder
                 "name" => "Anuska Sampedro",
                 "username" => 'Anuska',
                 "email" => "anuska@gmail.com",
-                "year_of_birth" => 1986,
-                "gender" => 'undecided',
+                "year_of_birth" => 1988,
+                "gender" => 'Unclear',
                 "city" => "Prague",
                 "country" => "Czechia",
                 "password" => Hash::make("secret"),
-                "image" => "https://avataaars.io/?avatarStyle=Circle&topType=LongHairStraight&accessoriesType=Blank&hairColor=BrownDark&facialHairType=Blank&clotheType=BlazerShirt&eyeType=Default&eyebrowType=Default&mouthType=Default&skinColor=Light/5em"
+                "image" => "https://www.collectormania.fr/7681-thickbox_default/playmobil-child-vintage-girl-yellow-white.jpg"
             ],
             [
                 "name" => "Kate Smith",
@@ -34,7 +34,7 @@ class UserSeeder extends Seeder
                 "city" => "Prague",
                 "country" => "Czechia",
                 "password" => Hash::make("secret"),
-                "image" => "https://avataaars.io/?avatarStyle=Circle&topType=LongHairStraight&accessoriesType=Blank&hairColor=BrownDark&facialHairType=Blank&clotheType=BlazerShirt&eyeType=Default&eyebrowType=Default&mouthType=Default&skinColor=Light/5em",
+                "image" => "https://randomuser.me/api/portraits/women/6.jpg",
                 "is_admin" => 1
             ],
             [
@@ -46,7 +46,7 @@ class UserSeeder extends Seeder
                 "city" => "Prague",
                 "country" => "Czechia",
                 "password" => Hash::make("secret"),
-                "image" => "https://avataaars.io/?avatarStyle=Circle&topType=LongHairStraight&accessoriesType=Blank&hairColor=BrownDark&facialHairType=Blank&clotheType=BlazerShirt&eyeType=Default&eyebrowType=Default&mouthType=Default&skinColor=Light/5em"
+                "image" => "https://randomuser.me/api/portraits/men/5.jpg"
             ],
             [
                 "name" => "Petr Novak",
@@ -57,7 +57,7 @@ class UserSeeder extends Seeder
                 "city" => "Prague",
                 "country" => "Czechia",
                 "password" => Hash::make("secret"),
-                "image" => "https://avataaars.io/?avatarStyle=Circle&topType=LongHairStraight&accessoriesType=Blank&hairColor=BrownDark&facialHairType=Blank&clotheType=BlazerShirt&eyeType=Default&eyebrowType=Default&mouthType=Default&skinColor=Light/5em"
+                "image" => "https://randomuser.me/api/portraits/men/57.jpg"
             ],
             [
                 "name" => "Milena Dvorakova",
@@ -68,7 +68,7 @@ class UserSeeder extends Seeder
                 "city" => "Prague",
                 "country" => "Czechia",
                 "password" => Hash::make("secret"),
-                "image" => "https://avataaars.io/?avatarStyle=Circle&topType=LongHairStraight&accessoriesType=Blank&hairColor=BrownDark&facialHairType=Blank&clotheType=BlazerShirt&eyeType=Default&eyebrowType=Default&mouthType=Default&skinColor=Light/5em"
+                "image" => "https://randomuser.me/api/portraits/women/31.jpg"
             ],
             [
                 "name" => "Bond",
@@ -79,7 +79,7 @@ class UserSeeder extends Seeder
                 "city" => "Prague",
                 "country" => "Czechia",
                 "password" => Hash::make("secret"),
-                "image" => "https://avataaars.io/?avatarStyle=Circle&topType=LongHairStraight&accessoriesType=Blank&hairColor=BrownDark&facialHairType=Blank&clotheType=BlazerShirt&eyeType=Default&eyebrowType=Default&mouthType=Default&skinColor=Light/5em",
+                "image" => "https://randomuser.me/api/portraits/men/34.jpg",
                 "is_admin" => 1
             ]
         ];

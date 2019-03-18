@@ -1,14 +1,25 @@
 
-// Fonts
-@import url('https://fonts.googleapis.com/css?family=Nunito');
-
-// Variables
+@import url('https://fonts.googleapis.com/css?family=Assistant:400,700|Roboto+Slab:400,700" rel="stylesheet');
+    //<link href="https://fonts.googleapis.com/css?family=Assistant:400,700|Roboto+Slab:400,700" rel="stylesheet">
+   
 @import 'variables';
+@import 'events';
+@import 'footer';
+@import 'shortpage'; //fix this
+@import 'user';
+@import 'welcome';
+@import 'variables';
+@import 'navbar';
 
-// Bootstrap
-@import '~bootstrap/scss/bootstrap';
+* {
+    box-sizing: border-box;
+  }
 
-.navbar-laravel {
-  background-color: #fff;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);
+html { 
+  height: 100%; 
+}
+  
+body {
+        margin: 0;
+        padding-top: 5em;
 }

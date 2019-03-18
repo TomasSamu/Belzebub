@@ -9,7 +9,7 @@
 
     @foreach ($events as $event)
     
-        <div class="card d-flex flex-row mb-3">
+        <div class="card d-flex flex-row mb-3" style="height: 20em">
 
             {{-- Pass to custom --}}
         <img class="card-img-top img-fluid" style= "object-fit: cover; width: 25em; height:15em" src="https://geekandsundry.com/wp-content/uploads/2016/06/BoardGameGS24.jpg" alt="Card image cap">

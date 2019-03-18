@@ -1,0 +1,24 @@
+.navbar {
+    background-color: $dark;
+    color: $light;
+    font-size: 0.9em;
+    font-family: $font-text;
+
+    span .navbar-toggler-icon {
+        color: $light;
+    }
+
+    a {
+        color: $light;
+
+        &:hover {
+            color: $light;
+            border-bottom: 0.1em solid $light;
+            //change the effect
+        }
+
+        &:active {
+            color: $secondary;  
+        }
+    }  
+}

@@ -1,0 +1,50 @@
+h2.title_welcome {
+    display: inline-block;
+    font-family: $font-title;
+    font-size: 4em;
+    background-color: $dark;
+    color: $light;
+    padding: 0.2em 0.4em;
+}
+
+h3.subtitle_welcome {
+    font-family: $font-title;
+    font-size: 2em;
+    display: inline-block;
+    background-color: $light;
+    color: $dark;
+    padding: 0.2em 0.4em;
+}
+
+.logotag {
+    font-family: $font-title;
+    font-size: 2em;
+    text-align: center;
+}
+
+.welcome 
+{
+    min-height: 30em;
+    background-color: $primary;
+    padding: 4em;   
+}
+.section_events {
+    background: linear-gradient(45deg, #f4ebd9c2, #058fd9d0), url(../../public/images/bgpic1.jpg) no-repeat center;
+    background-size: cover;
+  }
+  
+  .section_games {
+    background: linear-gradient(45deg, #058fd9b2, #d65008a1), url(../../public/images/bgpic2.jpg) no-repeat center;
+    background-size: cover;
+    text-align: right;
+  }
+  
+  .section_connect {
+    background: linear-gradient(45deg, #265dccbe, #f4ebd9b6), url(../../public/images/bgpic3.jpg) no-repeat center;
+    background-size: cover;
+  }
+  
+  .section_login {
+    background-color: #D65108;
+    text-align: center;
+  }
