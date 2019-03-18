@@ -133,18 +133,21 @@ h3.subtitle_welcome {
 
 .section_events {
   background: linear-gradient(45deg, #f4ebd9c2, #058fd9d0), url(../images/bgpic1.jpg) no-repeat center;
-  background-size: cover; 
+  background-attachment: fixed;
+  background-size: cover;
 }
 
 .section_games {
   background: linear-gradient(45deg, #058fd9b2, #d65008a1), url(../images/bgpic2.jpg) no-repeat center;
   background-size: cover;
+  background-attachment: fixed;
   text-align: right;
 }
 
 .section_connect {
   background: linear-gradient(45deg, #265dccbe, #f4ebd9b6), url(../images/bgpic3.jpg) no-repeat center;
   background-size: cover;
+  background-attachment: fixed;
 }
 
 .section_login {
