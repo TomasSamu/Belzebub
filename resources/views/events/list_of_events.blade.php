@@ -18,6 +18,13 @@
             <h5 class="card-text">{{$event->text}}</h5>
             <p class="card-text">Date: {{$event->date}}</p>
             <p class="card-text">Time: {{$event->time}}</p>
+
+            @if ($event->attendees()->count() == $event->num_of_players)
+                <p class="card-text">Number of Attendees: {{$event->attendees()->count()}} (the event is full)</p>
+            @else
+                <p class="card-text">Number of Attendees: {{$event->attendees()->count()}}</p>
+            @endif
+            
         <p class="card-text">Organizer: <a href="{{action('UserController@show', $event->user_id)}}">{{$event->users['name']}}</a></p>
 
             <div class="container d-flex flex-row">
