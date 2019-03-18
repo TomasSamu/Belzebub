@@ -40,6 +40,9 @@
                         <a href="{{action('BoardGameController@show',$boardgame->id )}}">
                             {{$boardgame->name}}
                         </a>
+                    <form method="POST" action="{{action('FeaturesController@removeGameFromCollection',$boardgame->id)}}">
+                        @csrf
+                    <input type="submit" value="remove"></form>
                     </li>
                     @endforeach
                 </ul>

@@ -24,6 +24,7 @@ Route::get('/first', 'HomeController@welcome')->name('welcome'); ////???????????
 
 
 Route::get('/add/{id}', 'FeaturesController@addGameToCollection');
+Route::post('/remove/{id}', 'FeaturesController@removeGameFromCollection');
 
 Route::get('/users/{user}/unattend', 'FeaturesController@unattendEvent');
 Route::delete('/users/{user}/unattend', 'FeaturesController@unattendEvent');

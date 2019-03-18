@@ -22,6 +22,13 @@ class FeaturesController extends Controller
         
     }
 
+    public function removeGameFromCollection($id)
+    {
+        $game = Boardgame::find($id);
+        $user = User::find(Auth::id());
+        $user->boardgames()->detach($game->id);
+        return back();
+    }
 
 public function attendEvent($id)
     {
