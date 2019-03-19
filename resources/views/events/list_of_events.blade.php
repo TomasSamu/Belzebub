@@ -13,7 +13,7 @@
 
     {{-- Cards --}}
 
-    <div class="card-deck">
+    <div class="card-deck mb-4">
         @foreach ($events as $event)
 
         {{-- class="col-lg-6 col-md-6 col-sm-4 col-xs-4"> --}}

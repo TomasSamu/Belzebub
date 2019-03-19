@@ -9,7 +9,7 @@
             <input type="submit" value="Add a new game"></form><br>
     </div>
 
-    <div class=row>
+    <div class="card-deck mb-4">
 
         <!-- col- elements here -->
         @foreach ($games as $game)

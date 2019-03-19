@@ -11,7 +11,7 @@
 
     {{-- Cards --}}
 
-    <div class="card-deck">
+    <div class="card-deck mb-4">
 
 
         @foreach ($locations as $location)
