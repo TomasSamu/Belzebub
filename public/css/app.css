@@ -1,10 +1,8 @@
-@import url(https://fonts.googleapis.com/css?family=Assistant:400,700|Roboto+Slab:400,700" rel="stylesheet);.event_card {
-  margin: 1em;
-  padding: 1em;
-}
-
-.event_card p {
-  margin: 0.5em;
+@import url(https://fonts.googleapis.com/css?family=Assistant:400,700|Roboto+Slab:400,700" rel="stylesheet);.card-img-top {
+  width: 100%;
+  height: 15vw;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .footer {
@@ -95,12 +93,6 @@
   justify-content: center;
 }
 
-.user.sections,
-.card {
-  height: 15em;
-  margin: 1em;
-}
-
 h2.title_welcome {
   display: inline-block;
   font-family: "Roboto Slab", serif;
@@ -121,13 +113,11 @@ h3.subtitle_welcome {
 
 .logotag {
   font-family: "Roboto Slab", serif;
-  color:  #fffbf2;
   font-size: 2em;
   text-align: center;
-  background: linear-gradient(45deg, #0d234ee3, #086b66b6), url(../images/bgpic3.jpg) no-repeat center;
+  background: linear-gradient(45deg, #058fd9b2, #d65008a1), url() no-repeat center;
   background-size: cover;
   background-attachment: fixed;
-  min-height: 15em;
 }
 
 .welcome {
@@ -137,20 +127,20 @@ h3.subtitle_welcome {
 }
 
 .section_events {
-  background: linear-gradient(45deg, #f4ebd9c2, #058fd9d0), url(../images/bgpic1.jpg) no-repeat center;
+  background: linear-gradient(45deg, #f4ebd9c2, #058fd9d0), url() no-repeat center;
   background-attachment: fixed;
   background-size: cover;
 }
 
 .section_games {
-  background: linear-gradient(45deg, #058fd9b2, #d65008a1), url(../images/bgpic2.jpg) no-repeat center;
+  background: linear-gradient(45deg, #058fd9b2, #d65008a1), url() no-repeat center;
   background-size: cover;
   background-attachment: fixed;
   text-align: right;
 }
 
 .section_connect {
-  background: linear-gradient(45deg, #265dccbe, #f4ebd9b6), url(../images/bgpic3.jpg) no-repeat center;
+  background: linear-gradient(45deg, #265dccbe, #f4ebd9b6), url() no-repeat center;
   background-size: cover;
   background-attachment: fixed;
 }
@@ -167,7 +157,7 @@ h3.subtitle_welcome {
   font-family: "Assistant", sans-serif;
 }
 
-.navbar span .navbar-toggler-icon {
+.navbar .navbar-toggler-icon {
   color: #fffbf2;
 }
 
@@ -182,6 +172,17 @@ h3.subtitle_welcome {
 
 .navbar a:active {
   color: #D65108;
+}
+
+div.modal div.modal-backdrop {
+  z-index: 0;
+}
+
+.card-img-top {
+  width: 100%;
+  height: 15vw;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 * {

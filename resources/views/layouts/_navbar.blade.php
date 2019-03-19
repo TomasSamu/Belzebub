@@ -154,14 +154,13 @@
     </div>
 </div>
 
-
 <!-- Modal Register-->
 <div class="modal fade" id="registermodal" tabindex="-1" role="dialog" aria-labelledby="registermodal" aria-hidden="true">
     <div class="modal-dialog" role="document">
         <div class="modal-content">
-            <div class="modal-header">
-                <div class="card-header">{{ __('Register') }}</div>
-            </div>
+            
+                <div class="modal-header">{{ __('Register') }}</div>
+
             <div class="modal-body">
 
                 <form method="POST" action="{{ route('register') }}">
@@ -224,7 +223,7 @@
 
                     <div class="form-group row mb-0">
                         <div class="col-md-6 offset-md-4">
-                            <button type="submit" class="btn btn-primary">
+                            <button type="submit" class="btn btn-info my-4 btn-block">
                                 {{ __('Register') }}
                             </button>
                         </div>
