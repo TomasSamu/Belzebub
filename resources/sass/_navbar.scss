@@ -4,7 +4,7 @@
     font-size: 0.9em;
     font-family: $font-text;
 
-    span .navbar-toggler-icon {
+    .navbar-toggler-icon {
         color: $light;
     }
 
@@ -21,4 +21,8 @@
             color: $secondary;  
         }
     }  
+}
+
+div.modal div.modal-backdrop {
+    z-index: 0;
 }

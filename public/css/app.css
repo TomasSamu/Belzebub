@@ -121,8 +121,13 @@ h3.subtitle_welcome {
 
 .logotag {
   font-family: "Roboto Slab", serif;
+  color:  #fffbf2;
   font-size: 2em;
   text-align: center;
+  background: linear-gradient(45deg, #0d234ee3, #086b66b6), url(../images/bgpic3.jpg) no-repeat center;
+  background-size: cover;
+  background-attachment: fixed;
+  min-height: 15em;
 }
 
 .welcome {
