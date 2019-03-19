@@ -1,9 +1,10 @@
 @extends('layouts.home')
 
-
 @section('content')
 
-<h1>Users</h1>
+<div class="sec-navbar d-flex flex-row justify-content-between pt-5 px-3 mt-3">
+    <h1>Users</h1>
+</div>
 
 <div class="container">
     <div class="row">

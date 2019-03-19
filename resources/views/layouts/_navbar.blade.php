@@ -226,8 +226,22 @@
                             <button type="submit" class="btn btn-info my-4 btn-block">
                                 {{ __('Register') }}
                             </button>
+                            
                         </div>
+                        <hr>
+
+                        <p class="px-5">By clicking
+                                <em>Register</em> you agree to our
+                                <a href="" target="_blank">terms of service</a>.
+                        </p>   
+
+                        
                     </div>
+
+                    
+
+        
+
                 </form>
 
 

@@ -1,15 +1,15 @@
 @extends('layouts.home')
 @section('content')
 
+{{-- Create new Event --}}
+<div class="sec-navbar d-flex flex-row justify-content-between pt-5 px-3 mt-3">
+        <form action="{{action('EventController@create')}}" method="get">
+                <input type="submit" value="Add a New Event" class="btn btn-amber">
+            </form>
+            <div class="pagination pg-amber">{{$events->onEachSide(1)->links()}}</div>
+</div>
+
 <div class="container">
-
-    {{-- Create new Event --}}
-
-    <form action="{{action('EventController@create')}}" method="get">
-            <input type="submit" value="Create New Event">
-        </form><br />
-    
-
 
     {{-- Cards --}}
 
@@ -23,11 +23,11 @@
 
             <div class="card">
                 <div class="view overlay">
-                    <img class="card-img-top embed-responsive" src="https://geekandsundry.com/wp-content/uploads/2016/06/BoardGameGS24.jpg"
-                        alt="Card image cap">
-                    <a href="#!">
-                        <div class="mask rgba-indigo-strong"></div>
-                    </a>
+                    <img class="card-img-top img-fluid" src="https://geekandsundry.com/wp-content/uploads/2016/06/BoardGameGS24.jpg"
+                        alt="Card image cap" />
+                        <div class="mask flex-center rgba-blue-slight">
+                            {{-- Not working --}}
+                        </div>
             	</div>
     
 
@@ -48,13 +48,13 @@
                 <div class="d-flex flex-row">
                     <form action="{{action('EventController@show', $event->id)}}" method="GET" class="ml-2">
                         @csrf
-                        <input type="submit" value="Detail" class="btn btn-success">
+                        <input type="submit" value="Detail" class="btn btn-success btn-sm">
                     </form>
                     @auth
                     @if ($event->attendees()->count() < $event->num_of_players)
                         <form action="{{action('FeaturesController@attendEvent', $event->id)}}" method="POST" class="ml-2">
                             @csrf
-                            <input type="submit" class="btn btn-primary" value="Attend">
+                            <input type="submit" class="btn btn-primary btn-sm" value="Attend">
                         </form>
                         @endauth
                         @endif
@@ -62,13 +62,13 @@
                         @can('admin')
                         <form action="{{action('EventController@edit', $event->id)}}" method="GET" class="ml-2">
                             @csrf
-                            <input type="submit" value="Edit" class="btn btn-primary">
+                            <input type="submit" value="Edit" class="btn btn-sm btn-primary">
                         </form>
 
                         <form action="{{action('EventController@destroy', $event->id)}}" method="POST" class="ml-2">
                             @method('DELETE')
                             @csrf
-                            <input type="submit" class="btn btn-danger" value="Delete">
+                            <input type="submit" class="btn btn-danger btn-sm" value="Delete">
                         </form>
                         @endcan
                 </div>
