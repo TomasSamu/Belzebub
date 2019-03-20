@@ -7,6 +7,7 @@ use App\Boardgame;
 use App\User;
 use App\Event;
 use App\Offer;
+use App\Genre;
 
 class FeaturesController extends Controller
 {
@@ -29,6 +30,13 @@ class FeaturesController extends Controller
         $game = Boardgame::find($id);
         $user = User::find(Auth::id());
         $user->boardgames()->detach($game->id);
+        return back();
+    }
+    public function removeGenreFromCollection($id)
+    {
+        $genre = Genre::find($id);
+        $user = User::find(Auth::id());
+        $user->genres()->detach($genre->id);
         return back();
     }
     public function offersIndex()

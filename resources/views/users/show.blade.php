@@ -57,6 +57,9 @@
                     @foreach ($user->genres as $genre)
                     <li class="list-group-item">
                             {{$genre->name}}
+                        <form method="POST" action="{{action('FeaturesController@removeGenreFromCollection',$genre->id)}}">
+                            @csrf
+                        <input type="submit" value="remove"></form>
                     </li>
                     @endforeach
                 </ul>
@@ -65,6 +68,8 @@
             <div class="card">
                 <ul class="list-group list-group-flush">
                     <h1>I am organizing these events:</h1>
+                    @if ($user->events)
+                        
                     @foreach ($user->events as $event)
                         <li class="list-group-item">
                             <div class="row">
@@ -78,6 +83,8 @@
                             </div>  
                         </li>
                     @endforeach
+
+                    @endif
                 </ul>
             </div> 
 
