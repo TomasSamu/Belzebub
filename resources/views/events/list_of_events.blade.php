@@ -2,11 +2,11 @@
 @section('content')
 
 {{-- Create new Event --}}
-<div class="sec-navbar d-flex flex-row justify-content-between pt-5 px-3 mt-3">
-        <form action="{{action('EventController@create')}}" method="get">
-                <input type="submit" value="Add a New Event" class="btn btn-amber">
-            </form>
-            <div class="pagination pg-amber">{{$events->onEachSide(1)->links()}}</div>
+<div class="sec-navbar">
+    <form action="{{action('EventController@create')}}" method="get">
+        <input type="submit" value="Add a New Event" class="btn btn-sm btn-amber">
+    </form>
+    <div class="pagination pg-amber">{{$events->onEachSide(1)->links()}}</div>
 </div>
 
 <div class="container">
@@ -18,18 +18,18 @@
 
         {{-- class="col-lg-6 col-md-6 col-sm-4 col-xs-4"> --}}
 
-            {{-- Pass to custom --}}
-            {{-- or imgfluid in scss --}}
+        {{-- Pass to custom --}}
+        {{-- or imgfluid in scss --}}
 
-            <div class="card">
-                <div class="view overlay">
-                    <img class="card-img-top img-fluid" src="https://geekandsundry.com/wp-content/uploads/2016/06/BoardGameGS24.jpg"
-                        alt="Card image cap" />
-                        <div class="mask flex-center rgba-blue-slight">
-                            {{-- Not working --}}
-                        </div>
-            	</div>
-    
+        <div class="card">
+            <div class="view overlay">
+                <img class="card-img-top img-fluid" src="https://geekandsundry.com/wp-content/uploads/2016/06/BoardGameGS24.jpg"
+                    alt="Card image cap" />
+                <div class="mask flex-center rgba-blue-slight">
+                    {{-- Not working --}}
+                </div>
+            </div>
+
 
             <div class="card-body">
                 <h5 class="card-title">{{$event->title}}</h5>
@@ -76,11 +76,11 @@
 
 
             </div>
-            </div>
+        </div>
 
-            @endforeach
+        @endforeach
 
     </div>
-</div>    
+</div>
 
 @endsection

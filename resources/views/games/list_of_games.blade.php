@@ -1,10 +1,10 @@
 @extends('layouts.home')
 @section('content')
 
-<div class="sec-navbar d-flex flex-row justify-content-between pt-5 px-3 mt-3">
+<div class="sec-navbar">
     <form method="GET" action="{{action('BoardGameController@create')}}">
         @csrf
-        <input type="submit" value="Add a new game" class="btn btn-amber"></form>
+        <input type="submit" value="Add a new game" class="btn btn-sm btn-amber"></form>
     <div class="pagination pg-amber">{{$games->onEachSide(1)->links()}}</div>
 </div>
 
@@ -21,10 +21,10 @@
                 <img class="card-img-top" src="{{$game->image_url}}" alt="Card image cap">
                 <div class="card-body">
                     <h5 class="card-title">{{$game->name}}</h6>
-                        
+
 
                         <div class="buttons-edit">
-                                @auth
+                            @auth
                             <form method="GET" action="{{action('FeaturesController@addGameToCollection',$game->id)}}">
                                 @csrf
                                 <button type="submit" value="Add" class="btn btn-icon btn-green"><i class="fas fa-plus"></i></button></form>

@@ -6,8 +6,8 @@
 }
 
 .footer {
-  background-color: #2B2828;
-  color: #fffbf2;
+  background-color: #212426;
+  color: #D3D0CB;
   font-size: 0.8em;
   display: flex;
   flex-direction: column;
@@ -35,10 +35,23 @@
   list-style-type: none;
   text-align: left;
 }
+.footer_section h5 {
+  text-align: center;
+  margin-bottom: 0.5em;
+}
+
+.social-icons {
+  display: flex;
+  flex-direction: row;
+  font-size: 2em;
+}
+.social-icons .fab {
+  margin-left: 0.5em;
+}
 
 /* Short Page */
 .shortpage {
-  background-color: #fffbf2;
+  background-color: #D3D0CB;
   min-height: 90vh;
 }
 
@@ -108,8 +121,8 @@ h2.title_welcome {
   display: inline-block;
   font-family: "Roboto Slab", serif !important;
   font-size: 4em;
-  background-color: #2B2828;
-  color: #fffbf2;
+  background-color: #212426;
+  color: #F4F1EB;
   padding: 0.3em 0.5em;
 }
 @media screen and (max-width: 320px) {
@@ -122,8 +135,8 @@ h3.subtitle_welcome {
   font-family: "Roboto Slab", serif !important;
   font-size: 2em;
   display: inline-block;
-  background-color: #fffbf2;
-  color: #2B2828;
+  background-color: #F4F1EB;
+  color: #212426;
   padding: 0.3em 0.5em;
 }
 @media only screen and (max-width: 600px) {
@@ -173,23 +186,46 @@ h3.subtitle_welcome {
 }
 
 .navbar {
-  background-color: #2B2828;
-  color: #fffbf2;
+  background-color: #212426;
+  color: #D3D0CB;
   font-size: 0.9em;
   font-family: "Assistant", sans-serif;
 }
 .navbar .navbar-toggler-icon {
-  color: #fffbf2;
+  color: #D3D0CB;
 }
 .navbar a {
-  color: #fffbf2;
+  color: #D3D0CB;
 }
 .navbar a:hover {
-  color: #fffbf2;
-  border-bottom: 0.1em solid #fffbf2;
+  color: #D3D0CB;
+  border-bottom: 0.1em solid #D3D0CB;
 }
 .navbar a:active {
-  color: #D65108;
+  color: #11389B;
+}
+
+.sec-navbar {
+  background-color: #D3D0CB;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-top: 3em;
+  padding: 0.7em 3em 0.5em 3em;
+  justify-content: space-between;
+}
+.sec-navbar .pagination {
+  margin-bottom: 0;
+}
+@media only screen and (max-width: 600px) {
+  .sec-navbar .btn-sm {
+    font-size: 0.3em;
+    padding: 0.2em;
+  }
+}
+
+.fa fa-navicon {
+  color: #D3D0CB;
 }
 
 div.modal div.modal-backdrop {
@@ -228,13 +264,35 @@ p {
   margin-bottom: 0.5em;
 }
 
-h5 {
+h1 {
   font-family: "Roboto Slab", serif !important;
+  font-size: 3em;
+}
+
+h2 {
+  font-family: "Roboto Slab", serif !important;
+  font-size: 2.5em;
+}
+
+h3 {
+  font-family: "Roboto Slab", serif !important;
+  font-size: 2em;
+}
+
+h4 {
+  font-family: "Assistant", sans-serif;
+  font-size: 1.5em;
+  font-weight: 700;
+}
+
+h5 {
+  font-family: "Assistant", sans-serif;
   font-size: 1.5em;
 }
 
 h6 {
-  font-weight: 700;
+  font-family: "Assistant", sans-serif;
+  font-style: italic;
 }
 
 .buttons-edit {

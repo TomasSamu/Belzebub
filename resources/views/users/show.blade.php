@@ -11,11 +11,11 @@
             </div>
             <div class="user-prof-right">
                 <p class="lead">
-                    <h5>Username: {{$user->username}}</h5>
-                    <h6>Email: {{$user->email}}</h6>
-                    <h6>Gender: {{$user->gender}}</h6>
-                    <h6>City: {{$user->city}}</h6>
-                    <h6>Country: {{$user->country}}</h6>
+                    <h2>Username: {{$user->username}}</h2>
+                    <h5>Email: {{$user->email}}</h5>
+                    <h5>Gender: {{$user->gender}}</h5>
+                    <h5>City: {{$user->city}}</h5>
+                    <h5>Country: {{$user->country}}</h5>
                 </p>
                 <div class="buttons-edit">
                     <form method="GET" action="{{action('UserController@index',$user->id)}}">

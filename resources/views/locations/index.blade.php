@@ -2,10 +2,10 @@
 
 @section('content')
 <!-- New Event -->
-<div class="sec-navbar d-flex flex-row justify-content-between pt-5 px-3 mt-3">
+<div class="sec-navbar">
     <form method="GET" action="{{action('LocationController@create')}}">
         @csrf
-        <input type="submit" value="Add a new location" class="btn btn-amber"></form><br>
+        <input type="submit" value="Add a new location" class="btn btn-sm btn-amber"></form><br>
 </div>
 
 <div class="container">

@@ -2,8 +2,8 @@ h2.title_welcome {
     display: inline-block;
     font-family: $font-title;
     font-size: 4em;
-    background-color: $dark;
-    color: $light;
+    background-color: $extra-dark;
+    color: $extra-light;
     padding: 0.3em 0.5em;
 
     @media screen and (max-width: $break-small) {
@@ -15,8 +15,8 @@ h3.subtitle_welcome {
     font-family: $font-title;
     font-size: 2em;
     display: inline-block;
-    background-color: $light;
-    color: $dark;
+    background-color: $extra-light;
+    color: $extra-dark;
     padding: 0.3em 0.5em;
 
     @media only screen and (max-width: 600px) {
