@@ -20,7 +20,7 @@ h3.subtitle_welcome {
     font-family: $font-title;
     font-size: 2em;
     text-align: center;
-    background: linear-gradient(45deg, #058fd9b2, #d65008a1), url() no-repeat center;
+    background: linear-gradient(45deg, #058fd9b2, #d65008a1), url("../images/bgpic1.jpg") no-repeat center;
     background-size: cover;
     background-attachment: fixed;
     padding-top: 6em;
@@ -33,20 +33,20 @@ h3.subtitle_welcome {
 }
 
 .section_events {
-  background: linear-gradient(45deg, #f4ebd9c2, #058fd9d0), url() no-repeat center;
+  background: linear-gradient(45deg, #f4ebd9c2, #058fd9d0), url("../images/bgpic1.jpg") no-repeat center;
   background-attachment: fixed;
   background-size: cover;
 }
 
 .section_games {
-  background: linear-gradient(45deg, #058fd9b2, #d65008a1), url() no-repeat center;
+  background: linear-gradient(45deg, #058fd9b2, #d65008a1), url("../images/bgpic1.jpg") no-repeat center;
   background-size: cover;
   background-attachment: fixed;
   text-align: right;
 }
 
 .section_connect {
-  background: linear-gradient(45deg, #265dccbe, #f4ebd9b6), url() no-repeat center;
+  background: linear-gradient(45deg, #265dccbe, #f4ebd9b6), url("../images/bgpic1.jpg") no-repeat center;
   background-size: cover;
   background-attachment: fixed;
 }

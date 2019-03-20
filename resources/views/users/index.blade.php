@@ -13,11 +13,13 @@
         <div class="col-lg-4 col-md-4 col-sm-6 col-xs-6">         
     {{-- pass to custom --}}
 
-    <div class="card m-2 p-2 shadow p-2 mb-4 bg-white rounded" style="width: 20rem; height: auto">
+    <div class="card m-2 p-2 shadow mb-4 bg-white rounded">
 
-        <img class="card-img-top rounded-circle" src="{{$user->image}}" alt="Card image cap" style="width: 10rem">
+        
+        <img class="card-img-top rounded-circle img-fluid user-img-circle" src="{{$user->image}}" alt="Card image cap" />
+        
 
-        <div class="card-body">
+        <div class="card-body user-card-body">
             <h5 class="card-title">{{ $user->name}}</h5>
             <h6 class="card-text text-muted">{{ $user->city}}</h6>
             <p class="card-text h-6">{{ $user->gender}}</p>
@@ -26,15 +28,15 @@
             <div class="card-buttons">
                 <form method="GET" action="{{action('UserController@show',$user->id)}}">
                     @csrf
-                    <input type="submit" value="Detail"></form>
+                    <input type="submit" class="btn btn-sm btn-info" value="Detail"></form>
                 @can('admin')
                 <form method="POST" action="{{action('UserController@destroy',$user->id)}}">
                     @method('DELETE')
                     @csrf
-                    <input type="submit" value="Delete"></form>
+                    <input type="submit" class="btn btn-sm btn-red" value="Delete"></form>
                 <form method="GET" action="{{action('UserController@edit',$user->id)}}">
                     @csrf
-                    <input type="submit" value="Edit"></form>
+                    <input type="submit" class="btn btn-sm btn-amber" value="Edit"></form>
                 @endcan
             </div>
 
