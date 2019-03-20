@@ -99,13 +99,23 @@
   flex-direction: row;
 }
 
+.user-profile-pic-big {
+  max-width: 20em;
+  height: auto;
+}
+
 h2.title_welcome {
   display: inline-block;
   font-family: "Roboto Slab", serif !important;
   font-size: 4em;
   background-color: #2B2828;
   color: #fffbf2;
-  padding: 0.2em 0.4em;
+  padding: 0.3em 0.5em;
+}
+@media screen and (max-width: 320px) {
+  h2.title_welcome {
+    font-size: 2em;
+  }
 }
 
 h3.subtitle_welcome {
@@ -114,7 +124,12 @@ h3.subtitle_welcome {
   display: inline-block;
   background-color: #fffbf2;
   color: #2B2828;
-  padding: 0.2em 0.4em;
+  padding: 0.3em 0.5em;
+}
+@media only screen and (max-width: 600px) {
+  h3.subtitle_welcome {
+    font-size: 1em;
+  }
 }
 
 .logotag {
@@ -128,9 +143,9 @@ h3.subtitle_welcome {
 }
 
 .welcome {
-  min-height: 30em;
+  min-height: 25em;
   background-color: #265DCC;
-  padding: 4em;
+  padding: 5em;
 }
 
 .section_events {
@@ -233,6 +248,13 @@ h6 {
 .card-body {
   display: flex;
   flex-direction: column;
+}
+
+.btn-icon {
+  padding: 0.4em !important;
+  font-size: 0.6em !important;
+  width: 3em;
+  height: 3em;
 }
 
 .btn-xs {

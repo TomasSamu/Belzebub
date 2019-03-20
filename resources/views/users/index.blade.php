@@ -25,18 +25,18 @@
             <p class="card-text h-6">{{ $user->gender}}</p>
             <p class="card-text h-6">This is a short introduction of the user.</p>
 
-            <div class="card-buttons">
+            <div class="buttons-edit">
                 <form method="GET" action="{{action('UserController@show',$user->id)}}">
                     @csrf
-                    <input type="submit" class="btn btn-sm btn-info" value="Detail"></form>
+                    <button type="submit" class="btn btn-icon btn-info" value="Detail"><i class="fas fa-info"></i></button></form>
                 @can('admin')
                 <form method="POST" action="{{action('UserController@destroy',$user->id)}}">
                     @method('DELETE')
                     @csrf
-                    <input type="submit" class="btn btn-sm btn-red" value="Delete"></form>
+                    <button type="submit" class="btn btn-icon btn-red" value="Delete"><i class="far fa-trash-alt"></i></button></form>
                 <form method="GET" action="{{action('UserController@edit',$user->id)}}">
                     @csrf
-                    <input type="submit" class="btn btn-sm btn-amber" value="Edit"></form>
+                    <button type="submit" class="btn btn-icon btn-amber" value="Edit"><i class="fas fa-pen"></i></button></form>
                 @endcan
             </div>
 

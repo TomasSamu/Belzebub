@@ -48,13 +48,13 @@
                 <div class="d-flex flex-row">
                     <form action="{{action('EventController@show', $event->id)}}" method="GET" class="ml-2">
                         @csrf
-                        <input type="submit" value="Detail" class="btn btn-success btn-xs">
+                        <button type="submit" value="Detail" class="btn btn-success btn-icon"><i class="fas fa-info"></i></button>
                     </form>
                     @auth
                     @if ($event->attendees()->count() < $event->num_of_players)
                         <form action="{{action('FeaturesController@attendEvent', $event->id)}}" method="POST" class="ml-2">
                             @csrf
-                            <input type="submit" class="btn btn-primary btn-xs" value="Attend">
+                            <button type="submit" class="btn btn-primary btn-icon" value="Attend"><i class="fas fa-user-check"></i></button>
                         </form>
                         @endauth
                         @endif
@@ -62,13 +62,13 @@
                         @can('admin')
                         <form action="{{action('EventController@edit', $event->id)}}" method="GET" class="ml-2">
                             @csrf
-                            <input type="submit" value="Edit" class="btn btn-xs btn-primary">
+                            <button type="submit" value="Edit" class="btn btn-icon btn-primary"><i class="fas fa-pen"></i></button>
                         </form>
 
                         <form action="{{action('EventController@destroy', $event->id)}}" method="POST" class="ml-2">
                             @method('DELETE')
                             @csrf
-                            <input type="submit" class="btn btn-danger btn-xs" value="Delete">
+                            <button type="submit" class="btn btn-danger btn-icon" value="Delete"><i class="far fa-trash-alt"></i></button>
                         </form>
                         @endcan
                 </div>

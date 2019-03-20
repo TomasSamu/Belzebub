@@ -27,20 +27,20 @@
                                 @auth
                             <form method="GET" action="{{action('FeaturesController@addGameToCollection',$game->id)}}">
                                 @csrf
-                                <input type="submit" value="Add" class="btn btn-xs btn-green"></form>
+                                <button type="submit" value="Add" class="btn btn-icon btn-green"><i class="fas fa-plus"></i></button></form>
                             @endauth
                             <form method="GET" action="{{action('BoardGameController@show',$game->id)}}">
                                 @csrf
-                                <input type="submit" value="Detail" class="btn btn-xs btn-info"></form>
+                                <button type="submit" value="Detail" class="btn btn-icon btn-info"><i class="fas fa-info"></i></button></form>
 
                             @can('admin')
                             <form method="POST" action="{{action('BoardGameController@destroy',$game->id)}}">
                                 @method('DELETE')
                                 @csrf
-                                <input type="submit" value="Delete" class="btn btn-xs btn-red"></form>
+                                <button type="submit" value="Delete" class="btn btn-icon btn-red"><i class="far fa-trash-alt"></i></button></form>
                             <form method="GET" action="{{action('BoardGameController@edit',$game->id)}}">
                                 @csrf
-                                <input type="submit" value="Edit" class="btn btn-xs btn-amber"></form>
+                                <button type="submit" value="Edit" class="btn btn-icon btn-amber"><i class="fas fa-pen"></i></button></form>
                             @endcan
 
                         </div>

@@ -4,7 +4,11 @@ h2.title_welcome {
     font-size: 4em;
     background-color: $dark;
     color: $light;
-    padding: 0.2em 0.4em;
+    padding: 0.3em 0.5em;
+
+    @media screen and (max-width: $break-small) {
+      font-size: 2em;
+    }
 }
 
 h3.subtitle_welcome {
@@ -13,7 +17,11 @@ h3.subtitle_welcome {
     display: inline-block;
     background-color: $light;
     color: $dark;
-    padding: 0.2em 0.4em;
+    padding: 0.3em 0.5em;
+
+    @media only screen and (max-width: 600px) {
+      font-size: 1em;
+    }
 }
 
 .logotag {
@@ -27,9 +35,9 @@ h3.subtitle_welcome {
 }
 
 .welcome {
-  min-height: 30em;
+  min-height: 25em;
   background-color: #265DCC;
-  padding: 4em;
+  padding: 5em;
 }
 
 .section_events {
