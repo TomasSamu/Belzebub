@@ -48,13 +48,13 @@
                 <div class="d-flex flex-row">
                     <form action="{{action('EventController@show', $event->id)}}" method="GET" class="ml-2">
                         @csrf
-                        <input type="submit" value="Detail" class="btn btn-success btn-sm">
+                        <input type="submit" value="Detail" class="btn btn-success btn-xs">
                     </form>
                     @auth
                     @if ($event->attendees()->count() < $event->num_of_players)
                         <form action="{{action('FeaturesController@attendEvent', $event->id)}}" method="POST" class="ml-2">
                             @csrf
-                            <input type="submit" class="btn btn-primary btn-sm" value="Attend">
+                            <input type="submit" class="btn btn-primary btn-xs" value="Attend">
                         </form>
                         @endauth
                         @endif
@@ -62,13 +62,13 @@
                         @can('admin')
                         <form action="{{action('EventController@edit', $event->id)}}" method="GET" class="ml-2">
                             @csrf
-                            <input type="submit" value="Edit" class="btn btn-sm btn-primary">
+                            <input type="submit" value="Edit" class="btn btn-xs btn-primary">
                         </form>
 
                         <form action="{{action('EventController@destroy', $event->id)}}" method="POST" class="ml-2">
                             @method('DELETE')
                             @csrf
-                            <input type="submit" class="btn btn-danger btn-sm" value="Delete">
+                            <input type="submit" class="btn btn-danger btn-xs" value="Delete">
                         </form>
                         @endcan
                 </div>
@@ -80,7 +80,6 @@
 
             @endforeach
 
-            {{$events->onEachSide(1)->links()}}
     </div>
 </div>    
 

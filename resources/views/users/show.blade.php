@@ -32,17 +32,19 @@
         <h1>My Collection</h1>
         <div class="user-collection row">
             @foreach ($user->boardgames as $boardgame)
-            <div class="card col-3 m-2">
-
-                <a href="{{action('BoardGameController@show',$boardgame->id )}}">
+            <div class="card col-3 m-2 p-3">
+                <div class="card-body" <a href="{{action('BoardGameController@show',$boardgame->id )}}">
                     {{$boardgame->name}}
-                </a>
-                <form method="POST" action="{{action('FeaturesController@removeGameFromCollection',$boardgame->id)}}">
-                    @csrf
-                    <input type="submit" value="remove" class="btn btn-sm btn-red"></form>
-                <form method="POST" action="{{action('FeaturesController@createOffer',$boardgame->id)}}">
-                    @csrf
-                    <input type="submit" value="offer" class="btn btn-sm btn-green"></form>
+                    </a>
+                    <div class="buttons-edit">
+                        <form method="POST" action="{{action('FeaturesController@removeGameFromCollection',$boardgame->id)}}">
+                            @csrf
+                            <input type="submit" value="remove" class="btn btn-sm btn-red"></form>
+                        <form method="POST" action="{{action('FeaturesController@createOffer',$boardgame->id)}}">
+                            @csrf
+                            <input type="submit" value="offer" class="btn btn-sm btn-green"></form>
+                    </div>
+                </div>
             </div>
             @endforeach
         </div>
@@ -54,11 +56,15 @@
 
         <div class="user-genres row"> .
             @foreach ($user->genres as $genre)
-            <div class="card col-2 m-2">
-                {{$genre->name}}
-                <form method="POST" action="{{action('FeaturesController@removeGenreFromCollection',$genre->id)}}">
-                    @csrf
-                    <input type="submit" value="remove" class="btn btn-sm btn-red"></form>
+            <div class="card col-2 m-2 p-3">
+                <div class="card-body">
+                    {{$genre->name}}
+                    <div class="buttons-edit">
+                        <form method="POST" action="{{action('FeaturesController@removeGenreFromCollection',$genre->id)}}">
+                            @csrf
+                            <input type="submit" value="remove" class="btn btn-sm btn-red"></form>
+                    </div>
+                </div>
             </div>
             @endforeach
         </div>
@@ -72,15 +78,19 @@
             @if ($user->events)
 
             @foreach ($user->events as $event)
-            <div class="card col-2 m-2">
+            <div class="card col-2 m-2 p-3">
+                <div class="card-body">
 
-                <a href="{{action('EventController@show', $event->id)}}">{{$event->title}}
-                </a>
-                <form method="POST" action="{{action('EventController@destroy', $event->id)}}">
-                    @csrf
-                    @method('DELETE')
-                    <input type="submit" value="delete" class="btn btn-sm btn-red">
-                </form>
+                    <a href="{{action('EventController@show', $event->id)}}">{{$event->title}}
+                    </a>
+                    <div class="buttons-edit">
+                        <form method="POST" action="{{action('EventController@destroy', $event->id)}}">
+                            @csrf
+                            @method('DELETE')
+                            <input type="submit" value="delete" class="btn btn-sm btn-red">
+                        </form>
+                    </div>
+                </div>
 
             </div>
             @endforeach
@@ -90,23 +100,27 @@
     </div>
 
     <div class="container">
-        
-            <h1>I am attending these events:</h1>
-            @foreach ($user->attend_events as $event)
-            <div class=" user-events-attend row">
-       
-                    <a href="{{action('EventController@show', $event->id)}}">{{$event->title}}
-                    </a>
+
+        <h1>I am attending these events:</h1>
+        @foreach ($user->attend_events as $event)
+        <div class=" user-events-attend row">
+            <div class="card-body">
+                <a href="{{action('EventController@show', $event->id)}}">{{$event->title}}
+                </a>
+                <div class="buttons-edit">
                     <form method="POST" action="{{action('FeaturesController@unattendEvent', $event->id)}}">
                         @csrf
                         @method('DELETE')
                         <input type="submit" class="btn btn-primary" value="unattend" class="btn btn-sm btn-red">
                     </form>
-    
                 </div>
-            @endforeach
+
+            </div>
         </div>
+            @endforeach
+        
     </div>
+</div>
 
 
 
