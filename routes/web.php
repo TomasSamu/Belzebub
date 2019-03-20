@@ -11,16 +11,16 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+// Route::get('/', function () {
+//     return view('welcome');
+// });
 Auth::routes();
 
 Route::resource('/events', 'EventController');
 
 
 Route::get('/home', 'HomeController@index')->name('home');
-Route::get('/first', 'HomeController@welcome')->name('welcome'); ////?????????????
+Route::get('/', 'HomeController@welcome')->name('welcome'); 
 
 
 Route::get('/add/{id}', 'FeaturesController@addGameToCollection');
