@@ -1,0 +1,25 @@
+
+/* Short Page */
+
+.shortpage {
+    background-color: $light;
+    min-height: 90vh; 
+}
+
+.comment {
+    display: flex;
+}
+
+.comment .comment-left {
+    width: 30%;
+}
+
+.comment .comment-right {
+    width: 70%;
+}
+
+.comment .comment-right h2 {
+    border: solid #9199a1;
+    border-width: 0 0 1px 0;
+}
+

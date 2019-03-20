@@ -1,14 +1,57 @@
+@import url('https://fonts.googleapis.com/css?family=Assistant:400,700|Roboto+Slab:400,700" rel="stylesheet');
+//<link href="https://fonts.googleapis.com/css?family=Assistant:400,700|Roboto+Slab:400,700" rel="stylesheet">
 
-// Fonts
-@import url('https://fonts.googleapis.com/css?family=Nunito');
-
-// Variables
 @import 'variables';
+@import 'events';
+@import 'footer';
+@import 'shortpage'; //fix this
+@import 'user';
+@import 'welcome';
+@import 'variables';
+@import 'navbar';
+@import 'games';
 
-// Bootstrap
-@import '~bootstrap/scss/bootstrap';
+* {
+    box-sizing: border-box;
+}
 
-.navbar-laravel {
-  background-color: #fff;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);
+html {
+    height: 100%;
+
+}
+
+body {
+    margin: 0;
+    font-family: $font-text;
+
+    .container {
+        padding-top: 5em;
+    }
+}
+
+p {
+    line-height: 0.8em;
+    margin-bottom: 0.5em;
+}
+
+h5 {
+    font-family: $font-title;
+    font-size: 1.5em;
+}
+
+h6 {
+    font-weight: 700;
+}
+
+.buttons-edit {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin-bottom: 2em;
+  margin-top:auto
+}
+
+.card-body {
+  display: flex;
+  flex-direction: column;
 }
