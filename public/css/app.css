@@ -117,6 +117,15 @@
   height: auto;
 }
 
+.scrolling-wrapper-flexbox {
+  display: flex;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+}
+.scrolling-wrapper-flexbox .card {
+  flex: 0 0 auto;
+}
+
 h2.title_welcome {
   display: inline-block;
   font-family: "Roboto Slab", serif !important;
@@ -259,6 +268,21 @@ body .container {
   padding-top: 5em;
 }
 
+.grid-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  grid-column-gap: 1em;
+  grid-row-gap: 1em;
+  justify-items: center;
+  padding: 1em 3em 1em 3em;
+}
+@media only screen and (max-width: 600px) {
+  .grid-container {
+    grid-template-columns: 1fr;
+    padding: 1em 1em 1em 1em;
+  }
+}
+
 p {
   line-height: 0.8em;
   margin-bottom: 0.5em;
@@ -318,4 +342,13 @@ h6 {
 .btn-xs {
   padding: 0.4em !important;
   font-size: 0.6em !important;
+}
+
+.scrolling-wrapper {
+  overflow-x: scroll;
+  overflow-y: hidden;
+  white-space: nowrap;
+}
+.scrolling-wrapper .card {
+  display: inline-block;
 }

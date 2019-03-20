@@ -31,6 +31,20 @@ body {
     }
 }
 
+.grid-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-column-gap: 1em;
+    grid-row-gap: 1em;
+    justify-items: center;
+    padding: 1em 3em 1em 3em;
+    @media only screen and (max-width: 600px) {
+        grid-template-columns: 1fr;
+        padding: 1em 1em 1em 1em;
+
+      }
+  }
+
 //text
 
 p {
@@ -92,4 +106,14 @@ h6 {
 .btn-xs {
     padding: 0.4em !important;
     font-size: 0.6em !important;
+}
+
+.scrolling-wrapper {
+    overflow-x: scroll;
+    overflow-y: hidden;
+    white-space: nowrap;
+  
+    .card {
+      display: inline-block;
+    }
 }

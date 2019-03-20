@@ -9,11 +9,10 @@
     <div class="pagination pg-amber">{{$events->onEachSide(1)->links()}}</div>
 </div>
 
-<div class="container">
+<div class="grid-container">
 
     {{-- Cards --}}
 
-    <div class="card-deck mb-4">
         @foreach ($events as $event)
 
         {{-- class="col-lg-6 col-md-6 col-sm-4 col-xs-4"> --}}
@@ -80,7 +79,6 @@
 
         @endforeach
 
-    </div>
 </div>
 
 @endsection

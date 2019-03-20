@@ -6,11 +6,10 @@
     <h1>Users</h1>
 </div>
 
-<div class="container">
-    <div class="row">
+<div class="grid-container">
+
 
         @foreach ($users as $user)
-        <div class="col-lg-4 col-md-4 col-sm-6 col-xs-6">
             {{-- pass to custom --}}
 
             <div class="card m-2 p-2 shadow mb-4 bg-white rounded">
@@ -45,10 +44,9 @@
 
 
             </div>
-        </div>
+
 
         @endforeach
     </div>
-</div>
 
 @endsection
