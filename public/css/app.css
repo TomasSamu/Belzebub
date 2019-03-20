@@ -68,6 +68,37 @@
   background-color: lightgrey;
 }
 
+.user-profile {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+.user-profile-pic {
+  width: 10em;
+  height: auto;
+}
+
+.user-collection {
+  display: flex;
+  flex-direction: row;
+}
+
+.user-genres {
+  display: flex;
+  flex-direction: row;
+}
+
+.user-events {
+  display: flex;
+  flex-direction: row;
+}
+
+.user-events-attend {
+  display: flex;
+  flex-direction: row;
+}
+
 h2.title_welcome {
   display: inline-block;
   font-family: "Roboto Slab", serif !important;
