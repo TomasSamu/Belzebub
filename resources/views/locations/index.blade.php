@@ -28,16 +28,16 @@
             <div class="buttons-edit">
                 <form method="GET" action="{{action('LocationController@show',$location->id)}}">
                     @csrf
-                    <input type="submit" value="Detail" class="btn btn-sm btn-blue" />
+                    <button type="submit" value="Detail" class="btn btn-icon btn-blue"><i class="fas fa-info"></i></button>
                 </form>
                 @can('admin')
                 <form method="POST" action="{{action('LocationController@destroy',$location->id)}}">
                     @method('DELETE')
                     @csrf
-                    <input type="submit" value="Delete" class="btn btn-sm btn-red"></form>
+                    <button type="submit" value="Delete" class="btn btn-icon btn-red"><i class="fas fa-trash"></i></button></form>
                 <form method="GET" action="{{action('LocationController@edit',$location->id)}}">
                     @csrf
-                    <input type="submit" value="Edit" class="btn btn-sm btn-info"></form>
+                    <button type="submit" value="Edit" class="btn btn-icon btn-info"><i class="fas fa-pen"></i></button></form>
                 @endcan
             </div>
         </div>
