@@ -21,10 +21,9 @@ class LocationSeeder extends Seeder
                     "city" => "Praha",
                     "country" => "Czech Republic",
                     "web" => "http://www.tchaiovna.cz",
-                    "rating" => "9.8"
+                    "rating" => "9.0"
 
                 ],
-
                 [
                     "name" => "Nálet",
                     "description" => "Bar at Holesovice",
@@ -57,8 +56,37 @@ class LocationSeeder extends Seeder
                     "web" => "http://www.cernyrytir.cz/",
                     "rating" => "9.7"
                 ],
-
                 
+                [
+                    "name" => "Geekárna",
+                    "description" => "Café Bar",
+                    "street" => "Starokošířská 259/9",
+                    "zip_code" => "15500",
+                    "city" => "Praha",
+                    "country" => "Czech Republic",
+                    "web" => "https://www.geekarna.cz",
+                    "rating" => "8.5"
+                ],
+                [
+                    "name" => "Boards and Brews",
+                    "description" => "Boardgame Pub",
+                    "street" => "Charkovská 441/18",
+                    "zip_code" => "10100",
+                    "city" => "Praha",
+                    "country" => "Czech Republic",
+                    "web" => "www.",
+                    "rating" => "9.9"
+                ],
+                [
+                    "name" => "Restaurace U Pecků",
+                    "description" => "Typical Czech Restaurant",
+                    "street" => "Staromlýnská 5",
+                    "zip_code" => "19000",
+                    "city" => "Praha",
+                    "country" => "Czech Republic",
+                    "web" => "not available",
+                    "rating" => "7.5"
+                ],
             ];
 
         foreach($locations as $location)
