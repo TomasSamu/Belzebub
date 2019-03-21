@@ -40,11 +40,10 @@
                         </div>
                         @endforeach
                 </div>
-                </p>
             </div>
     
             
-        </div>`
+        </div>
     
         <div class="container">
             @auth
@@ -61,17 +60,16 @@
             </form>
             @endauth
 
-
-        @foreach ($event->mainComments as $comment)
-            @include('events.comments')
-        @endforeach 
-
+            
+            @foreach ($event->mainComments as $comment)
+                @include('events.comments')
+            @endforeach 
 
         </div>
 </div>
         </div>
     
-        @foreach ($event->comments as $comment)
+{{--         @foreach ($event->comments as $comment)
     
         <div class="comment">
             <div class="comment-left">
@@ -85,6 +83,6 @@
                 {{ $comment->text }}
             </div>
         </div>
-        @endforeach
+        @endforeach --}}
 
 @endsection
