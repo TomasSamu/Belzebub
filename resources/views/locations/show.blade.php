@@ -17,7 +17,7 @@
         <h5>Zip Code: {{$location->zip_code}}</h5>
         <h5>City: {{$location->city}}</h5>
         <h5>Country: {{$location->country}}</h5>
-        <h5>Web: <a href="">{{$location->web}}</a></h5>
+        <h5>Web: <a href="{{$location->web}}" target="_blank">{{$location->web}}</a></h5>
     </p>
 
 

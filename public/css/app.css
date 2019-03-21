@@ -73,8 +73,10 @@
 }
 
 .user-img-circle {
-  padding: 2em 3em 2em 3em;
-  height: auto;
+  padding: 2em 2em 2em 2em;
+  margin: auto;
+  height: 15em;
+  width: 15em;
 }
 
 .user-card-body {
@@ -350,7 +352,7 @@ h6 {
 }
 
 .card-body {
-  background-color: #F25B24;
+  background-color: #11389B;
 }
 
 .card-img-top {
@@ -383,8 +385,8 @@ body .container {
 .grid-container {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
-  grid-column-gap: 1em;
-  grid-row-gap: 1em;
+  grid-column-gap: 1.5em;
+  grid-row-gap: 1.5em;
   justify-items: space-between;
   padding: 1em 3em 1em 3em;
 }

@@ -20,7 +20,7 @@ class LocationSeeder extends Seeder
                     "zip_code" => "16000",
                     "city" => "Praha",
                     "country" => "Czech Republic",
-                    "web" => "www.tchaiovna.cz",
+                    "web" => "http://www.tchaiovna.cz",
                     "rating" => "9.8"
 
                 ],
@@ -32,9 +32,33 @@ class LocationSeeder extends Seeder
                     "zip_code" => "17000",
                     "city" => "Praha",
                     "country" => "Czech Republic",
-                    "web" => "www.",
-                    "rating" => "9.9"
+                    "web" => "https://www.facebook.com/naletnaletnalet",
+                    "rating" => "9.8"
                 ],
+
+                [
+                    "name" => "Paluba",
+                    "description" => "Board Games Club",
+                    "street" => "Lidická 40b, Anděl, Smíchov-Smíchov",
+                    "zip_code" => "15000 ",
+                    "city" => "Praha",
+                    "country" => "Czech Republic",
+                    "web" => "http://www.paluba.cz/",
+                    "rating" => "9.7"
+                ],
+
+                [
+                    "name" => "Black Knight",
+                    "description" => "Board Games Club",
+                    "street" => "Za Poříčskou bránou 21, 8-Florenc",
+                    "zip_code" => "18600",
+                    "city" => "Praha",
+                    "country" => "Czech Republic",
+                    "web" => "http://www.cernyrytir.cz/",
+                    "rating" => "9.7"
+                ],
+
+                
             ];
 
         foreach($locations as $location)

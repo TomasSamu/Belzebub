@@ -15,7 +15,7 @@
             <div class="card m-2 p-2 shadow mb-4">
 
 
-                <img class="card-img-top rounded-circle img-fluid user-img-circle" src="{{$user->image}}" alt="Card image cap" />
+                <img class="rounded-circle user-img-circle" src="{{$user->image}}" alt="Card image cap" />
 
 
                 <div class="card-body user-card-body">

@@ -13,15 +13,16 @@
 <div class="grid-container">
 
     @foreach ($locations as $location)
-    <div class="card mb-3">
+    <div class="card">
         <div class="view overlay">
             <img class="card-img-top" src="{{$location->image_url}}" alt="Card image cap" />
-            <div class="mask rgba-indigo-strong"></div>
+            <div class="mask rgba-indigo-strong">
+
+            </div>
         </div>
 
         <div class="card-body">
             <h4 class="card-title">{{$location->name}}</h4>
-
 
             <div class="buttons-edit">
                 <form method="GET" action="{{action('LocationController@show',$location->id)}}">

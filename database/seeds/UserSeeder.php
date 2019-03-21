@@ -23,7 +23,7 @@ class UserSeeder extends Seeder
                 "city" => "Prague",
                 "country" => "Czechia",
                 "password" => Hash::make("secret"),
-                "image" => "https://www.collectormania.fr/7681-thickbox_default/playmobil-child-vintage-girl-yellow-white.jpg"
+                "image" => "https://data.whicdn.com/images/55415997/original.gif"
             ],
             [
                 "name" => "Kate Smith",

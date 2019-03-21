@@ -40,6 +40,24 @@ class EventSeeder extends Seeder
                 "date" => "2019-03-13",
                 "num_of_players" => "8"
             ],
+            [
+                "user_id" => "3",
+                "location_id" => "4",
+                "title" => "Scrabble",
+                "text" => "Regular Scrabble",
+                "time" => "17:00",
+                "date" => "2019-03-13",
+                "num_of_players" => "8"
+            ],
+            [
+                "user_id" => "4",
+                "location_id" => "4",
+                "title" => "Mahjong",
+                "text" => "Check with organizer for more info",
+                "time" => "19:00",
+                "date" => "2019-03-13",
+                "num_of_players" => "8"
+            ],
         ];
 
         foreach($events as $event)

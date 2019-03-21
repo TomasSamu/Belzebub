@@ -38,8 +38,8 @@ body {
 .grid-container {
     display: grid;
     grid-template-columns: repeat(5, 1fr);
-    grid-column-gap: 1em;
-    grid-row-gap: 1em;
+    grid-column-gap: 1.5em;
+    grid-row-gap: 1.5em;
     justify-items: space-between;
     padding: 1em 3em 1em 3em;
 
