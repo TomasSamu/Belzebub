@@ -81,10 +81,10 @@
                     <h5 class="card-title">{{$genre->name}}</h5>
                     <div class="buttons-edit">
                         <form method="POST"
-                            action="{{action('FeaturesController@removeGenreFromCollection',$genre->id)}}">
-                            @csrf
-                            <button type="submit" value="remove" class="btn btn-xs btn-red"><i
-                                    class="far fa-trash-alt"></i></button></form>
+                        action="{{action('FeaturesController@removeGenreFromCollection',$genre->id)}}">
+                        @csrf
+                        <button type="submit" value="remove" class="btn btn-xs btn-red"><i
+                        class="far fa-trash-alt"></i></button></form>
                     </div>
                 </div>
             </div>
@@ -95,9 +95,9 @@
 
     <div class="container">
 
+        @if ($user->events)
         <h2>I am organizing these events:</h2>
         <div class="grid-container">
-            @if ($user->events)
 
             @foreach ($user->events as $event)
             <div class="card mb-2">

@@ -21,7 +21,7 @@ class LocationSeeder extends Seeder
                     "city" => "Praha",
                     "country" => "Czech Republic",
                     "web" => "www.tchaiovna.cz",
-                    "rating" => "9.8"
+                    "rating" => "9.0"
 
                 ],
 
@@ -32,8 +32,38 @@ class LocationSeeder extends Seeder
                     "zip_code" => "17000",
                     "city" => "Praha",
                     "country" => "Czech Republic",
+                    "web" => "not available",
+                    "rating" => "8.9"
+                ],
+                [
+                    "name" => "Geekárna",
+                    "description" => "Café Bar",
+                    "street" => "Starokošířská 259/9",
+                    "zip_code" => "15500",
+                    "city" => "Praha",
+                    "country" => "Czech Republic",
+                    "web" => "https://www.geekarna.cz",
+                    "rating" => "8.5"
+                ],
+                [
+                    "name" => "Boards and Brews",
+                    "description" => "Boardgame Pub",
+                    "street" => "Charkovská 441/18",
+                    "zip_code" => "10 100",
+                    "city" => "Praha",
+                    "country" => "Czech Republic",
                     "web" => "www.",
                     "rating" => "9.9"
+                ],
+                [
+                    "name" => "Restaurace U Pecků",
+                    "description" => "Typical Czech Restaurant",
+                    "street" => "Staromlýnská 5",
+                    "zip_code" => " 190 00",
+                    "city" => "Praha",
+                    "country" => "Czech Republic",
+                    "web" => "not available",
+                    "rating" => "7.5"
                 ],
             ];
 
