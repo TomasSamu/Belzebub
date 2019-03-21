@@ -22,9 +22,7 @@ class LocationSeeder extends Seeder
                     "country" => "Czech Republic",
                     "web" => "www.tchaiovna.cz",
                     "rating" => "9.0"
-
                 ],
-
                 [
                     "name" => "Nálet",
                     "description" => "Bar at Holesovice",
@@ -49,7 +47,7 @@ class LocationSeeder extends Seeder
                     "name" => "Boards and Brews",
                     "description" => "Boardgame Pub",
                     "street" => "Charkovská 441/18",
-                    "zip_code" => "10 100",
+                    "zip_code" => "10100",
                     "city" => "Praha",
                     "country" => "Czech Republic",
                     "web" => "www.",
@@ -59,7 +57,7 @@ class LocationSeeder extends Seeder
                     "name" => "Restaurace U Pecků",
                     "description" => "Typical Czech Restaurant",
                     "street" => "Staromlýnská 5",
-                    "zip_code" => " 190 00",
+                    "zip_code" => "19000",
                     "city" => "Praha",
                     "country" => "Czech Republic",
                     "web" => "not available",
