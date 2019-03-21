@@ -56,5 +56,11 @@ div.modal div.modal-backdrop {
     z-index: 0;
 }
 
-
-
+.alert {
+    position:fixed !important;
+    top: 0px !important;
+    left: 0px; 
+    width: 100%;
+    z-index:9999; 
+    border-radius:0px
+}
