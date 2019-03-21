@@ -1,5 +1,5 @@
 .footer {
-    background-color: $dark;
+    background-color: $extra-dark;
     color: $light;
     font-size: 0.8em;
     display: flex;
@@ -30,4 +30,18 @@
     text-decoration: none;
     list-style-type: none;
     text-align: left;
+     h5 {
+         text-align: center;
+         margin-bottom: 0.5em;
+     }
+}
+
+.social-icons {
+    display: flex;
+    flex-direction: row;
+    font-size: 2em;
+
+    .fab {
+        margin-left: 0.5em;
+    }
 }

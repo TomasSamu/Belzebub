@@ -6,8 +6,8 @@
 }
 
 .footer {
-  background-color: #2B2828;
-  color: #fffbf2;
+  background-color: #212426;
+  color: #D3D0CB;
   font-size: 0.8em;
   display: flex;
   flex-direction: column;
@@ -35,10 +35,23 @@
   list-style-type: none;
   text-align: left;
 }
+.footer_section h5 {
+  text-align: center;
+  margin-bottom: 0.5em;
+}
+
+.social-icons {
+  display: flex;
+  flex-direction: row;
+  font-size: 2em;
+}
+.social-icons .fab {
+  margin-left: 0.5em;
+}
 
 /* Short Page */
 .shortpage {
-  background-color: #fffbf2;
+  background-color: #D3D0CB;
   min-height: 90vh;
 }
 
@@ -68,22 +81,77 @@
   background-color: lightgrey;
 }
 
+.user-profile {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+.user-profile-pic {
+  width: 10em;
+  height: auto;
+}
+
+.user-collection {
+  display: flex;
+  flex-direction: row;
+}
+
+.user-genres {
+  display: flex;
+  flex-direction: row;
+}
+
+.user-events {
+  display: flex;
+  flex-direction: row;
+}
+
+.user-events-attend {
+  display: flex;
+  flex-direction: row;
+}
+
+.user-profile-pic-big {
+  max-width: 20em;
+  height: auto;
+}
+
+.scrolling-wrapper-flexbox {
+  display: flex;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+}
+.scrolling-wrapper-flexbox .card {
+  flex: 0 0 auto;
+}
+
 h2.title_welcome {
   display: inline-block;
   font-family: "Roboto Slab", serif !important;
   font-size: 4em;
-  background-color: #2B2828;
-  color: #fffbf2;
-  padding: 0.2em 0.4em;
+  background-color: #212426;
+  color: #F4F1EB;
+  padding: 0.3em 0.5em;
+}
+@media screen and (max-width: 320px) {
+  h2.title_welcome {
+    font-size: 2em;
+  }
 }
 
 h3.subtitle_welcome {
   font-family: "Roboto Slab", serif !important;
   font-size: 2em;
   display: inline-block;
-  background-color: #fffbf2;
-  color: #2B2828;
-  padding: 0.2em 0.4em;
+  background-color: #F4F1EB;
+  color: #212426;
+  padding: 0.3em 0.5em;
+}
+@media only screen and (max-width: 600px) {
+  h3.subtitle_welcome {
+    font-size: 1em;
+  }
 }
 
 .logotag {
@@ -97,9 +165,9 @@ h3.subtitle_welcome {
 }
 
 .welcome {
-  min-height: 30em;
+  min-height: 25em;
   background-color: #265DCC;
-  padding: 4em;
+  padding: 5em;
 }
 
 .section_events {
@@ -127,27 +195,59 @@ h3.subtitle_welcome {
 }
 
 .navbar {
-  background-color: #2B2828;
-  color: #fffbf2;
+  background-color: #212426;
+  color: #D3D0CB;
   font-size: 0.9em;
   font-family: "Assistant", sans-serif;
 }
 .navbar .navbar-toggler-icon {
-  color: #fffbf2;
+  color: #D3D0CB;
 }
 .navbar a {
-  color: #fffbf2;
+  color: #D3D0CB;
 }
 .navbar a:hover {
-  color: #fffbf2;
-  border-bottom: 0.1em solid #fffbf2;
+  color: #D3D0CB;
+  border-bottom: 0.1em solid #D3D0CB;
 }
 .navbar a:active {
-  color: #D65108;
+  color: #11389B;
+}
+
+.sec-navbar {
+  background-color: #D3D0CB;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-top: 3em;
+  padding: 0.7em 3em 0.5em 3em;
+  justify-content: space-between;
+}
+.sec-navbar .pagination {
+  margin-bottom: 0;
+}
+@media only screen and (max-width: 600px) {
+  .sec-navbar .btn-sm {
+    font-size: 0.3em;
+    padding: 0.2em;
+  }
+}
+
+.fa fa-navicon {
+  color: #D3D0CB;
 }
 
 div.modal div.modal-backdrop {
   z-index: 0;
+}
+
+.alert {
+  position: fixed !important;
+  top: 0px !important;
+  left: 0px;
+  width: 100%;
+  z-index: 9999;
+  border-radius: 0px;
 }
 
 .card-img-top {
@@ -159,6 +259,21 @@ div.modal div.modal-backdrop {
 
 .game-card {
   min-height: 27em;
+}
+
+.comment {
+  display: flex;
+  flex-direction: row;
+}
+
+.comments-reply {
+  padding-left: 5em;
+}
+
+.show-reply {
+  background-color: lightgrey;
+  display: flex;
+  flex-direction: column;
 }
 
 * {
@@ -177,18 +292,67 @@ body .container {
   padding-top: 5em;
 }
 
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-column-gap: 1em;
+  grid-row-gap: 1em;
+  justify-items: space-between;
+  padding: 1em 3em 1em 3em;
+}
+@media only screen and (max-width: 900px) {
+  .grid-container {
+    grid-template-columns: 1fr 1fr;
+    padding: 1em 1em 1em 1em;
+  }
+}
+@media only screen and (max-width: 800px) {
+  .grid-container {
+    grid-template-columns: 1fr 1fr;
+    padding: 1em 1em 1em 1em;
+  }
+}
+@media only screen and (max-width: 400px) {
+  .grid-container {
+    grid-template-columns: 1fr;
+    padding: 1em 1em 1em 1em;
+  }
+}
+
 p {
   line-height: 0.8em;
   margin-bottom: 0.5em;
 }
 
-h5 {
+h1 {
   font-family: "Roboto Slab", serif !important;
+  font-size: 3em;
+}
+
+h2 {
+  font-family: "Roboto Slab", serif !important;
+  font-size: 2.5em;
+}
+
+h3 {
+  font-family: "Roboto Slab", serif !important;
+  font-size: 2em;
+}
+
+h4 {
+  font-family: "Assistant", sans-serif;
+  font-size: 1.5em;
+  font-weight: 700;
+}
+
+h5 {
+  font-family: "Assistant", sans-serif;
   font-size: 1.5em;
 }
 
 h6 {
-  font-weight: 700;
+  font-family: "Assistant", sans-serif;
+  font-style: italic;
 }
 
 .buttons-edit {
@@ -202,4 +366,25 @@ h6 {
 .card-body {
   display: flex;
   flex-direction: column;
+}
+
+.btn-icon {
+  padding: 0.4em !important;
+  font-size: 0.6em !important;
+  width: 3em;
+  height: 3em;
+}
+
+.btn-xs {
+  padding: 0.4em !important;
+  font-size: 0.6em !important;
+}
+
+.scrolling-wrapper {
+  overflow-x: scroll;
+  overflow-y: hidden;
+  white-space: nowrap;
+}
+.scrolling-wrapper .card {
+  display: inline-block;
 }

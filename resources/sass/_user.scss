@@ -8,3 +8,53 @@
 .user-card-body {
     background-color: lightgrey;
 }
+
+
+.user-profile {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+
+}
+
+.user-profile-pic {
+    width: 10em;
+    height: auto;
+}
+
+.user-collection {
+    display: flex;
+    flex-direction: row;
+}
+
+.user-genres {
+    display: flex;
+    flex-direction: row;
+}
+
+.user-events {
+    display: flex;
+    flex-direction: row;
+}
+
+.user-events-attend {
+    display: flex;
+    flex-direction: row;
+}
+
+.user-profile-pic-big {
+    max-width: 20em;
+    height: auto;
+}
+
+//user profile detail
+
+.scrolling-wrapper-flexbox {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+  
+    .card {
+      flex: 0 0 auto;
+    }
+  }

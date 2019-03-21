@@ -10,6 +10,9 @@
 @import 'variables';
 @import 'navbar';
 @import 'games';
+@import 'comments';
+
+//General 
 
 * {
     box-sizing: border-box;
@@ -29,29 +32,99 @@ body {
     }
 }
 
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-column-gap: 1em;
+    grid-row-gap: 1em;
+    justify-items: space-between;
+    padding: 1em 3em 1em 3em;
+
+    @media only screen and (max-width: 900px) {
+        grid-template-columns: 1fr 1fr;
+        padding: 1em 1em 1em 1em;
+      }
+      
+      @media only screen and (max-width: 800px) {
+        grid-template-columns: 1fr 1fr;
+        padding: 1em 1em 1em 1em;
+      }
+
+      @media only screen and (max-width: 400px) {
+        grid-template-columns: 1fr;
+        padding: 1em 1em 1em 1em;
+      }
+  }
+
+//text
+
 p {
     line-height: 0.8em;
     margin-bottom: 0.5em;
 }
 
-h5 {
+h1 {
     font-family: $font-title;
+    font-size: 3em;
+}
+
+h2{
+    font-family: $font-title;
+    font-size: 2.5em;
+}
+h3 {
+    font-family: $font-title;
+    font-size: 2em;
+}
+h4 {
+    font-family: $font-text;
+    font-size: 1.5em;
+    font-weight: 700;
+}
+h5 {
+    font-family: $font-text;
     font-size: 1.5em;
 }
 
 h6 {
-    font-weight: 700;
+    font-family: $font-text;
+    font-style: italic;
 }
+
+
+//Buttons
 
 .buttons-edit {
   display: flex;
   flex-direction: row;
   justify-content: center;
   margin-bottom: 2em;
-  margin-top:auto
+  margin-top:auto;
 }
 
 .card-body {
   display: flex;
   flex-direction: column;
+}
+
+.btn-icon {
+    padding: 0.4em !important;
+    font-size: 0.6em !important;
+    width: 3em;
+    height: 3em;
+}
+
+.btn-xs {
+    padding: 0.4em !important;
+    font-size: 0.6em !important;
+}
+
+.scrolling-wrapper {
+    overflow-x: scroll;
+    overflow-y: hidden;
+    white-space: nowrap;
+  
+    .card {
+      display: inline-block;
+    }
 }
