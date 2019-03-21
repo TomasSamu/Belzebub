@@ -32,15 +32,12 @@
 
     <div class="container">
 
-        @foreach ($event->comments as $comment)
             @auth
             <form action="{{action('CommentController@store', $event->id)}}" method="post">
             @csrf
                 <div class="form-group">
-                    <label for="text">Your answer:</label><br>
+                    <label for="text">Your comment:</label><br>
                     <textarea name="text" id="comment" cols="50" rows="5"></textarea>
-                    <input type="hidden" value="{{$event->id}}">
-                    <input type="hidden" name="comment_id" value="{{$comment->id}}">
                 </div>
             
                 <div class="form-group">
@@ -49,19 +46,12 @@
             </form>
             @endauth
 
-            <div class="comment">   
-                <div class="comment-left">
-                    <div class="user-avatar">
-{{--                         <img class="img-fluid"
-                            src="http://icons.iconarchive.com/icons/paomedia/small-n-flat/1024/user-male-icon.png"/>
- --}}                    </div>
-                    <div class="user-name">{{ $comment->user->name }}</div>
-                </div>
-                <div class="comment-right">
-                    {{ $comment->text }}
-                </div>
-            </div>
-        @endforeach
+
+        @foreach ($event->mainComments as $comment)
+            @include('events.comments')
+        @endforeach 
+
+
         </div>
 </div>
 
