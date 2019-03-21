@@ -68,7 +68,6 @@
             <div class="card">
                 <ul class="list-group list-group-flush">
                     <h1>I am organizing these events:</h1>
-                    @if ($user->events)
                         
                     @foreach ($user->events as $event)
                         <li class="list-group-item">
@@ -83,8 +82,6 @@
                             </div>  
                         </li>
                     @endforeach
-
-                    @endif
                 </ul>
             </div> 
 
