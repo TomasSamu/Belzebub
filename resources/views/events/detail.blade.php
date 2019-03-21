@@ -41,6 +41,33 @@
                 <p><img src="{{$attendee->image}}" alt="image" class="rounded-circle"></p>
             </div>
             @endforeach
+    
+            
+        </div>
+    
+        <div class="container">
+            @auth
+            <form action="{{action('CommentController@store', $event->id)}}" method="post">
+                @csrf
+                <div class="form-group">
+                    <label for="text">Your comment:</label><br>
+                    <textarea name="text" id="comment" cols="50" rows="5"></textarea>
+                </div>
+    
+                <div class="form-group">
+                    <input type="submit" value="submit comment">
+                </div>
+            </form>
+            @endauth
+
+
+        @foreach ($event->mainComments as $comment)
+            @include('events.comments')
+        @endforeach 
+
+
+        </div>
+</div>
         </div>
     </div>
 
