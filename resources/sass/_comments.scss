@@ -1,0 +1,15 @@
+.comment {
+    display: flex;
+    flex-direction: row;
+}
+
+.comments-reply {
+    padding-left: 5em;
+    
+}
+
+.show-reply {
+    background-color: lightgrey;
+    display: flex;
+    flex-direction: column;
+}

@@ -1,7 +1,5 @@
 @extends('layouts.home')
-
 @section('content')
-<!-- New Event -->
 
 
 <div class="sec-navbar">
