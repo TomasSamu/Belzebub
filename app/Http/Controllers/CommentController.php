@@ -8,14 +8,20 @@ use Auth;
 
 class CommentController extends Controller
 {
+
+    public function show($id)
+    {
+
+
+    }
     
     public function store(Request $request, $id)
     {
-
         $comment = new Comment;
         $comment->user_id = Auth::id();
         $comment->text = $request->text;
         $comment->event_id = $id;
+        $comment->comment_id = $request->comment_id;
         $comment->save();
 
         return redirect(action('EventController@show', $id))->with('success','you posted a new comment');
