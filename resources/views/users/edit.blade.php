@@ -1,7 +1,4 @@
 @extends('layouts.home')
-
-@section('title', 'Edit a user')
-{{-- @include('layouts.navigation') --}}
 @section('content')
 
 <div class="sec-navbar">
@@ -45,7 +42,7 @@
             <input type="text" class="form-control" id="play_time" name="image" value="{{$user->image}}">
         </div>
         <div class="form-group">
-            <input type="submit" class="form-control" value="Update">
+            <input type="submit" class="btn btn-sm btn-amber" value="Update">
         </div>
         
     </form>
