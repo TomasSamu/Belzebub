@@ -18,7 +18,7 @@ class CommentController extends Controller
         $comment->event_id = $id;
         $comment->save();
 
-        redirect(action('EventController@show', $id))->with('success','you posted a new comment');
+        return redirect(action('EventController@show', $id))->with('success','you posted a new comment');
 
     }
 
