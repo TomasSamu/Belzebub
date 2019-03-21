@@ -261,6 +261,21 @@ div.modal div.modal-backdrop {
   min-height: 27em;
 }
 
+.comment {
+  display: flex;
+  flex-direction: row;
+}
+
+.comments-reply {
+  padding-left: 5em;
+}
+
+.show-reply {
+  background-color: lightgrey;
+  display: flex;
+  flex-direction: column;
+}
+
 * {
   box-sizing: border-box;
 }
