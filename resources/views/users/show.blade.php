@@ -1,6 +1,12 @@
 @extends('layouts.home')
-
 @section('content')
+
+<div class="sec-navbar d-flex flex-row justify-content-between pt-5 px-3 mt-3">
+    <form method="GET" action="{{action('UserController@index',$user->id)}}">
+        @csrf
+        <input type="submit" value="Back" class="btn btn-sm btn-blue"></form>
+</div>
+
 <div class="container">
 
     <div class="container user-profile">
@@ -18,9 +24,7 @@
                     <h5>Country: {{$user->country}}</h5>
                 </p>
                 <div class="buttons-edit">
-                    <form method="GET" action="{{action('UserController@index',$user->id)}}">
-                        @csrf
-                        <input type="submit" value="Back" class="btn btn-sm btn-blue"></form>
+
                     <form method="POST" action="{{action('UserController@destroy',$user->id)}}">
                         @method('DELETE')
                         @csrf
@@ -35,29 +39,30 @@
 
 
     <div class="container">
-        <h5>My Collection</h5>
-        <div class="user-collection row">
+        <h2>My Collection</h2>
+        <div class="grid-container">
             @foreach ($user->boardgames as $boardgame)
-            <div class="col-lg-2 col-md-3 col-sm-6 col-xs-6 m-2 p-2">
-                <div class="card mb-3">
-                    <a href="{{action('BoardGameController@show',$boardgame->id )}}">
-                        <img class="card-img-top" src="{{$boardgame->image_url}}" alt="Card image cap">
-                    </a>
+            <div class="card mb-3">
+                <a href="{{action('BoardGameController@show',$boardgame->id )}}">
+                    <img class="card-img-top" src="{{$boardgame->image_url}}" alt="Card image cap">
+                </a>
 
-                    <div class="card-body">
-                        <h5 class="card-title">{{$boardgame->name}}</h5>
+                <div class="card-body">
+                    <h4 class="card-title">{{$boardgame->name}}</h4>
 
-                        {{-- add picture --}}
-                        <div class="buttons-edit">
-                            <form method="POST" action="{{action('FeaturesController@removeGameFromCollection',$boardgame->id)}}">
-                                @csrf
-                                <button type="submit" value="remove" class="btn btn-icon btn-red"><i class="far fa-trash-alt"></i></button></form>
-                            <form method="POST" action="{{action('FeaturesController@createOffer',$boardgame->id)}}">
-                                @csrf
-                                <button type="submit" value="offer" class="btn btn-icon btn-green"><i class="fas fa-exchange-alt"></i></button>
+                    {{-- add picture --}}
+                    <div class="buttons-edit">
+                        <form method="POST"
+                            action="{{action('FeaturesController@removeGameFromCollection',$boardgame->id)}}">
+                            @csrf
+                            <button type="submit" value="remove" class="btn btn-icon btn-red"><i
+                                    class="far fa-trash-alt"></i></button></form>
+                        <form method="POST" action="{{action('FeaturesController@createOffer',$boardgame->id)}}">
+                            @csrf
+                            <button type="submit" value="offer" class="btn btn-icon btn-green"><i
+                                    class="fas fa-exchange-alt"></i></button>
 
-                            </form>
-                        </div>
+                        </form>
                     </div>
                 </div>
             </div>
@@ -67,19 +72,19 @@
 
     <div class="container">
 
-        <h5>My Favourite Genres</h5>
+        <h2>My Favourite Genres</h2>
 
-        <div class="user-genres row"> .
+        <div class="grid-container"> .
             @foreach ($user->genres as $genre)
-            <div class="col-lg-2 col-md-3 col-sm-6 col-xs-6 m-2 p-3">
-                <div class="card mb-2">
-                    <div class="card-body">
-                        <h5 class="card-title">{{$genre->name}}</h5>
-                        <div class="buttons-edit">
-                            <form method="POST" action="{{action('FeaturesController@removeGenreFromCollection',$genre->id)}}">
-                                @csrf
-                                <button type="submit" value="remove" class="btn btn-xs btn-red"><i class="far fa-trash-alt"></i></button></form>
-                        </div>
+            <div class="card mb-2">
+                <div class="card-body">
+                    <h5 class="card-title">{{$genre->name}}</h5>
+                    <div class="buttons-edit">
+                        <form method="POST"
+                            action="{{action('FeaturesController@removeGenreFromCollection',$genre->id)}}">
+                            @csrf
+                            <button type="submit" value="remove" class="btn btn-xs btn-red"><i
+                                    class="far fa-trash-alt"></i></button></form>
                     </div>
                 </div>
             </div>
@@ -90,24 +95,23 @@
 
     <div class="container">
 
-        <h5>I am organizing these events:</h5>
-        <div class="user-events row">
+        <h2>I am organizing these events:</h2>
+        <div class="grid-container">
             @if ($user->events)
 
             @foreach ($user->events as $event)
-            <div class="col-lg-2 col-md-3 col-sm-6 col-xs-6 m-2 p-3">
-                <div class="card mb-2">
-                    <div class="card-body">
+            <div class="card mb-2">
+                <div class="card-body">
 
-                        <a href="{{action('EventController@show', $event->id)}}">{{$event->title}}
-                        </a>
-                        <div class="buttons-edit">
-                            <form method="POST" action="{{action('EventController@destroy', $event->id)}}">
-                                @csrf
-                                @method('DELETE')
-                                <button type="submit" value="delete" class="btn btn-xs btn-red"><i class="far fa-trash-alt"></i></button>
-                            </form>
-                        </div>
+                    <a href="{{action('EventController@show', $event->id)}}">{{$event->title}}
+                    </a>
+                    <div class="buttons-edit">
+                        <form method="POST" action="{{action('EventController@destroy', $event->id)}}">
+                            @csrf
+                            @method('DELETE')
+                            <button type="submit" value="delete" class="btn btn-xs btn-red"><i
+                                    class="far fa-trash-alt"></i></button>
+                        </form>
                     </div>
                 </div>
             </div>
@@ -119,24 +123,23 @@
 
     <div class="container">
 
-        <h5>I am attending these events:</h5>
-        <div class=" user-events-attend row">
+        <h2>I am attending these events:</h2>
+        <div class="grid-container">
             @foreach ($user->attend_events as $event)
-            <div class="col-lg-2 col-md-3 col-sm-6 col-xs-6 m-2 p-3">
-                <div class="card mb-2">
+            <div class="card mb-2">
 
-                    <div class="card-body">
-                        <a href="{{action('EventController@show', $event->id)}}">{{$event->title}}
-                        </a>
-                        <div class="buttons-edit">
-                            <form method="POST" action="{{action('FeaturesController@unattendEvent', $event->id)}}">
-                                @csrf
-                                @method('DELETE')
-                                <button type="submit" value="unattend" class="btn btn-xs btn-red"><i class="fas fa-ban"></i></button>
-                            </form>
-                        </div>
-
+                <div class="card-body">
+                    <a href="{{action('EventController@show', $event->id)}}">{{$event->title}}
+                    </a>
+                    <div class="buttons-edit">
+                        <form method="POST" action="{{action('FeaturesController@unattendEvent', $event->id)}}">
+                            @csrf
+                            @method('DELETE')
+                            <button type="submit" value="unattend" class="btn btn-xs btn-red"><i
+                                    class="fas fa-ban"></i></button>
+                        </form>
                     </div>
+
                 </div>
             </div>
             @endforeach
