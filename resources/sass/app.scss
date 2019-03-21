@@ -1,5 +1,5 @@
-@import url('https://fonts.googleapis.com/css?family=Assistant:400,700|Roboto+Slab:400,700" rel="stylesheet');
-//<link href="https://fonts.googleapis.com/css?family=Assistant:400,700|Roboto+Slab:400,700" rel="stylesheet">
+
+@import url(https://fonts.googleapis.com/css?family=Poppins:800,900|Assistant:400,700);
 
 @import 'variables';
 @import 'events';
@@ -11,6 +11,9 @@
 @import 'navbar';
 @import 'games';
 @import 'comments';
+@import 'fonts';
+@import 'buttons';
+@import 'card';
 
 //General 
 
@@ -56,68 +59,8 @@ body {
       }
   }
 
-//text
 
-p {
-    line-height: 0.8em;
-    margin-bottom: 0.5em;
-}
-
-h1 {
-    font-family: $font-title;
-    font-size: 3em;
-}
-
-h2{
-    font-family: $font-title;
-    font-size: 2.5em;
-}
-h3 {
-    font-family: $font-title;
-    font-size: 2em;
-}
-h4 {
-    font-family: $font-text;
-    font-size: 1.5em;
-    font-weight: 700;
-}
-h5 {
-    font-family: $font-text;
-    font-size: 1.5em;
-}
-
-h6 {
-    font-family: $font-text;
-    font-style: italic;
-}
-
-
-//Buttons
-
-.buttons-edit {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  margin-bottom: 2em;
-  margin-top:auto;
-}
-
-.card-body {
-  display: flex;
-  flex-direction: column;
-}
-
-.btn-icon {
-    padding: 0.4em !important;
-    font-size: 0.6em !important;
-    width: 3em;
-    height: 3em;
-}
-
-.btn-xs {
-    padding: 0.4em !important;
-    font-size: 0.6em !important;
-}
+//horizontal scrolling
 
 .scrolling-wrapper {
     overflow-x: scroll;

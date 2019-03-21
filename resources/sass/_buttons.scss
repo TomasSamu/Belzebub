@@ -1,0 +1,28 @@
+
+//Buttons
+
+.buttons-edit {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-bottom: 2em;
+    margin-top:auto;
+  }
+  
+  .card-body {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .btn-icon {
+      padding: 0.4em !important;
+      font-size: 0.6em !important;
+      width: 3em;
+      height: 3em;
+  }
+  
+  .btn-xs {
+      padding: 0.4em !important;
+      font-size: 0.6em !important;
+  }
+  

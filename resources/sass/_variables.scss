@@ -1,12 +1,5 @@
-
 // Body
 $body-bg: #f8fafc;
-
-// Typography
-$font-title: 'Roboto Slab', serif !important;
-$font-text: 'Assistant', sans-serif;
-$font-size-base: 0.9rem;
-$line-height-base: 1.6;
 
 // Colors
 $primary: #69CEB1;
@@ -17,6 +10,21 @@ $extra-dark: #212426;
 $light: #D3D0CB;
 $extra-light: #F4F1EB;
 
+$red: #C41E3D;
+$green: #53DD6C;
+$yellow: #E6C229;
+$blue: #3E7CB1;
+
+
+
 //Media queries
 $break-small: 320px;
 $break-large: 1200px;
+
+//Fonts
+
+$font-title: 'Poppins', sans-serif;
+$font-text: 'Assistant', sans-serif;
+
+$font-size-base: 0.9rem;
+$line-height-base: 1.5;
