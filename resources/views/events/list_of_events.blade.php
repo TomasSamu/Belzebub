@@ -33,8 +33,11 @@
             <div class="card-body">
                 <h5 class="card-title">{{$event->title}}</h5>
                 <h6 class="card-text">{{$event->text}}</h6>
+                <p class="card-text">Venue: <a href="{{action('LocationController@show', $event->location_id)}}">
+                    {{$event->location->name}}</a></p>
                 <p class="card-text">Date: {{$event->date}}</p>
                 <p class="card-text">Time: {{$event->time}}</p>
+                
                 <p class="card-text">Organizer: <a href="{{action('UserController@show', $event->user_id)}}">{{$event->users['name']}}</a></p>
 
                 @if ($event->attendees()->count() == $event->num_of_players)

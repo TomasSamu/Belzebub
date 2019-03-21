@@ -60,7 +60,7 @@
             </form>
             @endauth
 
-            
+
             @foreach ($event->mainComments as $comment)
                 @include('events.comments')
             @endforeach 
