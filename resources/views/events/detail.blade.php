@@ -60,7 +60,7 @@
             </form>
             @endauth
 
-            
+
             @foreach ($event->mainComments as $comment)
                 @include('events.comments')
             @endforeach 
@@ -68,21 +68,5 @@
         </div>
 </div>
         </div>
-    
-{{--         @foreach ($event->comments as $comment)
-    
-        <div class="comment">
-            <div class="comment-left">
-                <div class="user-avatar">
-                    <img class="img-fluid"
-                        src="http://icons.iconarchive.com/icons/paomedia/small-n-flat/1024/user-male-icon.png" />
-                </div>
-                <div class="user-name">{{ $comment->user->name }}</div>
-            </div>
-            <div class="comment-right">
-                {{ $comment->text }}
-            </div>
-        </div>
-        @endforeach --}}
 
 @endsection
