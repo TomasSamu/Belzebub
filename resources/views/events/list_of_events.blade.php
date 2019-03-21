@@ -4,8 +4,11 @@
 {{-- Create new Event --}}
 <div class="sec-navbar">
     <form action="{{action('EventController@create')}}" method="get">
-        <input type="submit" value="Add a New Event" class="btn btn-sm btn-amber">
+        <button type="submit" class="btn btn-sm btn-amber d-none d-sm-block">Add an event</button>
+        <button type="submit" class="btn btn-xs btn-amber d-none d-block d-sm-none"><i class="fas fa-plus"></i></button>
     </form>
+    
+    <h2 class="title-bar">Events</h2>
     <div class="pagination pg-amber">{{$events->onEachSide(1)->links()}}
     </div>
 </div>

@@ -2,8 +2,8 @@
 
 @section('content')
 
-<div class="sec-navbar d-flex flex-row justify-content-between pt-5 px-3 mt-3">
-    <h1>Users</h1>
+<div class="sec-navbar">
+        <h2 class="title-bar">Users</h2>
 </div>
 
 <div class="grid-container">

@@ -6,6 +6,7 @@
     <form method="GET" action="{{action('LocationController@create')}}">
         @csrf
         <input type="submit" value="Add a new location" class="btn btn-sm btn-amber"></form>
+        <h2 class="title-bar">Locations</h2>
     <div class="pagination pg-amber">{{$locations->onEachSide(1)->links()}}
     </div>
 </div>

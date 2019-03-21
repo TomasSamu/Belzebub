@@ -6,8 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
-    <link href="{{ asset('css/app.css') }}" rel="stylesheet" type="text/css">
-
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css">
     <!-- Bootstrap core CSS -->
@@ -19,20 +17,21 @@
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tempusdominus-bootstrap-4/5.0.0-alpha14/css/tempusdominus-bootstrap-4.min.css" />
 
+    <link href="{{ asset('css/app.css') }}" rel="stylesheet" type="text/css">
+
 
     <title>Board Game Project</title>
 </head>
 
 <body>
+    
     @include('layouts._navbar')
-    {{-- @include('layouts.alerts') --}}
-    {{-- <div class="container">
-        <div class="column"> --}}
+
             @yield('content')
-            {{-- </div>
-    </div> --}}
 
     @include('layouts._footer')
+
+
 
     <!-- JQuery -->
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>

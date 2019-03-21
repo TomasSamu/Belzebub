@@ -1,10 +1,10 @@
 @extends('layouts.home')
 @section('content')
 
-<div class="sec-navbar d-flex flex-row justify-content-between pt-5 px-3 mt-3">
+<div class="sec-navbar">
     <form method="GET" action="{{action('UserController@index',$user->id)}}">
         @csrf
-        <input type="submit" value="Back" class="btn btn-sm btn-blue"></form>
+    <input type="submit" value="Back" class="btn btn-sm btn-blue"></form>
 </div>
 
 <div class="container">

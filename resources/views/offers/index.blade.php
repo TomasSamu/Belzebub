@@ -2,6 +2,7 @@
 @section('content')
 
 <div class="sec-navbar d-flex flex-row justify-content-between pt-5 px-3 mt-3">
+    <h2>Offers</h2>
             {{$offers->onEachSide(1)->links()}}
 </div>
 

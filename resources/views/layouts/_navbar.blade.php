@@ -4,7 +4,7 @@
     <a class="navbar-brand" href="{{action('HomeController@welcome')}}">Board Game Project</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
         aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"><i class="fa fa-navicon"></i></span>
+        <span class="navbar-toggler-icon"><i class="fa fa-bars" aria-hidden="true"></i></span>
     </button>
 
     <div class="collapse navbar-collapse" id="navbarSupportedContent">

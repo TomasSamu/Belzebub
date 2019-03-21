@@ -203,35 +203,41 @@ h3.subtitle_welcome {
   font-family: "Assistant", sans-serif;
 }
 .navbar .navbar-toggler-icon {
-  color: #D3D0CB;
+  color: #F25B24;
 }
 .navbar a {
   color: #D3D0CB;
+  padding-bottom: 0.2em;
+  margin-bottom: 0.3em;
 }
 .navbar a:hover {
-  color: #D3D0CB;
-  border-bottom: 0.1em solid #D3D0CB;
+  color: #F25B24;
+  border-bottom: 0.07em solid #F25B24;
 }
 .navbar a:active {
-  color: #11389B;
+  color: #F25B24;
 }
 
 .sec-navbar {
-  background-color: #D3D0CB;
+  background-color: #F25B24;
   display: flex;
   flex-direction: row;
   align-items: center;
   margin-top: 3em;
-  padding: 0.7em 3em 0.5em 3em;
+  padding: 0.6em 3em 0.4em 3em;
   justify-content: space-between;
 }
 .sec-navbar .pagination {
   margin-bottom: 0;
 }
-@media only screen and (max-width: 600px) {
-  .sec-navbar .btn-sm {
-    font-size: 0.3em;
-    padding: 0.2em;
+.sec-navbar h2 {
+  color: #F4F1EB;
+  font-size: 1.7em;
+}
+@media only screen and (max-width: 400px) {
+  .sec-navbar .title-bar {
+    font-size: 1em;
+    padding: 0.1em;
   }
 }
 
@@ -341,7 +347,7 @@ h6 {
 .card-title {
   font-family: "Poppins", sans-serif;
   font-size: 1.5em;
-  color: white;
+  color: #F4F1EB;
 }
 
 .card-text {
@@ -352,7 +358,7 @@ h6 {
 }
 
 .card-body {
-  background-color: #11389B;
+  background-color: #91c7e5;
 }
 
 .card-img-top {
@@ -377,6 +383,9 @@ html {
 body {
   margin: 0;
   font-family: "Assistant", sans-serif;
+  background-color: #F4F1EB;
+  font-size: 0.9em;
+  line-height: 1.1em;
 }
 body .container {
   padding-top: 5em;

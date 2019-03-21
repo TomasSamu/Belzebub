@@ -5,49 +5,57 @@
     font-family: $font-text;
 
     .navbar-toggler-icon {
-        color: $light;
+        color: $tertiary;
     }
 
     a {
         color: $light;
+        padding-bottom: 0.2em;
+        margin-bottom: 0.3em;
 
         &:hover {
-            color: $light;
-            border-bottom: 0.1em solid $light;
+            color: $tertiary;
+            border-bottom: 0.07em solid $tertiary;
             //change the effect
         }
 
         &:active {
-            color: $secondary;  
+            color: $tertiary;
         }
-    }  
+    }
 }
+
 //secondary navbar
 .sec-navbar {
-    background-color: $light;
+    background-color: $tertiary;
     display: flex;
     flex-direction: row;
     align-items: center;
     margin-top: 3em;
-    padding: 0.7em 3em 0.5em 3em;
+    padding: 0.6em 3em 0.4em 3em;
     justify-content: space-between;
 
     .pagination {
         margin-bottom: 0;
     }
-    
-    //Not working fix
-    .btn-sm {
-        @media only screen and (max-width: 600px) {
-            font-size: 0.3em;
-            padding: 0.2em;
-          }
+
+    h2 {
+        color: $extra-light;
+        font-size: 1.7em;
+    }
+
+    //Not working fix/kkeeping this just for the class
+    .title-bar {
+
+        @media only screen and (max-width: 400px) {
+            font-size: 1em;
+            padding: 0.1em;
+        }
     }
 }
 
-
 //////toggler color not working! fix!
-.fa fa-navicon{  
+.fa fa-navicon {
     color: $light;
 }
 
@@ -57,10 +65,10 @@ div.modal div.modal-backdrop {
 }
 
 .alert {
-    position:fixed !important;
+    position: fixed !important;
     top: 0px !important;
-    left: 0px; 
+    left: 0px;
     width: 100%;
-    z-index:9999; 
-    border-radius:0px
+    z-index: 9999;
+    border-radius: 0px
 }
