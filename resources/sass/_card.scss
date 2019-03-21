@@ -1,0 +1,28 @@
+
+.card-title {
+    font-family: $font-title;
+    font-size: 1.5em;
+    color: white;
+}
+
+//also user-card-body
+.card-text {
+    font-family: $font-text;
+    font-size: 1em;
+    font-weight: 700;
+    color: black;
+}
+
+.card-body {
+    background-color: $tertiary;
+}
+
+.card-img-top {
+    width: 100%;
+    object-fit: cover;
+
+    @media only screen and (max-width: 400px) {
+        min-height: 10em;
+      }
+}
+
