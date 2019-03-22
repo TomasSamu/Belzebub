@@ -241,6 +241,54 @@ div.modal div.modal-backdrop {
   border-radius: 0px;
 }
 
+.comments {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  border: 0.2em solid black;
+}
+
+.comments-reply {
+  padding-left: 5em;
+}
+
+.comment-head {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1em;
+  background-color: #69CEB1;
+}
+.comment-head .user-name {
+  font-family: "Poppins", sans-serif;
+}
+
+.comment-right {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1em;
+  background-color: #393E41;
+  color: #D3D0CB;
+}
+
+#comment-reply {
+  background-color: #D3D0CB;
+  color: #393E41;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1em;
+}
+#comment-reply .form-group .reply {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 1em;
+}
+
 p {
   font-family: "Assistant", sans-serif;
   line-height: 0.8em;

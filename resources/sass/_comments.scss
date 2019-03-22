@@ -1,0 +1,50 @@
+.comments {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    border: 0.2em solid black;
+}
+
+.comments-reply {
+    padding-left: 5em;
+}
+
+.comment-head {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1em;
+    background-color: $primary;
+    .user-name {
+        font-family: $font-title;
+    }
+}
+
+.comment-right {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1em;
+    background-color: $dark;
+    color: $light;
+}
+
+#comment-reply {
+
+    background-color: $light;
+    color: $dark;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1em;
+
+    .form-group .reply {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        padding: 1em;
+    }
+
+}
