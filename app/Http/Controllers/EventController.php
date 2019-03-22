@@ -134,24 +134,34 @@ class EventController extends Controller
         $event = Event::findOrFail($id);
         $event->delete();
         return redirect(action('EventController@index'))->with('success','you successfully deleted event: '.$event->title); 
-
     }
 
-    public function eventsByDate(Request $request)
+    public function eventsByParam(Request $request)
     {
         $date = $request->dateFilter;
-        $events = Event::where('date', $date)->get();
+        $venue_id = $request->location_id;
 
-        return view('events.events_by_date', compact(['events', 'date']));
-    }
+        $eventQuery = Event::query();
 
-    public function eventsByLocation(Request $request)
-    {
-        $locations = Location::all();
-        $location = $request->location_id;
-        $events = Event::where('location_id', $location)->get();
-        return view('events.events_by_location', compact(['events', 'location', 'locations']));
+        if($date !== null){
+            $eventQuery->where('date', $date);
+        }
 
+        if($venue_id !== null){
+            $eventQuery->where('location_id', $venue_id);
+            $venue = Location::findOrFail($venue_id);
+        } else {
+            $venue = Location::all();
+        }
+    
+        $events = $eventQuery->get();
+
+
+        //->where('location_id', $venue)->get();
+
+        $locations = Location::all(); //needed for dropdown
+        
+        return view('events.events_filter', compact(['events', 'venue', 'locations', 'date']));
     }
 
 }
