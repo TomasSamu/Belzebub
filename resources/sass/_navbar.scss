@@ -3,6 +3,7 @@
     color: $light;
     font-size: 0.9em;
     font-family: $font-text;
+    z-index: 8999;
 
     .navbar-toggler-icon {
         color: $tertiary;
@@ -34,6 +35,7 @@
     margin-top: 3em;
     padding: 0.6em 3em 0.4em 3em;
     justify-content: space-between;
+    z-index: 7999;
 
     .pagination {
         margin-bottom: 0;

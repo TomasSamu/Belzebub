@@ -1,26 +1,65 @@
-
-.user-img-circle {
-    padding: 2em 2em 2em 2em;  
-    margin: auto;
-    height:15em; 
-    width:15em;
+.user-profile {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    padding: 0;
+    margin-top: 3em;
 }
+
+
+.user-profile-left {
+    position: absolute;
+    top: 6em;
+    z-index: 6999;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+    .username {
+        background-color: $extra-dark;
+        color: $light;
+        padding: 0.5em;
+    }
+
+    .img-detail {
+        padding: 2em 2em 2em 2em;
+        height: 20em;
+        width: 20em;
+    }
+}
+
 
 .user-card-body {
     background-color: lightgrey;
 }
 
-
-.user-profile {
+.user-profile-right {
     display: flex;
     flex-direction: column;
-    text-align: center;
+    justify-items: center;
+    position: relative;
+    background-color: $secondary;
+    color: $extra-light;
+    padding: 2em;
+    padding-top: 6em;
 
+    .lead {
+
+        p {
+            font-size: 0.9em;
+            color: $extra-dark;
+        }
+    }
 }
 
-.user-profile-pic {
+
+.user-img-circle {
     width: 10em;
     height: auto;
+    display: flex;
+    align-self: center;
+    padding: 0.5em;
 }
 
 .user-collection {
@@ -54,8 +93,8 @@
     display: flex;
     flex-wrap: nowrap;
     overflow-x: auto;
-  
+
     .card {
-      flex: 0 0 auto;
+        flex: 0 0 auto;
     }
-  }
+}

@@ -9,32 +9,33 @@
 
 <div class="container">
 
-    <div class="container user-profile">
-        <div class="row">
-            <div class="user-prof-left">
-                <h1 class="username">{{$user->name}}</h1>
-                <img src="{{$user->image}}" alt="image" class="card-img-top rounded-circle img-fluid user-img-circle">
-            </div>
-            <div class="user-prof-right">
-                <p class="lead">
-                    <h2>Username: {{$user->username}}</h2>
-                    <h5>Email: {{$user->email}}</h5>
-                    <h5>Gender: {{$user->gender}}</h5>
-                    <h5>City: {{$user->city}}</h5>
-                    <h5>Country: {{$user->country}}</h5>
-                </p>
-                <div class="buttons-edit">
+    <div class="user-profile">
 
-                    <form method="POST" action="{{action('UserController@destroy',$user->id)}}">
-                        @method('DELETE')
-                        @csrf
-                        <input type="submit" value="Delete" class="btn btn-sm btn-red"></form>
-                    <form method="GET" action="{{action('UserController@edit',$user->id)}}">
-                        @csrf
-                        <input type="submit" value="Edit" class="btn btn-sm btn-amber"></form>
-                </div>
+            <div class="user-profile-left">
+                <img src="{{$user->image}}" alt="image" class="rounded-circle img-fluid img-detail">
+                <h1 class="username">{{$user->name}}</h1>
             </div>
-        </div>
+            <div class="user-profile-right">
+                <div class="lead">
+                    <p>Username:{{$user->username}}</p>
+                    <p>Email: {{$user->email}}</p>
+                    <p>Gender: {{$user->gender}}</p>
+                    <p>City: {{$user->city}}</p>
+                    <p>Country: {{$user->country}}</p>
+                    <div class="buttons-edit">
+
+                            <form method="POST" action="{{action('UserController@destroy',$user->id)}}">
+                                @method('DELETE')
+                                @csrf
+                                <input type="submit" value="Delete" class="btn btn-sm btn-red"></form>
+                            <form method="GET" action="{{action('UserController@edit',$user->id)}}">
+                                @csrf
+                                <input type="submit" value="Edit" class="btn btn-sm btn-amber"></form>
+                        </div>
+                </div>
+                
+            </div>
+
     </div>
 
 
@@ -100,7 +101,7 @@
         <div class="grid-container">
 
             @foreach ($user->events as $event)
-            <div class="card mb-2">
+            <div class="card card-event">
                 <div class="card-body">
 
                     <a href="{{action('EventController@show', $event->id)}}">{{$event->title}}
