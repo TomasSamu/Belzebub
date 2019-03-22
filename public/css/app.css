@@ -92,14 +92,14 @@
   flex-direction: column;
   justify-items: center;
   position: relative;
-  background-color: #91c7e5;
+  background-color: #F25B24;
   color: #F4F1EB;
   padding: 2em;
   padding-top: 6em;
 }
 .user-profile-right .lead p {
   font-size: 0.9em;
-  color: #212426;
+  color: #F4F1EB;
 }
 
 .user-img-circle {
@@ -387,19 +387,19 @@ h6 {
 
 .card-title {
   font-family: "Poppins", sans-serif;
-  font-size: 1.5em;
-  color: #F4F1EB;
+  font-size: 1.3em;
+  color: #212426;
 }
 
 .card-text {
   font-family: "Assistant", sans-serif;
   font-size: 1em;
   font-weight: 700;
-  color: black;
+  color: #212426;
 }
 
 .card-body {
-  background-color: #91c7e5;
+  background-color: #F4F1EB;
 }
 
 .card-img-top {
@@ -423,18 +423,24 @@ h6 {
   justify-content: space-between;
   align-items: center;
   font-size: 1em;
+  background-color: #F25B24;
 }
 .card-genre .card-body h5 {
   margin: 0.2;
   font-size: 1em;
+  color: #F4F1EB;
 }
 .card-genre .card-body .buttons-edit {
   margin: 0.5em;
 }
 
 .card-event {
-  display: flex;
+  display: inline-flex;
   flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 1em;
+  background-color: #F25B24;
 }
 .card-event .card-body {
   display: inline-flex;
@@ -443,16 +449,19 @@ h6 {
   align-items: center;
   font-size: 1em;
   font-family: "Poppins", sans-serif;
+  background-color: #F25B24;
 }
-.card-event .card-body a {
+.card-event a {
   text-decoration: none;
+  margin: 0.2;
+  font-size: 1em;
   color: #F4F1EB;
 }
-.card-event .card-body h5 {
+.card-event h5 {
   margin: 0.2;
   font-size: 1em;
 }
-.card-event .card-body .buttons-edit {
+.card-event .buttons-edit {
   margin: 0.5em;
 }
 

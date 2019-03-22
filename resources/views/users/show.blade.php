@@ -77,9 +77,9 @@
 
         <div class="grid-container"> .
             @foreach ($user->genres as $genre)
-            <div class="card card-genre">
+            <div class="card card-event">
                 <div class="card-body">
-                    <h5 class="card-title">{{$genre->name}}</h5>
+                    <a href="">{{$genre->name}}</a>
                     <div class="buttons-edit">
                         <form method="POST"
                         action="{{action('FeaturesController@removeGenreFromCollection',$genre->id)}}">
@@ -104,8 +104,10 @@
             <div class="card card-event">
                 <div class="card-body">
 
-                    <a href="{{action('EventController@show', $event->id)}}">{{$event->title}}
-                    </a>
+                    <div class="card-title">
+                        <a href="{{action('EventController@show', $event->id)}}">{{$event->title}}
+                        </a>
+                    </div>
                     <div class="buttons-edit">
                         <form method="POST" action="{{action('EventController@destroy', $event->id)}}">
                             @csrf
@@ -127,11 +129,13 @@
         <h2>I am attending these events:</h2>
         <div class="grid-container">
             @foreach ($user->attend_events as $event)
-            <div class="card mb-2">
+            <div class="card-event">
 
                 <div class="card-body">
-                    <a href="{{action('EventController@show', $event->id)}}">{{$event->title}}
-                    </a>
+                    <div class="card-title">
+                        <a href="{{action('EventController@show', $event->id)}}">{{$event->title}}
+                        </a>
+                    </div>
                     <div class="buttons-edit">
                         <form method="POST" action="{{action('FeaturesController@unattendEvent', $event->id)}}">
                             @csrf

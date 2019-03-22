@@ -1,8 +1,8 @@
 
 .card-title {
     font-family: $font-title;
-    font-size: 1.5em;
-    color: $extra-light;
+    font-size: 1.3em;
+    color: $extra-dark;
 }
 
 //also user-card-body
@@ -10,11 +10,11 @@
     font-family: $font-text;
     font-size: 1em;
     font-weight: 700;
-    color: black;
+    color:$extra-dark;
 }
 
 .card-body {
-    background-color: $secondary;
+    background-color: $extra-light;
 }
 
 .card-img-top {
@@ -32,28 +32,26 @@
     display: flex;
     flex-direction: row;
 
+
     .card-body {
         display: inline-flex;
         flex-direction: row;
         justify-content: space-between;
         align-items: center;
         font-size: 1em; 
-
-        h5{
-            margin: 0.2;
-            font-size: 1em;
-        }
-
-        .buttons-edit {
-            margin: 0.5em;
-        }
+        background-color: $tertiary;
+ }
     }
 }
 
 
 .card-event {
-    display: flex;
+    display: inline-flex;
     flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1em; 
+    background-color: $tertiary;
 
     .card-body {
         display: inline-flex;
@@ -62,21 +60,17 @@
         align-items: center;
         font-size: 1em; 
         font-family: $font-title;
-
-
-        a {
-            text-decoration: none;
-            color: $extra-light;
-        }
-
-
-        h5{
-            margin: 0.2;
-            font-size: 1em;
-        }
-
-        .buttons-edit {
-            margin: 0.5em;
-        }
+        background-color: $tertiary;
     }
+    a h5{
+        text-decoration: none;
+        margin: 0.2;
+        font-size: 1em;
+        color: $extra-light;
+    } 
+
+    .buttons-edit {
+        margin: 0.5em;
+    }
+   
 }

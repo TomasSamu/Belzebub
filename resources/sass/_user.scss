@@ -39,7 +39,7 @@
     flex-direction: column;
     justify-items: center;
     position: relative;
-    background-color: $secondary;
+    background-color: $tertiary;
     color: $extra-light;
     padding: 2em;
     padding-top: 6em;
@@ -48,7 +48,7 @@
 
         p {
             font-size: 0.9em;
-            color: $extra-dark;
+            color: $extra-light;
         }
     }
 }
