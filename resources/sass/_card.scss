@@ -49,3 +49,34 @@
         }
     }
 }
+
+
+.card-event {
+    display: flex;
+    flex-direction: row;
+
+    .card-body {
+        display: inline-flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        font-size: 1em; 
+        font-family: $font-title;
+
+
+        a {
+            text-decoration: none;
+            color: $extra-light;
+        }
+
+
+        h5{
+            margin: 0.2;
+            font-size: 1em;
+        }
+
+        .buttons-edit {
+            margin: 0.5em;
+        }
+    }
+}

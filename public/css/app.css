@@ -55,26 +55,59 @@
   min-height: 90vh;
 }
 
-.user-img-circle {
+.user-profile {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  justify-content: center;
+  padding: 0;
+  margin-top: 3em;
+}
+
+.user-profile-left {
+  position: absolute;
+  top: 6em;
+  z-index: 6999;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.user-profile-left .username {
+  background-color: #212426;
+  color: #D3D0CB;
+  padding: 0.5em;
+}
+.user-profile-left .img-detail {
   padding: 2em 2em 2em 2em;
-  margin: auto;
-  height: 15em;
-  width: 15em;
+  height: 20em;
+  width: 20em;
 }
 
 .user-card-body {
   background-color: lightgrey;
 }
 
-.user-profile {
+.user-profile-right {
   display: flex;
   flex-direction: column;
-  text-align: center;
+  justify-items: center;
+  position: relative;
+  background-color: #91c7e5;
+  color: #F4F1EB;
+  padding: 2em;
+  padding-top: 6em;
+}
+.user-profile-right .lead p {
+  font-size: 0.9em;
+  color: #212426;
 }
 
-.user-profile-pic {
+.user-img-circle {
   width: 10em;
   height: auto;
+  display: flex;
+  align-self: center;
+  padding: 0.5em;
 }
 
 .user-collection {
@@ -184,6 +217,7 @@ h3.subtitle_welcome {
   color: #D3D0CB;
   font-size: 0.9em;
   font-family: "Assistant", sans-serif;
+  z-index: 8999;
 }
 .navbar .navbar-toggler-icon {
   color: #F25B24;
@@ -209,6 +243,7 @@ h3.subtitle_welcome {
   margin-top: 3em;
   padding: 0.6em 3em 0.4em 3em;
   justify-content: space-between;
+  z-index: 7999;
 }
 .sec-navbar .pagination {
   margin-bottom: 0;
@@ -330,7 +365,6 @@ h6 {
   display: flex;
   flex-direction: row;
   justify-content: center;
-  margin-bottom: 2em;
   margin-top: auto;
 }
 
@@ -395,6 +429,30 @@ h6 {
   font-size: 1em;
 }
 .card-genre .card-body .buttons-edit {
+  margin: 0.5em;
+}
+
+.card-event {
+  display: flex;
+  flex-direction: row;
+}
+.card-event .card-body {
+  display: inline-flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 1em;
+  font-family: "Poppins", sans-serif;
+}
+.card-event .card-body a {
+  text-decoration: none;
+  color: #F4F1EB;
+}
+.card-event .card-body h5 {
+  margin: 0.2;
+  font-size: 1em;
+}
+.card-event .card-body .buttons-edit {
   margin: 0.5em;
 }
 
