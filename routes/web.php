@@ -16,7 +16,11 @@
 // });
 Auth::routes();
 
+
 Route::resource('/events', 'EventController');
+Route::get('/listByDate', 'EventController@eventsByDate');
+Route::get('/listByLocation', 'EventController@eventsByLocation');
+
 
 
 Route::get('/home', 'HomeController@index')->name('home');
@@ -35,6 +39,8 @@ Route::delete('/users/{user}/unattend', 'FeaturesController@unattendEvent');
 
 Route::get('/events/attend/{event}', 'FeaturesController@attendEvent');
 Route::post('/events/attend/{event}', 'FeaturesController@attendEvent');
+
+
 
 
 Route::resource('/games', 'BoardGameController');
