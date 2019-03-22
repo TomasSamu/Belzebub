@@ -26,3 +26,26 @@
       }
 }
 
+// Card genre
+
+.card-genre {
+    display: flex;
+    flex-direction: row;
+
+    .card-body {
+        display: inline-flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        font-size: 1em; 
+
+        h5{
+            margin: 0.2;
+            font-size: 1em;
+        }
+
+        .buttons-edit {
+            margin: 0.5em;
+        }
+    }
+}

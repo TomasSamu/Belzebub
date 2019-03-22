@@ -264,6 +264,11 @@ div.modal div.modal-backdrop {
   background-color: darkgray;
 }
 
+.comment-left {
+  display: flex;
+  flex-direction: row;
+}
+
 .comments-reply {
   padding-left: 5em;
   background-color: #eceaea;
@@ -273,13 +278,11 @@ div.modal div.modal-backdrop {
   background-color: #cfcece;
   display: flex;
   flex-direction: column;
-  border: 0.1em solid black;
 }
 .show-reply .reply {
   background-color: #aaa9a9;
   display: flex;
   flex-direction: column;
-  border: 0.2em solid black;
 }
 
 p {
@@ -370,6 +373,25 @@ h6 {
   .card-img-top {
     min-height: 10em;
   }
+}
+
+.card-genre {
+  display: flex;
+  flex-direction: row;
+}
+.card-genre .card-body {
+  display: inline-flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 1em;
+}
+.card-genre .card-body h5 {
+  margin: 0.2;
+  font-size: 1em;
+}
+.card-genre .card-body .buttons-edit {
+  margin: 0.5em;
 }
 
 * {
