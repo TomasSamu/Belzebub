@@ -21,6 +21,12 @@
     </div>
 
     <div class="buttons-edit">
+        <form action="{{action('FeaturesController@attendEvent', $event->id)}}" method="POST" class="ml-2">
+            @csrf
+            <button type="submit" class="btn btn-primary btn-icon" value="Attend"><i
+                    class="fas fa-user-check"></i></button>
+        </form>
+
         <form method="POST" action="{{action('EventController@destroy',$event->id)}}">
             @method('DELETE')
             @csrf
@@ -41,10 +47,10 @@
                 <p><img src="{{$attendee->image}}" alt="image" class="rounded-circle"></p>
             </div>
             @endforeach
-    
-            
+
+
         </div>
-    
+
         <div class="container">
             @auth
             <form action="{{action('CommentController@store', $event->id)}}" method="post">
@@ -53,17 +59,17 @@
                     <label for="text">Your comment:</label><br>
                     <textarea name="text" id="comment" cols="50" rows="5"></textarea>
                 </div>
-    
+
                 <div class="form-group">
-                    <input type="submit" value="submit comment" class="btn btn-sm btn-amber" >
+                    <input type="submit" value="submit comment" class="btn btn-sm btn-amber">
                 </div>
             </form>
             @endauth
 
 
             @foreach ($event->mainComments as $comment)
-                @include('events.comments')
-            @endforeach 
+            @include('events.comments')
+            @endforeach
 
         </div>
     </div>

@@ -55,23 +55,6 @@
   min-height: 90vh;
 }
 
-.comment {
-  display: flex;
-}
-
-.comment .comment-left {
-  width: 30%;
-}
-
-.comment .comment-right {
-  width: 70%;
-}
-
-.comment .comment-right h2 {
-  border: solid #9199a1;
-  border-width: 0 0 1px 0;
-}
-
 .user-img-circle {
   padding: 2em 2em 2em 2em;
   margin: auto;
@@ -258,28 +241,52 @@ div.modal div.modal-backdrop {
   border-radius: 0px;
 }
 
-.comment {
+.comments {
   display: flex;
   flex-direction: row;
-  background-color: darkgray;
+  justify-content: space-between;
+  border: 0.2em solid black;
 }
 
 .comments-reply {
   padding-left: 5em;
-  background-color: #eceaea;
 }
 
-.show-reply {
-  background-color: #cfcece;
+.comment-head {
   display: flex;
-  flex-direction: column;
-  border: 0.1em solid black;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1em;
+  background-color: #69CEB1;
 }
-.show-reply .reply {
-  background-color: #aaa9a9;
+.comment-head .user-name {
+  font-family: "Poppins", sans-serif;
+}
+
+.comment-right {
   display: flex;
-  flex-direction: column;
-  border: 0.2em solid black;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1em;
+  background-color: #393E41;
+  color: #D3D0CB;
+}
+
+#comment-reply {
+  background-color: #D3D0CB;
+  color: #393E41;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1em;
+}
+#comment-reply .form-group .reply {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 1em;
 }
 
 p {
@@ -370,6 +377,25 @@ h6 {
   .card-img-top {
     min-height: 10em;
   }
+}
+
+.card-genre {
+  display: flex;
+  flex-direction: row;
+}
+.card-genre .card-body {
+  display: inline-flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 1em;
+}
+.card-genre .card-body h5 {
+  margin: 0.2;
+  font-size: 1em;
+}
+.card-genre .card-body .buttons-edit {
+  margin: 0.5em;
 }
 
 * {

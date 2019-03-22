@@ -76,7 +76,7 @@
 
         <div class="grid-container"> .
             @foreach ($user->genres as $genre)
-            <div class="card mb-2">
+            <div class="card card-genre">
                 <div class="card-body">
                     <h5 class="card-title">{{$genre->name}}</h5>
                     <div class="buttons-edit">
