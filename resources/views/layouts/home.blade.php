@@ -49,10 +49,17 @@
 
     <script>
         $(function () {
-
-            console.log($('#datetimepicker1'));
-                $('#datetimepicker1').datetimepicker();
+                $('#datetimepicker1').datetimepicker({
+                    format: 'YYYY-MM-DD HH:mm'
+                });
         });
+
+        $(function () {
+                $('#datetimepicker4').datetimepicker({
+                    format: 'YYYY-MM-DD'
+                });
+        });
+        
     </script>
     @yield('scripts')
 

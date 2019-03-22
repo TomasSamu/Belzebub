@@ -17,8 +17,9 @@ class EventController extends Controller
      */
     public function index() 
     {
-        $events = Event::paginate(3);
-         return view('events.list_of_events', compact(['events']));
+        $events = Event::paginate(5);
+        $locations = Location::all();
+         return view('events.list_of_events', compact(['events', 'locations']));
     }
 
     /**
@@ -40,12 +41,15 @@ class EventController extends Controller
      */
     public function store(Request $request)
     {
+
+        $dateTimeRaw = $request->date_time;
+        $dateTime = preg_split("/[\s,]+/", $dateTimeRaw);
+          
         $validator = $request->validate([
             'title' => 'required',
             'text' => 'required|max:250',
             'num_of_players' => 'required|numeric',
-            'date' => 'required|date',
-            'time' => 'required',
+            'date_time' => 'required',
             'location_id' => 'required',
         ]);
 
@@ -54,8 +58,8 @@ class EventController extends Controller
         $event->user_id = \Auth::id();
         $event->text = $request->text;
         $event->num_of_players = $request->num_of_players;
-        $event->date = $request->date;
-        $event->time = $request->time;
+        $event->date = $dateTime[0];
+        $event->time = $dateTime[1];
         $event->location_id = $request->location_id;
         $event->save();
 
@@ -122,7 +126,7 @@ class EventController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  int  $id
+     * @param  int  $id 
      * @return \Illuminate\Http\Response
      */
     public function destroy($id)
@@ -130,6 +134,23 @@ class EventController extends Controller
         $event = Event::findOrFail($id);
         $event->delete();
         return redirect(action('EventController@index'))->with('success','you successfully deleted event: '.$event->title); 
+
+    }
+
+    public function eventsByDate(Request $request)
+    {
+        $date = $request->dateFilter;
+        $events = Event::where('date', $date)->get();
+
+        return view('events.events_by_date', compact(['events', 'date']));
+    }
+
+    public function eventsByLocation(Request $request)
+    {
+        $locations = Location::all();
+        $location = $request->location_id;
+        $events = Event::where('location_id', $location)->get();
+        return view('events.events_by_location', compact(['events', 'location', 'locations']));
 
     }
 
