@@ -12,54 +12,18 @@ class EventSeeder extends Seeder
      */
     public function run()
     {
-        $events = [
-            [
-                "user_id" => "1",
-                "location_id" => "1",
-                "title" => "Monday play",
-                "text" => "Regular Monday session",
+        $events = [];
+        for ($i;$i === 50; $i++) {
+            $events +=  [
+                "user_id" => rand(1,6),
+                "location_id" => rand(1,7),
+                "title" => "Dummy Event n." . $i,
+                "text" => "Regular Boardgame session",
                 "time" => "19:00",
-                "date" => "2019-03-11",
-                "num_of_players" => "3"
-            ],
-            [
-                "user_id" => "1",
-                "location_id" => "2",
-                "title" => "Tuesday play",
-                "text" => "Regular Tuesday session",
-                "time" => "18:00",
-                "date" => "2019-03-12",
-                "num_of_players" => "7"
-            ],
-            [
-                "user_id" => "2",
-                "location_id" => "2",
-                "title" => "Wednesday play",
-                "text" => "Regular Wednesday session",
-                "time" => "20:00",
-                "date" => "2019-03-13",
-                "num_of_players" => "8"
-            ],
-            [
-                "user_id" => "3",
-                "location_id" => "4",
-                "title" => "Scrabble",
-                "text" => "Regular Scrabble",
-                "time" => "17:00",
-                "date" => "2019-03-13",
-                "num_of_players" => "8"
-            ],
-            [
-                "user_id" => "4",
-                "location_id" => "4",
-                "title" => "Mahjong",
-                "text" => "Check with organizer for more info",
-                "time" => "19:00",
-                "date" => "2019-03-13",
-                "num_of_players" => "8"
-            ],
-        ];
-
+                "date" => "2019-" . rand(0,28) . "-" . rand(1,12),
+                "num_of_players" => rand(1,6)
+            ];
+        }
         foreach($events as $event)
         {
             Event::create($event);
