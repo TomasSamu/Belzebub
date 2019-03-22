@@ -21,8 +21,8 @@ class LocationSeeder extends Seeder
                     "city" => "Praha",
                     "country" => "Czech Republic",
                     "web" => "http://www.tchaiovna.cz",
-                    "rating" => "9.0"
-
+                    "rating" => "9.0",
+                    "image" => "https://maps.google.com/maps?q=A%20maze%20in%20tchaiovna&t=&z=13&ie=UTF8&iwloc=&output=embed"
                 ],
                 [
                     "name" => "Nálet",
@@ -32,9 +32,9 @@ class LocationSeeder extends Seeder
                     "city" => "Praha",
                     "country" => "Czech Republic",
                     "web" => "https://www.facebook.com/naletnaletnalet",
-                    "rating" => "9.8"
+                    "rating" => "9.8",
+                    "image" => "https://maps.google.com/maps?q=nalet&t=&z=13&ie=UTF8&iwloc=&output=embed"
                 ],
-
                 [
                     "name" => "Paluba",
                     "description" => "Board Games Club",
@@ -43,9 +43,9 @@ class LocationSeeder extends Seeder
                     "city" => "Praha",
                     "country" => "Czech Republic",
                     "web" => "http://www.paluba.cz/",
-                    "rating" => "9.7"
+                    "rating" => "9.7",
+                    "image" => "https://maps.google.com/maps?q=Paluba&t=&z=13&ie=UTF8&iwloc=&output=embed"
                 ],
-
                 [
                     "name" => "Black Knight",
                     "description" => "Board Games Club",
@@ -54,9 +54,9 @@ class LocationSeeder extends Seeder
                     "city" => "Praha",
                     "country" => "Czech Republic",
                     "web" => "http://www.cernyrytir.cz/",
-                    "rating" => "9.7"
-                ],
-                
+                    "rating" => "9.7",
+                    "image" => "https://maps.google.com/maps?q=Black%20Knight&t=&z=13&ie=UTF8&iwloc=&output=embed"
+                ],               
                 [
                     "name" => "Geekárna",
                     "description" => "Café Bar",
@@ -65,7 +65,8 @@ class LocationSeeder extends Seeder
                     "city" => "Praha",
                     "country" => "Czech Republic",
                     "web" => "https://www.geekarna.cz",
-                    "rating" => "8.5"
+                    "rating" => "8.5",
+                    "image" => "https://maps.google.com/maps?q=Geek%C3%A1rna&t=&z=13&ie=UTF8&iwloc=&output=embed"
                 ],
                 [
                     "name" => "Boards and Brews",
@@ -74,8 +75,9 @@ class LocationSeeder extends Seeder
                     "zip_code" => "10100",
                     "city" => "Praha",
                     "country" => "Czech Republic",
-                    "web" => "www.",
-                    "rating" => "9.9"
+                    "web" => "http://www.bohemiaboardsandbrews.com",
+                    "rating" => "9.9",
+                    "image" => "https://maps.google.com/maps?q=Boards%20and%20Brews&t=&z=13&ie=UTF8&iwloc=&output=embed"
                 ],
                 [
                     "name" => "Restaurace U Pecků",
@@ -85,7 +87,8 @@ class LocationSeeder extends Seeder
                     "city" => "Praha",
                     "country" => "Czech Republic",
                     "web" => "not available",
-                    "rating" => "7.5"
+                    "rating" => "7.5",
+                    "image" => "https://maps.google.com/maps?q=Restaurace%20U%20Peck%C5%AF&t=&z=13&ie=UTF8&iwloc=&output=embed"
                 ],
             ];
 
