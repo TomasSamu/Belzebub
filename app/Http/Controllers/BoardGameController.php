@@ -142,4 +142,13 @@ class BoardGameController extends Controller
         return redirect(action('BoardGameController@index'))->with('success','you successfully deleted game: '.$game->name);
     }
 
+    public function search(Request $request){
+
+/* return 'abc'; */
+
+        $search = $request->search;
+        $games = Boardgame::where('name', 'like', '%'.$search.'%')->get();
+        return $games;
+     }
+
 }

@@ -18,10 +18,7 @@ Auth::routes();
 
 
 Route::resource('/events', 'EventController');
-Route::get('/listByDate', 'EventController@eventsByDate');
-Route::get('/listByLocation', 'EventController@eventsByLocation');
-
-
+Route::get('/listByParam', 'EventController@eventsByParam');
 
 Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/', 'HomeController@welcome')->name('welcome'); 
@@ -42,7 +39,7 @@ Route::post('/events/attend/{event}', 'FeaturesController@attendEvent');
 
 
 
-
+Route::get('/games/filter', 'BoardGameController@search');
 Route::resource('/games', 'BoardGameController');
 Route::resource('/locations', 'LocationController');
 Route::resource('/users', 'UserController');
