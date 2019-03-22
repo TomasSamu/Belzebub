@@ -55,23 +55,6 @@
   min-height: 90vh;
 }
 
-.comment {
-  display: flex;
-}
-
-.comment .comment-left {
-  width: 30%;
-}
-
-.comment .comment-right {
-  width: 70%;
-}
-
-.comment .comment-right h2 {
-  border: solid #9199a1;
-  border-width: 0 0 1px 0;
-}
-
 .user-img-circle {
   padding: 2em 2em 2em 2em;
   margin: auto;
@@ -256,33 +239,6 @@ div.modal div.modal-backdrop {
   width: 100%;
   z-index: 9999;
   border-radius: 0px;
-}
-
-.comment {
-  display: flex;
-  flex-direction: row;
-  background-color: darkgray;
-}
-
-.comment-left {
-  display: flex;
-  flex-direction: row;
-}
-
-.comments-reply {
-  padding-left: 5em;
-  background-color: #eceaea;
-}
-
-.show-reply {
-  background-color: #cfcece;
-  display: flex;
-  flex-direction: column;
-}
-.show-reply .reply {
-  background-color: #aaa9a9;
-  display: flex;
-  flex-direction: column;
 }
 
 p {
