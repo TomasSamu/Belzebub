@@ -12,11 +12,11 @@
     <div class="event-info">
         <div class="lead">
             <h5>Descriptions: {{$event->text}}</h5>
-            <h5>Location: {{$event->location->name}}</h5>
+            <h5>Location: <a href="{{action('LocationController@show',$event->location->id )}}">{{$event->location->name}}</a></h5>
             <h5>Number of players: {{$event->num_of_players}}</h5>
             <h5>Date: {{$event->date}}</h5>
             <h5>Time: {{$event->time}}</h5>
-            <h5>Organizer: {{$created_by->name}}</h5>
+            <h5>Organizer: <a href a href="{{action('UserController@show', $created_by->id )}}">{{$created_by->name}}</a></h5>
         </div>
     </div>
 
