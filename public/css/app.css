@@ -63,6 +63,11 @@
   padding: 0;
   margin-top: 3em;
 }
+@media only screen and (max-width: 400px) {
+  .user-profile {
+    margin-top: -3em;
+  }
+}
 
 .user-profile-left {
   position: absolute;
@@ -71,6 +76,13 @@
   display: flex;
   flex-direction: row;
   align-items: center;
+}
+@media only screen and (max-width: 400px) {
+  .user-profile-left {
+    flex-direction: column;
+    position: relative;
+    top: 0;
+  }
 }
 .user-profile-left .username {
   background-color: #212426;
@@ -96,6 +108,11 @@
   color: #F4F1EB;
   padding: 2em;
   padding-top: 6em;
+}
+@media only screen and (max-width: 400px) {
+  .user-profile-right {
+    padding-top: 2em;
+  }
 }
 .user-profile-right .lead p {
   font-size: 0.9em;
@@ -324,6 +341,24 @@ div.modal div.modal-backdrop {
   padding: 1em;
 }
 
+a {
+  text-decoration: none;
+  color: inherit;
+}
+a a:link {
+  text-decoration: none;
+  color: inherit;
+}
+a A:visited {
+  text-decoration: none;
+}
+a A:hover {
+  text-decoration: none;
+}
+a A:active {
+  text-decoration: none;
+}
+
 p {
   font-family: "Assistant", sans-serif;
   line-height: 0.8em;
@@ -413,19 +448,6 @@ h6 {
   }
 }
 
-.card-genre {
-  display: flex;
-  flex-direction: row;
-}
-.card-genre .card-body {
-  display: inline-flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-  font-size: 1em;
-  background-color: #F25B24;
-}
-
 .card-event {
   display: inline-flex;
   flex-direction: row;
@@ -442,12 +464,16 @@ h6 {
   font-size: 1em;
   font-family: "Poppins", sans-serif;
   background-color: #F25B24;
+  border-radius: 1em;
 }
-.card-event a h5 {
+.card-event .card-body a {
   text-decoration: none;
   margin: 0.2;
   font-size: 1em;
   color: #F4F1EB;
+}
+.card-event .card-body a a:hover {
+  color: #212426;
 }
 .card-event .buttons-edit {
   margin: 0.5em;

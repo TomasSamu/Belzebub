@@ -26,22 +26,7 @@
       }
 }
 
-// Card genre
-
-.card-genre {
-    display: flex;
-    flex-direction: row;
-
-
-    .card-body {
-        display: inline-flex;
-        flex-direction: row;
-        justify-content: space-between;
-        align-items: center;
-        font-size: 1em; 
-        background-color: $tertiary;
- }
-    }
+// Card genre and event
 
 .card-event {
     display: inline-flex;
@@ -51,6 +36,7 @@
     font-size: 1em; 
     background-color: $tertiary;
 
+
     .card-body {
         display: inline-flex;
         flex-direction: row;
@@ -59,17 +45,37 @@
         font-size: 1em; 
         font-family: $font-title;
         background-color: $tertiary;
-    }
+        border-radius: 1em;
 
-    a h5 {
-        text-decoration: none;
-        margin: 0.2;
-        font-size: 1em;
-        color: $extra-light;
-    } 
+        a{
+            text-decoration: none;
+            margin: 0.2;
+            font-size: 1em;
+            color: $extra-light;
+
+            a:hover {
+                color: $extra-dark;
+            }
+        } 
+    }
 
     .buttons-edit {
         margin: 0.5em;
     }
    
 }
+
+// .card-genre {
+//     display: flex;
+//     flex-direction: row;
+
+
+//     .card-body {
+//         display: inline-flex;
+//         flex-direction: row;
+//         justify-content: space-between;
+//         align-items: center;
+//         font-size: 1em; 
+//         background-color: $tertiary;
+//  }
+//     }
