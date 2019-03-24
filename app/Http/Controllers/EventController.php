@@ -138,7 +138,7 @@ class EventController extends Controller
     {
         $event = Event::findOrFail($id);
         $event->delete();
-        return redirect(action('EventController@index'))->with('success','you successfully deleted event: '.$event->title); 
+        return back()->with('success','you successfully deleted event: '.$event->title); 
     }
 
     public function eventsByParam(Request $request)

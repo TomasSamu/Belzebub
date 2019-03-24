@@ -59,6 +59,7 @@
                     <h4 class="card-title">{{$boardgame->name}}</h4>
 
                     {{-- add picture --}}
+                    @if (Auth::id() == $user->id)
                     <div class="buttons-edit">
                         <form method="POST"
                             action="{{action('FeaturesController@removeGameFromCollection',$boardgame->id)}}">
@@ -72,6 +73,7 @@
 
                         </form>
                     </div>
+                    @endif
                 </div>
             </div>
             @endforeach
@@ -87,6 +89,7 @@
             <div class="card card-event rounded-pill">
                 <div class="card-body">
                     <a href="">{{$genre->name}}</a>
+                    @if (Auth::id() == $user->id)
                     <div class="buttons-edit">
                         <form method="POST"
                         action="{{action('FeaturesController@removeGenreFromCollection',$genre->id)}}">
@@ -94,6 +97,7 @@
                         <button type="submit" value="remove" class="btn btn-xs btn-red"><i
                         class="far fa-trash-alt"></i></button></form>
                     </div>
+                    @endif
                 </div>
             </div>
             @endforeach
@@ -103,7 +107,7 @@
 
     <div class="container">
 
-        @if ($user->events)
+        @if ($user->events->count() > 0)
         <h2>I am organizing these events:</h2>
         <div class="grid-container">
 
@@ -113,6 +117,7 @@
 
                         <a href="{{action('EventController@show', $event->id)}}">{{$event->title}}
                         </a>
+                    @if (Auth::id() == $user->id)
                     <div class="buttons-edit">
                         <form method="POST" action="{{action('EventController@destroy', $event->id)}}">
                             @csrf
@@ -121,16 +126,21 @@
                                     class="far fa-trash-alt"></i></button>
                         </form>
                     </div>
+                    @endif
                 </div>
             </div>
             @endforeach
 
+            @else
+            <h2>I am not organizing any events yet:</h2>
+            <p><a href="{{action('EventController@create')}}"> Create new event</a><p>
+        
             @endif
         </div>
     </div>
 
     <div class="container">
-
+        @if ($user->attend_events()->count() > 0)
         <h2>I am attending these events:</h2>
         <div class="grid-container">
             @foreach ($user->attend_events as $event)
@@ -139,6 +149,7 @@
                 <div class="card-body">
                         <a href="{{action('EventController@show', $event->id)}}">{{$event->title}}
                         </a>
+                    @if (Auth::id() == $user->id)
                     <div class="buttons-edit">
                         <form method="POST" action="{{action('FeaturesController@unattendEvent', $event->id)}}">
                             @csrf
@@ -147,11 +158,17 @@
                                     class="fas fa-ban"></i></button>
                         </form>
                     </div>
+                    @endif
 
                 </div>
             </div>
             @endforeach
         </div>
+
+        @else
+        <h2>I am not attending any events yet</h2>
+        <p><a href="{{action('EventController@index')}}"> Check out the coming events</a><p>
+        @endif
     </div>
 
 
