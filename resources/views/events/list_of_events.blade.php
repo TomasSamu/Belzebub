@@ -10,36 +10,23 @@
 
     <h2 class="title-bar">Events</h2>
 
-@include('layouts._searchbar_events')
+ @include('layouts._searchbar_events')
 
 <div class="pagination pg-amber">{{$events->onEachSide(1)->links()}}</div>
 </div>
 
-{{-- filter events by date --}}
-{{--  <div class="container eventSelector">  
-            <div class="form-group">
-                <form action="{{action('FeaturesController@eventsByDate')}}" method="get">
-@csrf
-<div class="input-group date" id="datetimepicker4" data-target-input="nearest">
-    <input type="text" name="dateFilter" class="form-control datetimepicker-input" data-target="#datetimepicker4" />
-    <div class="input-group-append" data-target="#datetimepicker4" data-toggle="datetimepicker">
-        <div class="input-group-text"><i class="fa fa-calendar"></i></div>
-    </div>
-
-</div>
-<button type="submit" class='bth btn-primary'> Submit </button>
-</form>
-</div>
-
-</div> --}}
 <h2>List of all events</h2>
 
 <div class="grid-container">
 
-
     {{-- Cards --}}
 
     @foreach ($events as $event)
+
+    {{-- average Rating per event query --}}
+    @php
+        $avgRating = round(App\Rating::where('event_id', $event->id)->avg('rating'),2);
+    @endphp
 
     <div class="card">
         <div class="view overlay">
@@ -65,23 +52,25 @@
             <p class="card-text">Number of Attendees: {{$event->attendees()->count()}} (the event is full)</p>
             @else
             <p class="card-text">Number of Attendees: {{$event->attendees()->count()}}</p>
+            <p>Average Rating: {{$avgRating}}</p>
             @endif
 
 
             <div class="buttons-edit">
+                @auth
                 <form action=" {{action('EventController@show', $event->id)}}" method="GET" class="ml-2">
                     @csrf
                     <button type="submit" value="Detail" class="btn btn-success btn-icon"><i
                             class="fas fa-info"></i></button>
                 </form>
-                @auth
+
                 @if ($event->attendees()->count() < $event->num_of_players)
                     <form action="{{action('FeaturesController@attendEvent', $event->id)}}" method="POST" class="ml-2">
                         @csrf
                         <button type="submit" class="btn btn-primary btn-icon" value="Attend"><i
                                 class="fas fa-user-check"></i></button>
                     </form>
-                    @endauth
+                    
                     @endif
 
                     @can('admin')
@@ -98,6 +87,11 @@
                                 class="far fa-trash-alt"></i></button>
                     </form>
                     @endcan
+                    @endauth
+
+                    @guest
+                     <p>Login to see details</p>   
+                    @endguest
             </div>
 
 

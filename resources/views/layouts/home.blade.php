@@ -69,7 +69,7 @@
                     return response.json();
                 })
                 .then(function(myGames) {
-                    console.log(JSON.stringify(myGames));
+                    
 
                     let searchResult = document.querySelector('#search_results');
                     searchResult.innerHTML ='';

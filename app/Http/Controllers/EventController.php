@@ -7,6 +7,7 @@ use App\Event;
 use App\Location;
 use App\Comment;
 use App\User;
+use App\Rating;
 
 class EventController extends Controller
 {
@@ -19,7 +20,9 @@ class EventController extends Controller
     {
         $events = Event::paginate(5);
         $locations = Location::all();
-         return view('events.list_of_events', compact(['events', 'locations']));
+        
+
+        return view('events.list_of_events', compact(['events', 'locations']));
     }
 
     /**
@@ -79,8 +82,10 @@ class EventController extends Controller
         $event = Event::find($id);
      /*    $location = Location::find($event->location_id); */
         /* $comments = Comment::where('event_id',$id)->get(); */
+        $avgRating = round(Rating::where('event_id', $id)->avg('rating'), 2);
+
         $created_by = User::where('id', $event->user_id)->first();
-        return view('events.detail',compact(['event', 'created_by']));
+        return view('events.detail',compact(['event', 'created_by', 'avgRating']));
         
     }
 
@@ -151,17 +156,37 @@ class EventController extends Controller
             $eventQuery->where('location_id', $venue_id);
             $venue = Location::findOrFail($venue_id);
         } else {
-            $venue = Location::all();
+            $venue=null;
         }
-    
+      
         $events = $eventQuery->get();
-
-
-        //->where('location_id', $venue)->get();
-
         $locations = Location::all(); //needed for dropdown
         
         return view('events.events_filter', compact(['events', 'venue', 'locations', 'date']));
     }
+
+    public function rating(Request $request, $id)
+    {
+        $rate = Rating::where('event_id', $id)->where('user_id', \Auth::id())->first();
+        if($rate){
+
+            $rate->event_id = $id;
+            $rate->rating = $request->rating;
+            $rate->user_id = \Auth::id();
+            $rate->update();
+            return back()->with('warning', 'You changed your vote to '.$request->rating);
+        } else {
+        
+            $rate = new Rating;
+            $rate->event_id = $id;
+            $rate->rating = $request->rating;
+            $rate->user_id = \Auth::id();
+            $rate->save();
+
+        }
+
+         return back()->with('success', 'You just voted '.$request->rating);; 
+    }
+
 
 }

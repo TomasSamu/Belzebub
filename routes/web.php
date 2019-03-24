@@ -20,6 +20,9 @@ Auth::routes();
 Route::resource('/events', 'EventController');
 Route::get('/listByParam', 'EventController@eventsByParam');
 
+Route::get('/events/rating/{event}', 'EventController@rating');
+Route::post('/events/rating/{event}', 'EventController@rating');
+
 Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/', 'HomeController@welcome')->name('welcome'); 
 
@@ -36,8 +39,6 @@ Route::delete('/users/{user}/unattend', 'FeaturesController@unattendEvent');
 
 Route::get('/events/attend/{event}', 'FeaturesController@attendEvent');
 Route::post('/events/attend/{event}', 'FeaturesController@attendEvent');
-
-
 
 Route::get('/games/filter', 'BoardGameController@search');
 Route::resource('/games', 'BoardGameController');

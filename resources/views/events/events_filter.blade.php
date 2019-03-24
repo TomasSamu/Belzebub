@@ -15,10 +15,14 @@
 
 </div>
 
-@if($date==null)
-<h2>All events</h2>
+@if ($events->count() == 0)
+    <h2>There are no events to show, create your own and invite friends :)</h2>
 @else
-<h2> Events happening on {{$date}}</h2>
+    @if($date==null && $venue!=null)
+        <h2>All events at: {{$venue->name}}</h2>
+    @else
+        <h2> Events happening on {{$date}}</h2>
+    @endif
 @endif
 
 <div class="grid-container">

@@ -22,16 +22,23 @@
                     <p>Gender: {{$user->gender}}</p>
                     <p>City: {{$user->city}}</p>
                     <p>Country: {{$user->country}}</p>
-                    <div class="buttons-edit">
 
-                            <form method="POST" action="{{action('UserController@destroy',$user->id)}}">
-                                @method('DELETE')
-                                @csrf
-                                <input type="submit" value="Delete" class="btn btn-sm btn-red"></form>
-                            <form method="GET" action="{{action('UserController@edit',$user->id)}}">
-                                @csrf
-                                <input type="submit" value="Edit" class="btn btn-sm btn-amber"></form>
+                    @php
+                        $isAdmin = App\User::find(Auth::id());   
+                    @endphp
+
+                    @if (Auth::id() == $user->id || Auth::id()==$isAdmin->is_admin)
+                        <div class="buttons-edit">                            
+                                <form method="POST" action="{{action('UserController@destroy',$user->id)}}">
+                                    @method('DELETE')
+                                    @csrf
+                                    <input type="submit" value="Delete" class="btn btn-sm btn-red"></form>
+                                <form method="GET" action="{{action('UserController@edit',$user->id)}}">
+                                    @csrf
+                                    <input type="submit" value="Edit" class="btn btn-sm btn-amber"></form>
                         </div>
+                    @endif
+                    
                 </div>
                 
             </div>

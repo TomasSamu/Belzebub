@@ -17,6 +17,7 @@
             <h5>Date: {{$event->date}}</h5>
             <h5>Time: {{$event->time}}</h5>
             <h5>Organizer: <a href a href="{{action('UserController@show', $created_by->id )}}">{{$created_by->name}}</a></h5>
+            <h5>Average rating: {{$avgRating}}</h5>
         </div>
     </div>
 
@@ -36,7 +37,17 @@
             @csrf
             <button type="submit" value="Edit" class="btn btn-icon btn-amber"><i class="fas fa-pen-alt"></i></button>
         </form>
+
     </div>
+    <form method="POST" action="{{action('EventController@rating', $event->id)}}">
+            @csrf
+            <input type="radio" name="rating" value="1" class="btn btn-icon btn-amber" /> <span>1</span>
+            <input type="radio" name="rating" value="2" class="btn btn-icon btn-amber" /> <span>2</span>
+            <input type="radio" name="rating" value="3" class="btn btn-icon btn-amber" /> <span>3</span>
+            <input type="radio" name="rating" value="4" class="btn btn-icon btn-amber" /> <span>4</span>
+            <input type="radio" name="rating" value="5" class="btn btn-icon btn-amber" /> <span>5</span>
+            <button type="submit" value="Rate">Rate</button>
+    </form>
 
     <div class="container">
         <h5>Attendees:</h5>

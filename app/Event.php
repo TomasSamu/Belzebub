@@ -44,6 +44,11 @@ class Event extends Model
     {
         return $this->comments()->whereNull('comment_id');
     }
+
+    public function ratings()
+    {
+        return $this->hasMany('App\Rating');
+    }
     
 
     
