@@ -77,7 +77,7 @@
 
         <div class="grid-container"> .
             @foreach ($user->genres as $genre)
-            <div class="card card-event">
+            <div class="card card-event rounded-pill">
                 <div class="card-body">
                     <a href="">{{$genre->name}}</a>
                     <div class="buttons-edit">
@@ -101,7 +101,7 @@
         <div class="grid-container">
 
             @foreach ($user->events as $event)
-            <div class="card card-event">
+            <div class="card card-event rounded-pill">
                 <div class="card-body">
 
                         <a href="{{action('EventController@show', $event->id)}}">{{$event->title}}
@@ -127,7 +127,7 @@
         <h2>I am attending these events:</h2>
         <div class="grid-container">
             @foreach ($user->attend_events as $event)
-            <div class=" card card-event">
+            <div class="card card-event">
 
                 <div class="card-body">
                         <a href="{{action('EventController@show', $event->id)}}">{{$event->title}}

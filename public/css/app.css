@@ -1,8 +1,31 @@
-@import url(https://fonts.googleapis.com/css?family=Poppins:800,900|Assistant:400,700);.card-img-top {
-  width: 100%;
-  height: 15vw;
-  -o-object-fit: cover;
-     object-fit: cover;
+@import url(https://fonts.googleapis.com/css?family=Poppins:800,900|Assistant:400,700);.search-bar-events form {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  font-size: 0.8rem;
+  color: #F4F1EB;
+}
+
+#datetimepicker, #locationpicker {
+  margin-right: 0.5rem;
+}
+@media only screen and (max-width: 400px) {
+  #datetimepicker, #locationpicker {
+    margin-bottom: 0.5rem;
+  }
+}
+
+.search-bar-events-inputs {
+  display: flex;
+  flex-direction: row;
+  align-items: baseline;
+}
+@media only screen and (max-width: 450px) {
+  .search-bar-events-inputs {
+    display: flex;
+    flex-direction: column;
+    margin-right: 0.7em;
+  }
 }
 
 .footer {
@@ -88,6 +111,11 @@
   background-color: #212426;
   color: #D3D0CB;
   padding: 0.5em;
+}
+@media only screen and (max-width: 400px) {
+  .user-profile-left .username {
+    font-size: 3rem;
+  }
 }
 .user-profile-left .img-detail {
   padding: 2em 2em 2em 2em;
@@ -262,12 +290,28 @@ h3.subtitle_welcome {
   justify-content: space-between;
   z-index: 7999;
 }
+@media only screen and (max-width: 400px) {
+  .sec-navbar {
+    padding: 0.6em 0.5em 0.4em 0.5em;
+  }
+}
 .sec-navbar .pagination {
   margin-bottom: 0;
 }
 .sec-navbar h2 {
   color: #F4F1EB;
   font-size: 1.7em;
+}
+@media only screen and (max-width: 800px) {
+  .sec-navbar h2 {
+    font-size: 0.9em;
+    padding: 0.3em;
+  }
+}
+@media only screen and (max-width: 400px) {
+  .sec-navbar h2 {
+    display: none;
+  }
 }
 @media only screen and (max-width: 400px) {
   .sec-navbar .title-bar {
@@ -388,12 +432,19 @@ h4 {
 
 h5 {
   font-family: "Assistant", sans-serif;
-  font-size: 1em;
+  font-size: 1rem;
+  font-weight: 700;
 }
 
 h6 {
   font-family: "Assistant", sans-serif;
   font-style: italic;
+}
+
+p {
+  font-family: "Assistant", sans-serif;
+  font-size: 1rem;
+  line-height: 1.6rem;
 }
 
 .buttons-edit {
@@ -439,6 +490,7 @@ h6 {
 
 .card-img-top {
   width: 100%;
+  height: 15vw;
   -o-object-fit: cover;
      object-fit: cover;
 }
@@ -449,11 +501,6 @@ h6 {
 }
 
 .card-event {
-  display: inline-flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-  font-size: 1em;
   background-color: #F25B24;
 }
 .card-event .card-body {
@@ -463,7 +510,7 @@ h6 {
   align-items: center;
   font-size: 1em;
   font-family: "Poppins", sans-serif;
-  background-color: #F25B24;
+  background-color: transparent;
   border-radius: 1em;
 }
 .card-event .card-body a {
@@ -476,7 +523,7 @@ h6 {
   color: #212426;
 }
 .card-event .buttons-edit {
-  margin: 0.5em;
+  margin: 0.2rem;
 }
 
 .location-card {

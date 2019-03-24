@@ -17,8 +17,10 @@
     background-color: $extra-light;
 }
 
+//this affects all cards images
 .card-img-top {
     width: 100%;
+    height: 15vw;
     object-fit: cover;
 
     @media only screen and (max-width: 400px) {
@@ -29,11 +31,6 @@
 // Card genre and event
 
 .card-event {
-    display: inline-flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    font-size: 1em; 
     background-color: $tertiary;
 
 
@@ -44,7 +41,7 @@
         align-items: center;
         font-size: 1em; 
         font-family: $font-title;
-        background-color: $tertiary;
+        background-color: transparent;
         border-radius: 1em;
 
         a{
@@ -60,7 +57,7 @@
     }
 
     .buttons-edit {
-        margin: 0.5em;
+        margin: 0.2rem;
     }
    
 }

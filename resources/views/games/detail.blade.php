@@ -18,7 +18,7 @@
             <h5>Number of players: {{$game->min_players}} - {{$game->max_players}}</h5>
             <h5>Age: {{$game->age_range}}</h5>
             <h5>Average playtime: {{$game->play_time}}</h5>
-            <h5>Description: <br>{{$game->description}}</h5>
+            <p>Description: <br>{{$game->description}}</p>
         </p>
     </div>
 

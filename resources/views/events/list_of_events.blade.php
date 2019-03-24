@@ -7,54 +7,35 @@
         <button type="submit" class="btn btn-sm btn-amber d-none d-sm-block">Add an event</button>
         <button type="submit" class="btn btn-xs btn-amber d-none d-block d-sm-none"><i class="fas fa-plus"></i></button>
     </form>
-    
+
     <h2 class="title-bar">Events</h2>
 
-    <form action="{{action('EventController@eventsByParam')}}" method="get">
-                    
-        <div class="input-group date" id="datetimepicker4" data-target-input="nearest">
-                <label for="dateFilter"> Pick a date</label>           
-                <input type="text" name="dateFilter" class="form-control datetimepicker-input" data-target="#datetimepicker4"/>
-                <div class="input-group-append" data-target="#datetimepicker4" data-toggle="datetimepicker">
-                    <div class="input-group-text"><i class="fa fa-calendar"></i></div>
-                </div>
-        </div>
+@include('layouts._searchbar_events')
 
-        <div class="form-group">
-                <label for="#">Pick location</label>
-                <select name="location_id" class="form-control">
-                        <option value="">all</option>
-                    @foreach($locations as $location)
-                        <option value="{{ $location->id }}">{{ $location->name }}</option>
-                    @endforeach
-                </select>
-                
-            </div>  
-            <button type="submit" class="btn btn-sm btn-amber"> Search</button>  
-    </form>
-
-    <div class="pagination pg-amber">{{$events->onEachSide(1)->links()}}</div>
+<div class="pagination pg-amber">{{$events->onEachSide(1)->links()}}</div>
 </div>
 
 {{-- filter events by date --}}
 {{--  <div class="container eventSelector">  
             <div class="form-group">
                 <form action="{{action('FeaturesController@eventsByDate')}}" method="get">
-                        @csrf   
-                    <div class="input-group date" id="datetimepicker4" data-target-input="nearest">          
-                            <input type="text" name="dateFilter" class="form-control datetimepicker-input" data-target="#datetimepicker4"/>
-                            <div class="input-group-append" data-target="#datetimepicker4" data-toggle="datetimepicker">
-                                <div class="input-group-text"><i class="fa fa-calendar"></i></div>
-                            </div>
-                                        
-                    </div>
-                    <button type="submit" class='bth btn-primary'> Submit </button>  
-                </form>
-            </div>
-        
-</div>  --}}
+@csrf
+<div class="input-group date" id="datetimepicker4" data-target-input="nearest">
+    <input type="text" name="dateFilter" class="form-control datetimepicker-input" data-target="#datetimepicker4" />
+    <div class="input-group-append" data-target="#datetimepicker4" data-toggle="datetimepicker">
+        <div class="input-group-text"><i class="fa fa-calendar"></i></div>
+    </div>
+
+</div>
+<button type="submit" class='bth btn-primary'> Submit </button>
+</form>
+</div>
+
+</div> --}}
 <h2>List of all events</h2>
+
 <div class="grid-container">
+
 
     {{-- Cards --}}
 

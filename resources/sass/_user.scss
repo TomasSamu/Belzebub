@@ -29,6 +29,9 @@
         background-color: $extra-dark;
         color: $light;
         padding: 0.5em;
+        @media only screen and (max-width: 400px) {
+            font-size: 3rem;
+        }
     }
 
     .img-detail {

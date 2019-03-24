@@ -1,6 +1,28 @@
-.card-img-top {
-    width: 100%;
-    height: 15vw;
-    object-fit: cover;
+.search-bar-events form {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    font-size: 0.8rem;
+    color: $extra-light;
 }
 
+
+    #datetimepicker, #locationpicker {
+        margin-right: 0.5rem;
+
+        @media only screen and (max-width: 400px) {
+            margin-bottom: 0.5rem;
+            }
+}
+
+.search-bar-events-inputs {
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
+
+    @media only screen and (max-width: 450px) {
+        display: flex;
+        flex-direction: column;
+        margin-right: 0.7em;
+        }
+}

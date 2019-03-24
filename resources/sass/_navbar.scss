@@ -37,6 +37,11 @@
     justify-content: space-between;
     z-index: 7999;
 
+    @media only screen and (max-width: 400px) {
+        padding: 0.6em 0.5em 0.4em 0.5em;
+
+    }
+
     .pagination {
         margin-bottom: 0;
     }
@@ -44,6 +49,15 @@
     h2 {
         color: $extra-light;
         font-size: 1.7em;
+        @media only screen and (max-width: 800px) {
+            font-size: 0.9em;
+            padding: 0.3em;
+        }
+
+        @media only screen and (max-width: 400px) {
+           display: none;
+    
+        }
     }
 
     //Not working fix/kkeeping this just for the class
@@ -61,7 +75,7 @@
     color: $light;
 }
 
-//sets the modal toalways be on top
+//sets the modal to always be on top
 div.modal div.modal-backdrop {
     z-index: 0;
 }
