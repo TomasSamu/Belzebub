@@ -6,26 +6,38 @@
   color: #F4F1EB;
 }
 
-#datetimepicker, #locationpicker {
+#datetimepicker4, #locationpicker4 {
   margin-right: 0.5rem;
 }
 @media only screen and (max-width: 400px) {
-  #datetimepicker, #locationpicker {
-    margin-bottom: 0.5rem;
+  #datetimepicker4, #locationpicker4 {
+    margin-bottom: 0.4rem;
   }
+}
+#datetimepicker4 input, #locationpicker4 input {
+  font-size: 0.8rem;
+  padding: 0.2rem 0em;
+  height: calc(1.5em + .5rem + 2px);
 }
 
 .search-bar-events-inputs {
   display: flex;
   flex-direction: row;
-  align-items: baseline;
+  align-items: center;
 }
 @media only screen and (max-width: 450px) {
   .search-bar-events-inputs {
     display: flex;
     flex-direction: column;
-    margin-right: 0.7em;
   }
+}
+.search-bar-events-inputs select.form-control, .search-bar-events-inputs div, .search-bar-events-inputs input {
+  font-size: 0.8rem;
+}
+
+.attendee img {
+  width: 80%;
+  height: auto;
 }
 
 .footer {

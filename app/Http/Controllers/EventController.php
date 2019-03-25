@@ -18,7 +18,7 @@ class EventController extends Controller
      */
     public function index() 
     {
-        $events = Event::paginate(5);
+        $events = Event::paginate(10);
         $locations = Location::all();
         
 

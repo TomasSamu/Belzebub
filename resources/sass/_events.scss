@@ -7,22 +7,36 @@
 }
 
 
-    #datetimepicker, #locationpicker {
+    #datetimepicker4, #locationpicker4 {
         margin-right: 0.5rem;
 
         @media only screen and (max-width: 400px) {
-            margin-bottom: 0.5rem;
+            margin-bottom: 0.4rem;
+            }
+
+            input {
+                font-size: 0.8rem;
+                padding: 0.2rem 0em;
+                height: calc(1.5em + .5rem + 2px);
             }
 }
 
 .search-bar-events-inputs {
     display: flex;
     flex-direction: row;
-    align-items: baseline;
+    align-items: center;
 
     @media only screen and (max-width: 450px) {
         display: flex;
         flex-direction: column;
-        margin-right: 0.7em;
         }
+
+        select.form-control, div, input {
+            font-size: 0.8rem;
+        }
+}
+
+.attendee img {
+    width: 80%;
+    height: auto;
 }
