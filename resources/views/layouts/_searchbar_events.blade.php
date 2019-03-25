@@ -1,7 +1,7 @@
 <div class="search-bar-events">
     <form action="{{action('EventController@eventsByParam')}}" method="get">
         <div class="search-bar-events-inputs">
-            <div class="container eventSelector">  
+             <div class="container eventSelector">  
                 <div class="form-group">
                     @csrf
                     <div class="input-group date" id="datetimepicker4" data-target-input="nearest">
@@ -14,7 +14,7 @@
             </div>
 
         {{--new style ---should be adjusted so it works as per above--}}
-{{--             <div class="date input-group input-group-sm" id="datetimepicker4" data-target-input="nearest">
+{{--              <div class="date input-group input-group-sm" id="datetimepicker4" data-target-input="nearest">
             <input type="text" name="dateFilter" class="form-control datetimepicker-input" aria-label="Small"
                 aria-describedby="inputGroup-sizing-sm" data-target="#datetimepicker4" placeholder="Pick a date" />
             <div class="input-group-prepend" data-target="#datetimepicker4" data-toggle="datetimepicker">

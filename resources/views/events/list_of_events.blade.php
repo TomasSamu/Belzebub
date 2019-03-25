@@ -17,7 +17,8 @@
 
 
 {{-- top rated events --}}
-{{--<div class="grid-container">
+<h2>Top 3 rated events: </h2>
+<div class="grid-container">
     
   @foreach ($topEvents as $event)
     
@@ -31,8 +32,8 @@
     
     
             <div class="card-body">
-                <h5 class="card-title">{{$event->event->title}}</h5>
-                <h6 class="card-text">{{$event->event->text}}</h6>
+                <h5 class="card-title">{{$event->title}}</h5>
+                <h6 class="card-text">{{$event->text}}</h6>
                  <p class="card-text">Venue: <a href="{{action('LocationController@show', $event->location_id)}}">
                         {{$event->location->name}}</a></p>
                 <p class="card-text">Date: {{$event->date}}</p>
@@ -45,10 +46,9 @@
                 <p class="card-text">Number of Attendees: {{$event->attendees()->count()}} (the event is full)</p>
                 @else
                 <p class="card-text">Number of Attendees: {{$event->attendees()->count()}}</p>
-                <p>Average Rating: {{$avgRating}}</p>
-                @endif --}}
+                <p>Average Rating: {{round($event->ratings()->avg('rating'), 2)}} </p>
+                @endif
     
-    {{--
                 <div class="buttons-edit">
                     @auth
                     <form action=" {{action('EventController@show', $event->id)}}" method="GET" class="ml-2">
@@ -87,14 +87,12 @@
                         @endguest
                 </div> 
     
-    
-    
             </div>
         </div>
     
         @endforeach
     
-    </div> --}} 
+    </div> 
 
 
 {{-- all events in ascending order --}}
