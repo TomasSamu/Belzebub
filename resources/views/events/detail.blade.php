@@ -4,7 +4,7 @@
 <div class="sec-navbar">
     <form method="GET" action="{{action('EventController@index',$event->id)}}">
         @csrf
-        <input type="submit" value="Back" class="btn btn-sm btn-blue"></form>
+        <input type="submit" value="Back" class="btn btn-sm btn-amber"></form>
 </div>
 
 <div class="container">
@@ -42,15 +42,17 @@
         @endif
 
     </div>
-    <form method="POST" action="{{action('EventController@rating', $event->id)}}">
-            @csrf
-            <input type="radio" name="rating" value="1" class="btn btn-icon btn-amber" /> <span>1</span>
-            <input type="radio" name="rating" value="2" class="btn btn-icon btn-amber" /> <span>2</span>
-            <input type="radio" name="rating" value="3" class="btn btn-icon btn-amber" /> <span>3</span>
-            <input type="radio" name="rating" value="4" class="btn btn-icon btn-amber" /> <span>4</span>
-            <input type="radio" name="rating" value="5" class="btn btn-icon btn-amber" /> <span>5</span>
-            <button type="submit" value="Rate">Rate</button>
-    </form>
+<div class="rating">
+        <form method="POST" action="{{action('EventController@rating', $event->id)}}">
+                @csrf
+                <input type="radio" name="rating" value="1" id="rating-1" class="star star-1" /> <label for="rating-1" title="text">1</label>
+                <input type="radio" name="rating" value="2" id="rating-2" /> <label for="rating-2" title="text">2</label>
+                <input type="radio" name="rating" value="3" id="rating-3" /> <label for="rating-3" title="text">3</label>
+                <input type="radio" name="rating" value="4" id="rating-4" /> <label for="rating-4" title="text">4</label>
+                <input type="radio" name="rating" value="5" id="rating-5" /> <label for="rating-5" title="text">5</label>
+                <button type="submit" value="Rate">Rate</button>
+        </form>
+</div>
 
     <div class="container">
         <h5>Attendees:</h5>
