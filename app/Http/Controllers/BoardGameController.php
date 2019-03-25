@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Boardgame;
+use App\Rating;
 class BoardGameController extends Controller
 {
     // public function __construct()
@@ -79,8 +80,9 @@ class BoardGameController extends Controller
      */
     public function show($id)
     {
+        $avgRating = round(Rating::where('board_game_id', $id)->avg('rating'), 2);
         $game = Boardgame::find($id);
-        $detail = view('games.detail',compact('game'));
+        $detail = view('games.detail',compact(['game', 'avgRating']));
         return $detail;
     }
 
@@ -149,6 +151,29 @@ class BoardGameController extends Controller
         $search = $request->search;
         $games = Boardgame::where('name', 'like', '%'.$search.'%')->get();
         return $games;
+     }
+
+     public function rating(Request $request, $id)
+     {
+         $rate = Rating::where('board_game_id', $id)->where('user_id', \Auth::id())->first();
+         if($rate){
+ 
+             $rate->board_game_id = $id;
+             $rate->rating = $request->rating;
+             $rate->user_id = \Auth::id();
+             $rate->update();
+             return back()->with('warning', 'You changed your vote to '.$request->rating);
+         } else {
+         
+             $rate = new Rating;
+             $rate->board_game_id = $id;
+             $rate->rating = $request->rating;
+             $rate->user_id = \Auth::id();
+             $rate->save();
+ 
+         }
+ 
+          return back()->with('success', 'You just voted '.$request->rating);; 
      }
 
 }

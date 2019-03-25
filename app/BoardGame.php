@@ -38,4 +38,9 @@ class BoardGame extends Model
     {
         return $this->hasMany('App\Offer');
     }
+
+    public function ratings()
+    {
+        return $this->hasMany('App\Rating');
+    }
 }

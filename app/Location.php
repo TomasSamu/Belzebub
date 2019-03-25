@@ -22,4 +22,11 @@ class Location extends Model
     {
         return $this->hasMany('App\Event');
     }
+
+    public function ratings()
+    {
+        return $this->hasMany('App\Rating');
+    }
+
+
 }

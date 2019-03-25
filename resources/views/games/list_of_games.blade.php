@@ -20,7 +20,7 @@
                 <img class="card-img-top" src="{{$game->image_url}}" alt="Card image cap">
                 <div class="card-body">
                     <h5 class="card-title">{{$game->name}}</h6>
-
+                        <p>Average Rating: {{round($game->ratings()->avg('rating'), 2)}} </p>
 
                         <div class="buttons-edit">
                             @auth

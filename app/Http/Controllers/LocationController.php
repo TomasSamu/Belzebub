@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Location;
 use App\Event;
+use App\Rating;
 class LocationController extends Controller
 {
     // public function __construct()
@@ -80,7 +81,8 @@ class LocationController extends Controller
     public function show($id)
     {
         $location = Location::find($id);
-        $detail = view('locations.show',compact('location'));
+        $avgRating = round(Rating::where('location_id', $id)->avg('rating'), 2);
+        $detail = view('locations.show',compact(['location', 'avgRating']));
         return $detail;
     }
 
@@ -143,4 +145,27 @@ class LocationController extends Controller
 
         return redirect(action('LocationController@index'))->with('success','you successfully deleted location: '.$location->name);
     }
+
+    public function rating(Request $request, $id)
+     {
+         $rate = Rating::where('location_id', $id)->where('user_id', \Auth::id())->first();
+         if($rate){
+ 
+             $rate->location_id = $id;
+             $rate->rating = $request->rating;
+             $rate->user_id = \Auth::id();
+             $rate->update();
+             return back()->with('warning', 'You changed your vote to '.$request->rating);
+         } else {
+         
+             $rate = new Rating;
+             $rate->location_id = $id;
+             $rate->rating = $request->rating;
+             $rate->user_id = \Auth::id();
+             $rate->save();
+ 
+         }
+ 
+          return back()->with('success', 'You just voted '.$request->rating);; 
+     }
 }

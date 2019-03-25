@@ -10,4 +10,14 @@ class Rating extends Model
     {
         return $this->belongsTo('App\Event');
     }
+
+    public function boardgame()
+    {
+        return $this->belongsTo('App\BoardGame');
+    }
+
+    public function location()
+    {
+        return $this->belongsTo('App\Location');
+    }
 }

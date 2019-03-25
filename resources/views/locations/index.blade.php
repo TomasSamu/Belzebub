@@ -24,6 +24,7 @@
 
         <div class="card-body">
             <h4 class="card-title">{{$location->name}}</h4>
+            <p>Average Rating: {{round($location->ratings()->avg('rating'), 2)}} </p>
 
             <div class="buttons-edit">
                 <form method="GET" action="{{action('LocationController@show',$location->id)}}">

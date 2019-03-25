@@ -20,12 +20,18 @@ Auth::routes();
 Route::resource('/events', 'EventController');
 Route::get('/listByParam', 'EventController@eventsByParam');
 
+//ratings routes
 Route::get('/events/rating/{event}', 'EventController@rating');
 Route::post('/events/rating/{event}', 'EventController@rating');
+Route::get('/games/rating/{game}', 'BoardGameController@rating');
+Route::post('/games/rating/{game}', 'BoardGameController@rating');
+Route::get('/locations/rating/{game}', 'LocationController@rating');
+Route::post('/locations/rating/{game}', 'LocationController@rating');
+
+
 
 Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/', 'HomeController@welcome')->name('welcome'); 
-
 
 Route::get('/add/{id}', 'FeaturesController@addGameToCollection');
 Route::post('/remove/game/{id}', 'FeaturesController@removeGameFromCollection');
