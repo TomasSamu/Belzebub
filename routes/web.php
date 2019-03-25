@@ -28,7 +28,12 @@ Route::post('/games/rating/{game}', 'BoardGameController@rating');
 Route::get('/locations/rating/{game}', 'LocationController@rating');
 Route::post('/locations/rating/{game}', 'LocationController@rating');
 
-
+Route::get('/events/{Event}', 'CommentController@eventCommentStore');
+Route::post('/events/{Event}', 'CommentController@eventCommentStore');
+Route::get('/games/{game}', 'CommentController@gameCommentStore');
+Route::post('/game/{game}', 'CommentController@gameCommentStore');
+Route::get('/locations/{location}', 'CommentController@locationCommentStore');
+Route::post('/locations/{location}', 'CommentController@locationCommentStore');
 
 Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/', 'HomeController@welcome')->name('welcome'); 
@@ -51,8 +56,8 @@ Route::resource('/games', 'BoardGameController');
 Route::resource('/locations', 'LocationController');
 Route::resource('/users', 'UserController');
 
-Route::get('/events/{Event}', 'CommentController@store');
-Route::post('/events/{Event}', 'CommentController@store');
+
+
 
 /* Route::get('logout', 'Auth\LoginController@logout'); */
 

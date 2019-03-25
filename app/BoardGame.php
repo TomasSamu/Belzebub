@@ -43,4 +43,14 @@ class BoardGame extends Model
     {
         return $this->hasMany('App\Rating');
     }
+
+    public function comments()
+    {
+        return $this->hasMany('App\Comment');
+    }
+
+    public function mainComments()
+    {
+        return $this->comments()->whereNull('comment_id');
+    }
 }

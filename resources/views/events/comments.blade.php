@@ -13,7 +13,7 @@
 
 <div class="show-reply">
         @auth
-        <form action="{{action('CommentController@store', $event->id)}}" method="post">
+        <form action="{{action('CommentController@eventCommentStore', $event->id)}}" method="post">
             @csrf
 
             <div class="form-group reply" id="comment-reply">
@@ -30,8 +30,6 @@
 
 
 <div class="comments-reply">
-
-
 
     @if($comment->replies()->count() > 0)
 

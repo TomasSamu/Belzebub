@@ -67,9 +67,10 @@
 
         </div>
 
+    {{-- main comment form --}}
         <div class="container">
             @auth
-            <form action="{{action('CommentController@store', $event->id)}}" method="post">
+            <form action="{{action('CommentController@eventCommentStore', $event->id)}}" method="post">
                 @csrf
                 <div class="form-group">
                     <label for="text">Your comment:</label><br>
@@ -82,10 +83,10 @@
             </form>
             @endauth
 
-
+    {{-- comment thread --}}
             @foreach ($event->mainComments as $comment)
-            @include('events.comments')
-            @endforeach
+                @include('events.comments')
+            @endforeach  
 
         </div>
     </div>
