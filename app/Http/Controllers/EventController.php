@@ -18,11 +18,26 @@ class EventController extends Controller
      */
     public function index() 
     {
-        $events = Event::paginate(5);
+        /* all events ascending order */
+        $eventsAll = Event::all();
+        $events = Event::orderBy('date', 'ASC')->orderBy('time','ASC')->paginate(5);
+
+        /* top rated events */
+        
+        $topEvents = $eventsAll;
+        foreach($topEvents as $event){
+
+                $event = $eventsAll->ratings()->avg('rating');
+               
+               
+               
+                dd($event);
+        };
         $locations = Location::all();
         
+        
 
-        return view('events.list_of_events', compact(['events', 'locations']));
+        return view('events.list_of_events', compact(['events', 'locations', 'topEvents']));
     }
 
     /**
