@@ -41,18 +41,19 @@
             <h5>City: {{$location->city}}</h5>
             <h5>Country: {{$location->country}}</h5>
             <h5>Web: <a href="{{$location->web}}" target="_blank">{{$location->web}}</a></h5>
+            @can('admin')
             <div class="buttons-edit">
-    
-                    <form method="POST" action="{{action('LocationController@destroy',$location->id)}}">
-                        @method('DELETE')
-                        @csrf
-                        <button type="submit" value="Delete" class="btn btn-icon btn-red"><i class="fas fa-trash-alt"></i></button>
-                    </form>
-                    <form method="GET" action="{{action('LocationController@edit',$location->id)}}">
-                        @csrf
-                        <button type="submit" value="Edit" class="btn btn-icon btn-amber"><i class="fas fa-pen-alt"></i></button>
-                    </form>
-                </div>
+                <form method="POST" action="{{action('LocationController@destroy',$location->id)}}">
+                    @method('DELETE')
+                    @csrf
+                    <button type="submit" value="Delete" class="btn btn-icon btn-red"><i class="fas fa-trash-alt"></i></button>
+                </form>
+                <form method="GET" action="{{action('LocationController@edit',$location->id)}}">
+                    @csrf
+                    <button type="submit" value="Edit" class="btn btn-icon btn-amber"><i class="fas fa-pen-alt"></i></button>
+                </form>
+            </div>
+            @endcan
         </div>
 </div>
 

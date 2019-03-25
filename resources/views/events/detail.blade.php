@@ -21,6 +21,7 @@
         </div>
     </div>
 
+
     <div class="buttons-edit">
         <form action="{{action('FeaturesController@attendEvent', $event->id)}}" method="POST" class="ml-2">
             @csrf
@@ -28,15 +29,17 @@
                     class="fas fa-user-check"></i></button>
         </form>
 
-        <form method="POST" action="{{action('EventController@destroy',$event->id)}}">
-            @method('DELETE')
-            @csrf
-            <button type="submit" value="Delete" class="btn btn-icon btn-red"><i class="fas fa-trash-alt"></i></button>
-        </form>
-        <form method="GET" action="{{action('EventController@edit',$event->id)}}">
-            @csrf
-            <button type="submit" value="Edit" class="btn btn-icon btn-amber"><i class="fas fa-pen-alt"></i></button>
-        </form>
+        @if (Auth::id() == $event->user_id || $isAdmin->is_admin)
+            <form method="POST" action="{{action('EventController@destroy',$event->id)}}">
+                @method('DELETE')
+                @csrf
+                <button type="submit" value="Delete" class="btn btn-icon btn-red"><i class="fas fa-trash-alt"></i></button>
+            </form>
+            <form method="GET" action="{{action('EventController@edit',$event->id)}}">
+                @csrf
+                <button type="submit" value="Edit" class="btn btn-icon btn-amber"><i class="fas fa-pen-alt"></i></button>
+            </form>
+        @endif
 
     </div>
     <form method="POST" action="{{action('EventController@rating', $event->id)}}">

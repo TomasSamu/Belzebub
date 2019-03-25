@@ -18,11 +18,16 @@ class EventController extends Controller
      */
     public function index() 
     {
-        $events = Event::paginate(10);
-        $locations = Location::all();
-        
+        /* all events ascending order */
+        $events = Event::orderBy('date', 'ASC')->orderBy('time','ASC')->paginate(5);
 
-        return view('events.list_of_events', compact(['events', 'locations']));
+        /* top rated events */
+        $topEvents = Event::orderByRaw('(SELECT avg(`rating`)
+                                        FROM `ratings`
+                                        WHERE `ratings`.`event_id`  = `events`.`id`) DESC')->limit(3)->get();
+
+        $locations = Location::all();
+        return view('events.list_of_events', compact(['events', 'locations', 'topEvents']));
     }
 
     /**
@@ -83,9 +88,9 @@ class EventController extends Controller
      /*    $location = Location::find($event->location_id); */
         /* $comments = Comment::where('event_id',$id)->get(); */
         $avgRating = round(Rating::where('event_id', $id)->avg('rating'), 2);
-
         $created_by = User::where('id', $event->user_id)->first();
-        return view('events.detail',compact(['event', 'created_by', 'avgRating']));
+        $isAdmin = User::where('id', \Auth::id())->first();
+        return view('events.detail',compact(['event', 'created_by', 'avgRating', 'isAdmin']));
         
     }
 
