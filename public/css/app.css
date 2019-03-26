@@ -670,7 +670,17 @@ body {
   line-height: 1.1em;
 }
 body .container {
-  padding-top: 5em;
+  padding: 3em 1em;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-width: 95vw;
+  margin: 0 auto;
+}
+
+.pagination {
+  display: flex;
+  align-self: center;
 }
 
 .grid-container {
