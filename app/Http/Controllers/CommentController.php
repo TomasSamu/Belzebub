@@ -15,7 +15,7 @@ class CommentController extends Controller
 
     }
     
-    public function store(Request $request, $id)
+    public function eventCommentStore(Request $request, $id)
     {
         $comment = new Comment;
         $comment->user_id = Auth::id();
@@ -24,8 +24,32 @@ class CommentController extends Controller
         $comment->comment_id = $request->comment_id;
         $comment->save();
 
-        return redirect(action('EventController@show', $id))->with('success','you posted a new comment');
+        return back()->with('success','you posted a new comment');
 
+    }
+
+     public function gameCommentStore(Request $request, $id)
+    {
+        $comment = new Comment;
+        $comment->user_id = Auth::id();
+        $comment->text = $request->text;
+        $comment->board_game_id = $id;
+        $comment->comment_id = $request->comment_id;
+        $comment->save();
+
+        return back()->with('success','you posted a new comment');
+    }
+
+    public function locationCommentStore(Request $request, $id)
+    {
+        $comment = new Comment;
+        $comment->user_id = Auth::id();
+        $comment->text = $request->text;
+        $comment->location_id = $id;
+        $comment->comment_id = $request->comment_id;
+        $comment->save();
+
+        return back()->with('success','you posted a new comment');
     }
 
 

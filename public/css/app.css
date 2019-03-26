@@ -40,6 +40,46 @@
   height: auto;
 }
 
+.event-detail {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  grid-template-rows: auto auto;
+  grid-template-areas: "header header " "pic text";
+  grid-column-gap: 2rem;
+  grid-row-gap: 1rem;
+  margin-bottom: 2rem;
+}
+.event-detail .lead {
+  margin-bottom: 2rem;
+}
+.event-detail img {
+  max-width: 40em;
+}
+
+.title {
+  grid-area: header;
+  margin-bottom: 1rem;
+}
+@media (max-width: 600px) {
+  .title {
+    font-size: 1.2em;
+  }
+}
+
+.text {
+  grid-area: text;
+}
+
+.pic {
+  grid-area: pic;
+}
+
+@media (max-width: 600px) {
+  .game-detail {
+    display: flex;
+    flex-direction: column;
+  }
+}
 .footer {
   background-color: #212426;
   color: #D3D0CB;
@@ -369,6 +409,11 @@ div.modal div.modal-backdrop {
   grid-area: header;
   margin-bottom: 1rem;
 }
+@media (max-width: 600px) {
+  .title {
+    font-size: 1.2em;
+  }
+}
 
 .text {
   grid-area: text;
@@ -581,6 +626,60 @@ p {
   margin: 2em;
 }
 
+.mapouter {
+  position: relative;
+  text-align: right;
+  height: 500px;
+  width: 600px;
+}
+
+.gmap_canvas {
+  overflow: hidden;
+  background: none !important;
+  height: 500px;
+  width: 600px;
+}
+
+.location-detail {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  grid-template-rows: auto auto;
+  grid-template-areas: "header header " "maprouter text";
+  grid-column-gap: 2rem;
+  grid-row-gap: 1rem;
+  margin-bottom: 2rem;
+}
+.location-detail .lead {
+  margin-bottom: 2rem;
+}
+.location-detail .maprouter {
+  max-width: 40em;
+}
+
+.title {
+  grid-area: header;
+  margin-bottom: 1rem;
+}
+@media (max-width: 600px) {
+  .title {
+    font-size: 1.2em;
+  }
+}
+
+.text {
+  grid-area: text;
+}
+
+.maprouter {
+  grid-area: maprouter;
+}
+
+@media (max-width: 600px) {
+  .game-detail {
+    display: flex;
+    flex-direction: column;
+  }
+}
 .rating {
   margin: 2rem 0;
   text-align: center;

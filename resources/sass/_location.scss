@@ -5,3 +5,64 @@
     align-items: center;
     margin: 2em;
 }
+
+.mapouter {
+    position: relative;
+    text-align: right;
+    height: 500px;
+    width: 600px;
+}
+
+.gmap_canvas {
+    overflow: hidden;
+    background: none !important;
+    height: 500px;
+    width: 600px;
+}
+
+
+.location-detail {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    grid-template-rows: auto auto;
+    grid-template-areas: "header header "
+                       "maprouter text";
+
+    grid-column-gap: 2rem;
+    grid-row-gap: 1rem;
+    margin-bottom: 2rem;
+
+    .lead {
+        margin-bottom: 2rem;
+    }
+    
+    .maprouter {
+        max-width: 40em;
+    }
+}
+
+
+.title {
+    grid-area: header;
+    margin-bottom: 1rem;
+
+    @media (max-width: 600px) {
+        font-size: 1.2em;
+        }
+}
+
+.text {
+    grid-area: text;
+}
+
+.maprouter {
+    grid-area: maprouter;
+}
+
+
+@media (max-width: 600px) {
+     .game-detail {
+         display: flex;
+         flex-direction: column;
+     }
+    }

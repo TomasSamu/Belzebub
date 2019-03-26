@@ -27,4 +27,14 @@ class Comment extends Model
     {
         return $this->belongsTo('App\User');
     }
+
+    public function boardgame()
+    {
+        return $this->belongsTo('App\BoardGame');
+    }
+
+    public function location()
+    {
+        return $this->belongsTo('App\Location');
+    }
 }

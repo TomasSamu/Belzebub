@@ -13,7 +13,7 @@
     <h1 class="title">{{$game->name}}</h1>
 
     <img src="{{$game->image_url}}" alt="image" class="pic">
-    <div class="event-info text">
+    <div class="game-info text">
 
         <div class="lead">
             <h5>Published: {{$game->year}}</h5>
@@ -55,9 +55,28 @@
 
     </div>
 
-    
+</div>
 
-   
+<div class="container">
+    
+        @auth
+        <form action="{{action('CommentController@gameCommentStore', $game->id)}}" method="post">
+            @csrf
+            <div class="form-group">
+                <label for="text">Your comment:</label><br>
+                <textarea name="text" id="comment" cols="50" rows="5"></textarea>
+            </div>
+    
+            <div class="form-group">
+                <input type="submit" value="submit comment" class="btn btn-sm btn-amber">
+            </div>
+        </form>
+        @endauth
+    
+            {{-- comment thread --}}
+            @foreach ($game->mainComments as $comment)
+                @include('games.comments')
+            @endforeach  
 </div>
 
 @endsection
