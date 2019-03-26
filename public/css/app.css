@@ -349,6 +349,41 @@ div.modal div.modal-backdrop {
   border-radius: 0px;
 }
 
+.game-detail {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  grid-template-rows: auto auto;
+  grid-template-areas: "header header " "pic text";
+  grid-column-gap: 2rem;
+  grid-row-gap: 1rem;
+  margin-bottom: 2rem;
+}
+.game-detail .lead {
+  margin-bottom: 2rem;
+}
+.game-detail img {
+  max-width: 40em;
+}
+
+.title {
+  grid-area: header;
+  margin-bottom: 1rem;
+}
+
+.text {
+  grid-area: text;
+}
+
+.pic {
+  grid-area: pic;
+}
+
+@media (max-width: 600px) {
+  .game-detail {
+    display: flex;
+    flex-direction: column;
+  }
+}
 .comments {
   display: flex;
   flex-direction: row;
@@ -544,6 +579,11 @@ p {
   justify-content: space-between;
   align-items: center;
   margin: 2em;
+}
+
+.rating {
+  margin: 2rem 0;
+  text-align: center;
 }
 
 * {

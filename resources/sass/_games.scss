@@ -1,0 +1,40 @@
+.game-detail {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    grid-template-rows: auto auto;
+    grid-template-areas: "header header "
+                       "pic text";
+
+    grid-column-gap: 2rem;
+    grid-row-gap: 1rem;
+    margin-bottom: 2rem;
+
+    .lead {
+        margin-bottom: 2rem;
+    }
+    
+    img {
+        max-width: 40em;
+    }
+}
+
+.title {
+    grid-area: header;
+    margin-bottom: 1rem;
+}
+
+.text {
+    grid-area: text;
+}
+
+.pic {
+    grid-area: pic;
+}
+
+
+@media (max-width: 600px) {
+     .game-detail {
+         display: flex;
+         flex-direction: column;
+     }
+    }
