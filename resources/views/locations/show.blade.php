@@ -10,23 +10,22 @@
 <div class="container location-detail">
 
     <h1 class="title">{{$location->name}}</h1>
-
-    
         <div class="mapouter">
-            <div class="gmap_canvas"><iframe width="600" height="500" id="gmap_canvas" src="{{$location->image}}"
-                    frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>Google Maps Generator by <a
-                    href="https://www.embedgooglemap.net">embedgooglemap.net</a></div>
+            <div class="gmap_canvas"><iframe id="gmap_canvas" src="{{$location->image}}" width="500px" height="400px"
+                    frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe></div>
 
         </div>
 
-        <div class="text">
-            <h5>Description:{{$location->description}}</h5>
-            <h5>Street: {{$location->street}}</h5>
-            <h5>Zip Code: {{$location->zip_code}}</h5>
-            <h5>City: {{$location->city}}</h5>
-            <h5>Country: {{$location->country}}</h5>
-            <h5>Web: <a href="{{$location->web}}" target="_blank">{{$location->web}}</a></h5>
-            <p>Average Rating: {{$avgRating}}</p>
+        <div class="location-info text">
+<div class="lead">
+                <h5>Description:{{$location->description}}</h5>
+                <h5>Street: {{$location->street}}</h5>
+                <h5>Zip Code: {{$location->zip_code}}</h5>
+                <h5>City: {{$location->city}}</h5>
+                <h5>Country: {{$location->country}}</h5>
+                <h5>Web: <a href="{{$location->web}}" target="_blank">{{$location->web}}</a></h5>
+                <h5>Average Rating: {{$avgRating}}</h5>
+</div>
 
             <div class="rating">
                 <form method="POST" action="{{action('LocationController@rating', $location->id)}}">
@@ -72,7 +71,7 @@
             @csrf
             <div class="form-group">
                 <label for="text">Your comment:</label><br>
-                <textarea name="text" id="comment" cols="50" rows="5"></textarea>
+                <textarea name="text" id="comment" class="form-control"></textarea>
             </div>
 
             <div class="form-group">

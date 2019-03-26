@@ -618,28 +618,6 @@ p {
   margin: 0.2rem;
 }
 
-.location-card {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-  margin: 2em;
-}
-
-.mapouter {
-  position: relative;
-  text-align: right;
-  height: 500px;
-  width: 600px;
-}
-
-.gmap_canvas {
-  overflow: hidden;
-  background: none !important;
-  height: 500px;
-  width: 600px;
-}
-
 .location-detail {
   display: grid;
   grid-template-columns: auto 1fr;
@@ -651,9 +629,6 @@ p {
 }
 .location-detail .lead {
   margin-bottom: 2rem;
-}
-.location-detail .maprouter {
-  max-width: 40em;
 }
 
 .title {
@@ -675,7 +650,7 @@ p {
 }
 
 @media (max-width: 600px) {
-  .game-detail {
+  .location-detail {
     display: flex;
     flex-direction: column;
   }

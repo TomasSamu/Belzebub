@@ -59,7 +59,19 @@
     </div>
 </div>
 
+<div class="container">
+        <h5>Attendees:</h5>
+        <div class="grid-container">
+            @foreach ($event->attendees as $attendee)
+            <div class="attendee">
+                <p>{{$attendee->name}}</p>
+                <p><img src="{{$attendee->image}}" alt="image" class="rounded-circle"></p>
+            </div>
+            @endforeach
 
+
+        </div>
+</div>
 <div class="container">
     @auth
     <form action="{{action('CommentController@eventCommentStore', $event->id)}}" method="post">

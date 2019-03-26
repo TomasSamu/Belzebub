@@ -13,6 +13,8 @@
     <h1 class="title">{{$game->name}}</h1>
 
     <img src="{{$game->image_url}}" alt="image" class="pic">
+
+    
     <div class="game-info text">
 
         <div class="lead">
