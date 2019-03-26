@@ -23,6 +23,7 @@ class CreateLocationsTable extends Migration
             $table->text('country');
             $table->string('web')->nullable();
             $table->string('image')->nullable();
+            $table->string('map')->nullable();
             $table->tinyInteger('rating')->nullable();
             $table->timestamps();
         });

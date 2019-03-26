@@ -483,7 +483,7 @@ a {
 }
 a a:link {
   text-decoration: none;
-  color: inherit;
+  color: #91c7e5;
 }
 a A:visited {
   text-decoration: none;
@@ -493,12 +493,6 @@ a A:hover {
 }
 a A:active {
   text-decoration: none;
-}
-
-p {
-  font-family: "Assistant", sans-serif;
-  line-height: 0.8em;
-  margin-bottom: 0.5em;
 }
 
 h1 {
@@ -533,7 +527,7 @@ h6 {
   font-style: italic;
 }
 
-p {
+.description {
   font-family: "Assistant", sans-serif;
   font-size: 1rem;
   line-height: 1.6rem;

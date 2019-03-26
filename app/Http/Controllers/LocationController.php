@@ -53,8 +53,8 @@ class LocationController extends Controller
             'zip_code' => 'required:numeric',
             'city' => 'required',
             'country' => 'required',
-            /* 'web' => 'required',
-             'image' => 'required|url' */
+            'web' => 'required',
+            'image' => 'required|url'
         ]);
 
         $location->fill($request->only([
@@ -115,8 +115,8 @@ class LocationController extends Controller
             'zip_code' => 'required:numeric',
             'city' => 'required',
             'country' => 'required',
-            /* 'web' => 'required',
-             'image' => 'required|url' */
+            'web' => 'required',
+            'image' => 'required|url'
         ]);
         
         $location = Location::findOrFail($id);

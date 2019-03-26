@@ -17,7 +17,7 @@
     <div class="card">
         <div class="view overlay">
 
-            <img class="card-img-top" src="{{$location->image_url}}" alt="Card image cap" />
+            <img class="card-img-top" src="{{$location->image}}" alt="Card image cap" />
             <div class="mask rgba-indigo-strong">
             </div>
         </div>

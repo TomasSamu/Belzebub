@@ -5,7 +5,7 @@ a {
 
     a:link {
         text-decoration: none;
-        color: inherit;
+        color: $secondary;
     }
     A:visited {text-decoration: none; 
     }
@@ -14,11 +14,6 @@ a {
     A:active {text-decoration: none; 
     }
     
-}
-p {
-    font-family: $font-text;
-    line-height: 0.8em;
-    margin-bottom: 0.5em;
 }
 
 h1 {
@@ -50,8 +45,18 @@ h6 {
     font-style: italic;
 }
 
-p {
+.description{
     font-family: $font-text;
     font-size: 1rem;
     line-height: 1.6rem; 
 }
+
+// .lead {
+//     font-family: $font-text;
+//     font-size: 1em;
+//     line-height: 1em;
+//     display: flex;
+//     flex-direction: column;
+//     align-self: flex-end;
+//     text-align: left;
+// }
