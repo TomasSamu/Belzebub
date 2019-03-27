@@ -16,7 +16,7 @@
                 <h1 class="username">{{$user->name}}</h1>
             </div>
             <div class="user-profile-right">
-                <div class="lead">
+                <div class="user-info-text">
                     <p>Username:{{$user->username}}</p>
                     <p>Email: {{$user->email}}</p>
                     <p>Gender: {{$user->gender}}</p>
@@ -84,7 +84,7 @@
 
         <h2>My Favourite Genres</h2>
 
-        <div class="grid-container"> .
+        <div class="grid-container">
             @foreach ($user->genres as $genre)
             <div class="card card-event rounded-pill">
                 <div class="card-body">

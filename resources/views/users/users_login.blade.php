@@ -69,10 +69,6 @@
                         {{ __('Register') }}
                     </button>
 
-
-                    <button type="button" class="btn btn-info mr-3">
-                        <a href="{{ route('login') }}">Login</a>
-                    </button>
                 </div>
             </div>
         </form>

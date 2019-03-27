@@ -201,7 +201,11 @@
     padding-top: 2em;
   }
 }
-.user-profile-right .lead p {
+.user-profile-right .user-info-text {
+  display: inline-flex;
+  flex-direction: column;
+}
+.user-profile-right .user-info-text p {
   font-size: 0.9em;
   color: #F4F1EB;
 }
@@ -691,6 +695,7 @@ body .container {
   flex-direction: column;
   justify-content: center;
   min-width: 95vw;
+  min-height: 82vh;
   margin: 0 auto;
 }
 

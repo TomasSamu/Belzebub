@@ -66,7 +66,9 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#db4d29', end
         padding-top: 2em;
     }
 
-    .lead {
+    .user-info-text {
+        display: inline-flex;
+        flex-direction: column;
 
         p {
             font-size: 0.9em;
