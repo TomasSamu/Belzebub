@@ -9,7 +9,13 @@
         margin-top: -3em;
     }
 }
-
+@mixin bg-user{
+    background: rgb(219,77,41); /* Old browsers */
+background: -moz-linear-gradient(-45deg, rgba(219,77,41,1) 1%, rgba(214,99,0,1) 100%); /* FF3.6-15 */
+background: -webkit-linear-gradient(-45deg, rgba(219,77,41,1) 1%,rgba(214,99,0,1) 100%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(135deg, rgba(219,77,41,1) 1%,rgba(214,99,0,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#db4d29', endColorstr='#d66300',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+}
 
 .user-profile-left {
     position: absolute;
@@ -51,7 +57,7 @@
     flex-direction: column;
     justify-items: center;
     position: relative;
-    background-color: $tertiary;
+    @include bg-user();
     color: $extra-light;
     padding: 2em;
     padding-top: 6em;

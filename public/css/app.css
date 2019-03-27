@@ -184,7 +184,14 @@
   flex-direction: column;
   justify-items: center;
   position: relative;
-  background-color: #F25B24;
+  background: #db4d29;
+  /* Old browsers */
+  /* FF3.6-15 */
+  /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(135deg, #db4d29 1%, #d66300 100%);
+  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr="#db4d29", endColorstr="#d66300",GradientType=1 );
+  /* IE6-9 fallback on horizontal gradient */
   color: #F4F1EB;
   padding: 2em;
   padding-top: 6em;
@@ -311,29 +318,36 @@ h3.subtitle_welcome {
 
 .navbar {
   background-color: #212426;
-  color: #D3D0CB;
+  color: #F4F1EB;
   font-size: 0.9em;
   font-family: "Assistant", sans-serif;
   z-index: 8999;
 }
 .navbar .navbar-toggler-icon {
-  color: #F25B24;
+  color: #160455;
 }
 .navbar a {
-  color: #D3D0CB;
+  color: #F4F1EB;
   padding-bottom: 0.2em;
   margin-bottom: 0.3em;
 }
 .navbar a:hover {
-  color: #F25B24;
-  border-bottom: 0.07em solid #F25B24;
+  color: #2CAEBB;
+  border-bottom: 0.07em solid #F4F1EB;
 }
 .navbar a:active {
-  color: #F25B24;
+  color: #160455;
 }
 
 .sec-navbar {
-  background-color: #F25B24;
+  background: #002cae;
+  /* Old browsers */
+  /* FF3.6-15 */
+  /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(135deg, #002cae 0%, #2caebb 100%);
+  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr="#002cae", endColorstr="#2caebb",GradientType=1 );
+  /* IE6-9 fallback on horizontal gradient */
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -391,12 +405,13 @@ div.modal div.modal-backdrop {
 
 .game-detail {
   display: grid;
-  grid-template-columns: auto 1fr;
+  grid-template-columns: 40% auto;
   grid-template-rows: auto auto;
   grid-template-areas: "header header " "pic text";
   grid-column-gap: 2rem;
   grid-row-gap: 1rem;
   margin-bottom: 2rem;
+  padding: 0 3rem;
 }
 .game-detail .lead {
   margin-bottom: 2rem;
@@ -445,11 +460,12 @@ div.modal div.modal-backdrop {
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  padding: 1em;
-  background-color: #69CEB1;
+  padding: 0.5em;
+  background-color: #DB4D29;
 }
 .comment-head .user-name {
   font-family: "Poppins", sans-serif;
+  color: #F4F1EB;
 }
 
 .comment-right {
@@ -457,7 +473,7 @@ div.modal div.modal-backdrop {
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  padding: 1em;
+  padding: 0.5em;
   background-color: #393E41;
   color: #D3D0CB;
 }
@@ -468,7 +484,7 @@ div.modal div.modal-backdrop {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1em;
+  padding: 0.5em;
 }
 #comment-reply .form-group .reply {
   display: flex;
@@ -483,7 +499,7 @@ a {
 }
 a a:link {
   text-decoration: none;
-  color: #91c7e5;
+  color: #2CAEBB;
 }
 a A:visited {
   text-decoration: none;
@@ -587,7 +603,7 @@ h6 {
 }
 
 .card-event {
-  background-color: #F25B24;
+  background-color: #160455;
 }
 .card-event .card-body {
   display: inline-flex;
@@ -614,11 +630,12 @@ h6 {
 
 .location-detail {
   display: grid;
-  grid-template-columns: auto 1fr;
+  grid-template-columns: 40% auto;
   grid-template-rows: auto auto;
   grid-template-areas: "header header " "maprouter text";
   grid-column-gap: 2rem;
   grid-row-gap: 1rem;
+  padding: 0 3rem;
 }
 .location-detail .lead {
   margin-bottom: 2rem;

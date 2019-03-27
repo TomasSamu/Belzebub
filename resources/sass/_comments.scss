@@ -19,10 +19,11 @@
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    padding: 1em;
+    padding: 0.5em;
     background-color: $primary;
     .user-name {
         font-family: $font-title;
+        color: $extra-light;
     }
 }
 
@@ -31,7 +32,7 @@
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    padding: 1em;
+    padding: 0.5em;
     background-color: $dark;
     color: $light;
 }
@@ -43,7 +44,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 1em;
+    padding: 0.5em;
 
     .form-group .reply {
         display: flex;

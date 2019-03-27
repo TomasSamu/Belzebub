@@ -10,7 +10,7 @@
         <div class="footer_section">
                 <h5>Follow Us</h5>
                 <div class="social-icons">
-                    <li><i class="fab fa-facebook"></i></li>
+                    <li><a href="https://www.instagram.com/gameradar_cz/"><i class="fab fa-facebook"></i></a></li>
                     <li><i class="fab fa-twitter"></i></li>
                     <li><i class="fab fa-instagram"></i></li>
                 </div>
