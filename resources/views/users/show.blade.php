@@ -4,44 +4,48 @@
 <div class="sec-navbar">
     <form method="GET" action="{{action('UserController@index',$user->id)}}">
         @csrf
-    <input type="submit" value="Back" class="btn btn-sm btn-blue"></form>
+        <input type="submit" value="Back" class="btn btn-sm btn-blue"></form>
 </div>
 
 <div class="container">
 
     <div class="user-profile">
 
-            <div class="user-profile-left">
-                <img src="{{$user->image}}" alt="image" class="rounded-circle img-fluid img-detail">
-                <h1 class="username">{{$user->name}}</h1>
+
+        <div class="user-profile-left">
+            <img src="{{$user->image}}" alt="image" class="rounded-circle img-fluid img-detail">
+            <h1 class="username">{{$user->name}}</h1>
+        </div>
+
+        <div class="user-profile-right">
+            <div class="user-info-text">
+                <p>Username:{{$user->username}}</p>
+                <p>Email: {{$user->email}}</p>
+                <p>Gender: {{$user->gender}}</p>
+                <p>City: {{$user->city}}</p>
+                <p>Country: {{$user->country}}</p>
+
             </div>
-            <div class="user-profile-right">
-                <div class="user-info-text">
-                    <p>Username:{{$user->username}}</p>
-                    <p>Email: {{$user->email}}</p>
-                    <p>Gender: {{$user->gender}}</p>
-                    <p>City: {{$user->city}}</p>
-                    <p>Country: {{$user->country}}</p>
 
-                    @php
-                        $isAdmin = App\User::find(Auth::id());   
-                    @endphp
+        </div>
 
-                    @if (Auth::id() == $user->id || Auth::id()==$isAdmin->is_admin)
-                        <div class="buttons-edit">                            
-                                <form method="POST" action="{{action('UserController@destroy',$user->id)}}">
-                                    @method('DELETE')
-                                    @csrf
-                                    <input type="submit" value="Delete" class="btn btn-sm btn-red"></form>
-                                <form method="GET" action="{{action('UserController@edit',$user->id)}}">
-                                    @csrf
-                                    <input type="submit" value="Edit" class="btn btn-sm btn-amber"></form>
-                        </div>
-                    @endif
-                    
+        <div class="buttons-edit">
+                @php
+                $isAdmin = App\User::find(Auth::id());
+                @endphp
+
+                @if (Auth::id() == $user->id || Auth::id()==$isAdmin->is_admin)
+                <div class="buttons-edit">
+                    <form method="POST" action="{{action('UserController@destroy',$user->id)}}">
+                        @method('DELETE')
+                        @csrf
+                        <input type="submit" value="Delete" class="btn btn-sm btn-red"></form>
+                    <form method="GET" action="{{action('UserController@edit',$user->id)}}">
+                        @csrf
+                        <input type="submit" value="Edit" class="btn btn-sm btn-amber"></form>
                 </div>
-                
-            </div>
+                @endif
+          </div>
 
     </div>
 
@@ -92,10 +96,10 @@
                     @if (Auth::id() == $user->id)
                     <div class="buttons-edit">
                         <form method="POST"
-                        action="{{action('FeaturesController@removeGenreFromCollection',$genre->id)}}">
-                        @csrf
-                        <button type="submit" value="remove" class="btn btn-xs btn-red"><i
-                        class="far fa-trash-alt"></i></button></form>
+                            action="{{action('FeaturesController@removeGenreFromCollection',$genre->id)}}">
+                            @csrf
+                            <button type="submit" value="remove" class="btn btn-xs btn-red"><i
+                                    class="far fa-trash-alt"></i></button></form>
                     </div>
                     @endif
                 </div>
@@ -115,8 +119,8 @@
             <div class="card card-event rounded-pill">
                 <div class="card-body">
 
-                        <a href="{{action('EventController@show', $event->id)}}">{{$event->title}}
-                        </a>
+                    <a href="{{action('EventController@show', $event->id)}}">{{$event->title}}
+                    </a>
                     @if (Auth::id() == $user->id)
                     <div class="buttons-edit">
                         <form method="POST" action="{{action('EventController@destroy', $event->id)}}">
@@ -133,9 +137,10 @@
 
             @else
             <h2>I am not organizing any events yet:</h2>
-            <p><a href="{{action('EventController@create')}}"> Create new event</a><p>
-        
-            @endif
+            <p><a href="{{action('EventController@create')}}"> Create new event</a>
+                <p>
+
+                    @endif
         </div>
     </div>
 
@@ -147,8 +152,8 @@
             <div class="card card-event rounded-pill">
 
                 <div class="card-body">
-                        <a href="{{action('EventController@show', $event->id)}}">{{$event->title}}
-                        </a>
+                    <a href="{{action('EventController@show', $event->id)}}">{{$event->title}}
+                    </a>
                     @if (Auth::id() == $user->id)
                     <div class="buttons-edit">
                         <form method="POST" action="{{action('FeaturesController@unattendEvent', $event->id)}}">
@@ -167,8 +172,9 @@
 
         @else
         <h2>I am not attending any events yet</h2>
-        <p><a href="{{action('EventController@index')}}"> Check out the coming events</a><p>
-        @endif
+        <p><a href="{{action('EventController@index')}}"> Check out the coming events</a>
+            <p>
+                @endif
     </div>
 
 

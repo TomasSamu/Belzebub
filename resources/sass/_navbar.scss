@@ -6,6 +6,22 @@
     font-family: $font-text;
     z-index: 8999;
 
+    .navbar-brand {
+        font-family: $font-title;
+        margin: 0;
+        padding: 0;
+
+        img {
+            margin: 0 2em;
+        }
+        span {
+            @media only screen and (max-width: 400px) {
+                display: none;
+        
+            }
+        }
+    }
+
     .navbar-toggler-icon {
         color: $tertiary;
     }

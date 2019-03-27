@@ -17,24 +17,66 @@ background: linear-gradient(135deg, rgba(219,77,41,1) 1%,rgba(214,99,0,1) 100%);
 filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#db4d29', endColorstr='#d66300',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
 }
 
-.user-profile-left {
-    position: absolute;
-    top: 6em;
-    z-index: 6999;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
+// .user-profile-left {
+//     position: absolute;
+//     top: 6em;
+//     z-index: 6999;
+//     display: flex;
+//     flex-direction: row;
+//     align-items: center;
     
+//     @media only screen and (max-width: 400px) {
+//         flex-direction: column;
+//         position: relative;
+//         top:0;
+//     }
+.user-info-right {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.user-card-body {
+    background-color: lightgrey;
+}
+
+.user-profile {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+    // @include bg-user();
+    background-color: $tertiary;
+    color: $extra-light;
+    padding: 8em 2em 2em 2em;
+
     @media only screen and (max-width: 400px) {
-        flex-direction: column;
-        position: relative;
-        top:0;
+        padding-top: 2em;
     }
+
+
+    .user-info-text {
+        display: flex;
+        flex-direction: row;
+
+        p {
+            font-size: 1em;
+            padding: 1.5em;
+            color: $extra-light;
+        }
+    }
+
+    .user-profile-left {
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
 
     .username {
         background-color: $extra-dark;
         color: $light;
-        padding: 0.5em;
+        padding: 0.2em;
+        margin-top: -1em;
         @media only screen and (max-width: 400px) {
             font-size: 3rem;
         }
@@ -44,37 +86,10 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#db4d29', end
         padding: 2em 2em 2em 2em;
         height: 20em;
         width: 20em;
+        margin: -15em 0.5em 0.5em 0.5em;
     }
 }
 
-
-.user-card-body {
-    background-color: lightgrey;
-}
-
-.user-profile-right {
-    display: flex;
-    flex-direction: column;
-    justify-items: center;
-    position: relative;
-    @include bg-user();
-    color: $extra-light;
-    padding: 2em;
-    padding-top: 6em;
-
-    @media only screen and (max-width: 400px) {
-        padding-top: 2em;
-    }
-
-    .user-info-text {
-        display: inline-flex;
-        flex-direction: column;
-
-        p {
-            font-size: 0.9em;
-            color: $extra-light;
-        }
-    }
 }
 
 

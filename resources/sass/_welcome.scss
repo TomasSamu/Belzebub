@@ -31,13 +31,18 @@ h3.subtitle_welcome {
     background: linear-gradient(45deg, #058fd9b2, #d65008a1), url("../images/bgpic1.jpg") no-repeat center;
     background-size: cover;
     background-attachment: fixed;
-    padding-top: 6em;
+    padding: 3em;
 }
 
 .welcome {
   min-height: 25em;
   background-color: #265DCC;
   padding: 5em;
+
+  @media only screen and (max-width: 400px) {
+    padding: 1em;
+    min-height: 12em;
+}
 }
 
 .section_events {

@@ -144,70 +144,60 @@
   }
 }
 
-.user-profile-left {
-  position: absolute;
-  top: 6em;
-  z-index: 6999;
+.user-info-right {
   display: flex;
-  flex-direction: row;
-  align-items: center;
-}
-@media only screen and (max-width: 400px) {
-  .user-profile-left {
-    flex-direction: column;
-    position: relative;
-    top: 0;
-  }
-}
-.user-profile-left .username {
-  background-color: #212426;
-  color: #D3D0CB;
-  padding: 0.5em;
-}
-@media only screen and (max-width: 400px) {
-  .user-profile-left .username {
-    font-size: 3rem;
-  }
-}
-.user-profile-left .img-detail {
-  padding: 2em 2em 2em 2em;
-  height: 20em;
-  width: 20em;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .user-card-body {
   background-color: lightgrey;
 }
 
-.user-profile-right {
+.user-profile {
   display: flex;
   flex-direction: column;
-  justify-items: center;
+  justify-content: center;
   position: relative;
-  background: #db4d29;
-  /* Old browsers */
-  /* FF3.6-15 */
-  /* Chrome10-25,Safari5.1-6 */
-  background: linear-gradient(135deg, #db4d29 1%, #d66300 100%);
-  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr="#db4d29", endColorstr="#d66300",GradientType=1 );
-  /* IE6-9 fallback on horizontal gradient */
+  background-color: #160455;
   color: #F4F1EB;
-  padding: 2em;
-  padding-top: 6em;
+  padding: 8em 2em 2em 2em;
 }
 @media only screen and (max-width: 400px) {
-  .user-profile-right {
+  .user-profile {
     padding-top: 2em;
   }
 }
-.user-profile-right .user-info-text {
-  display: inline-flex;
-  flex-direction: column;
+.user-profile .user-info-text {
+  display: flex;
+  flex-direction: row;
 }
-.user-profile-right .user-info-text p {
-  font-size: 0.9em;
+.user-profile .user-info-text p {
+  font-size: 1em;
+  padding: 1.5em;
   color: #F4F1EB;
+}
+.user-profile .user-profile-left {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.user-profile .user-profile-left .username {
+  background-color: #212426;
+  color: #D3D0CB;
+  padding: 0.2em;
+  margin-top: -1em;
+}
+@media only screen and (max-width: 400px) {
+  .user-profile .user-profile-left .username {
+    font-size: 3rem;
+  }
+}
+.user-profile .user-profile-left .img-detail {
+  padding: 2em 2em 2em 2em;
+  height: 20em;
+  width: 20em;
+  margin: -15em 0.5em 0.5em 0.5em;
 }
 
 .user-img-circle {
@@ -287,13 +277,19 @@ h3.subtitle_welcome {
   background: linear-gradient(45deg, #058fd9b2, #d65008a1), url("../images/bgpic1.jpg") no-repeat center;
   background-size: cover;
   background-attachment: fixed;
-  padding-top: 6em;
+  padding: 3em;
 }
 
 .welcome {
   min-height: 25em;
   background-color: #265DCC;
   padding: 5em;
+}
+@media only screen and (max-width: 400px) {
+  .welcome {
+    padding: 1em;
+    min-height: 12em;
+  }
 }
 
 .section_events {
@@ -326,6 +322,19 @@ h3.subtitle_welcome {
   font-size: 0.9em;
   font-family: "Assistant", sans-serif;
   z-index: 8999;
+}
+.navbar .navbar-brand {
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+  padding: 0;
+}
+.navbar .navbar-brand img {
+  margin: 0 2em;
+}
+@media only screen and (max-width: 400px) {
+  .navbar .navbar-brand span {
+    display: none;
+  }
 }
 .navbar .navbar-toggler-icon {
   color: #160455;
@@ -690,7 +699,7 @@ body {
   line-height: 1.1em;
 }
 body .container {
-  padding: 3em 1em;
+  padding: 2em 1em;
   display: flex;
   flex-direction: column;
   justify-content: center;
