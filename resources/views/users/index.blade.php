@@ -15,7 +15,7 @@
             <div class="card m-2 p-2 shadow mb-4">
 
 
-                <img class="rounded-circle user-img-circle" src="{{$user->image}}" alt="Card image cap" />
+                <a href="{{action('UserController@show',$user->id)}}"><img class="rounded-circle user-img-circle" src="{{$user->image}}" alt="Card image cap" /></a>
 
 
                 <div class="card-body user-card-body">
