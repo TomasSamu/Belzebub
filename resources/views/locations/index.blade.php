@@ -15,17 +15,17 @@
     
         @foreach ($locations as $location)
         <div class="card">
-            <div class="view overlay">
-    
-                <img class="card-img-top" src="{{$location->image}}" alt="Card image cap" />
-                <div class="mask rgba-indigo-strong">
+            <a href="{{action('LocationController@show',$location->id)}}">
+                <div class="view overlay">
+                    <img class="card-img-top" src="{{$location->image}}" alt="Card image cap" />
+                    <div class="mask rgba-indigo-strong">
+                    </div>
                 </div>
-            </div>
-    
+            </a>
             <div class="card-body">
                 <h4 class="card-title">{{$location->name}}</h4>
                 <p>Average Rating: {{round($location->ratings()->avg('rating'), 2)}} </p>
-    
+
                 <div class="buttons-edit">
                     <form method="GET" action="{{action('LocationController@show',$location->id)}}">
                         @csrf

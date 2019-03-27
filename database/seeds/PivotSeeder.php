@@ -4,6 +4,7 @@ use Illuminate\Database\Seeder;
 use  App\Boardgame;
 use App\User;
 use App\Genre;
+use App\Rating;
 
 class PivotSeeder extends Seeder
 {
@@ -255,7 +256,11 @@ class PivotSeeder extends Seeder
         foreach ($boardgames as $boardgame) {
         $genre->boardgames()->attach([$boardgame->id]);
         }
-        
-        
+
+        $boardgames = Boardgame::all();
+        $users = User::all();
+        foreach ($users as $user) {
+            $user->boardgames()->sync([(rand(1,$boardgames->count())),(rand(1,$boardgames->count())),(rand(1,$boardgames->count())),(rand(1,$boardgames->count())),(rand(1,$boardgames->count())),(rand(1,$boardgames->count()))]);
+        }
     }
 }
