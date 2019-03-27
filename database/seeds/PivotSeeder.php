@@ -6,6 +6,7 @@ use App\User;
 use App\Genre;
 use App\Rating;
 use App\Location;
+use App\Event;
 
 class PivotSeeder extends Seeder
 {
@@ -272,8 +273,8 @@ class PivotSeeder extends Seeder
 
         $users = User::all();
         $events = Event::all();
-        foreach ($locations as $location) {
-            foreach ($events as $event) {
+        foreach ($events as $event) {
+            foreach ($users as $user) {
                 $rating = new Rating;
                 $rating->event_id = $event->id;
                 $rating->rating = rand(2,5);
@@ -284,10 +285,10 @@ class PivotSeeder extends Seeder
 
         $users = User::all();
         $games = Boardgame::all();
-        foreach ($locations as $location) {
-            foreach ($games as $game) {
+        foreach ($games as $game) {
+            foreach ($users as $user) {
                 $rating = new Rating;
-                $rating->game_id = $game->id;
+                $rating->board_game_id = $game->id;
                 $rating->rating = rand(2,5);
                 $rating->user_id = $user->id;
                 $rating->save();
