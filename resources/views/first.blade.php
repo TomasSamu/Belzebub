@@ -4,7 +4,7 @@
 @section('content')
         
         <div class="container-fluid logotag">
-                <img src="images/logo.png" alt="Game Radar Logo" class="img-fluid">
+                <img src="images/logo_orange_trans.png" alt="Game Radar Logo" class="img-fluid">
         </div>
 
         <a href="{{ action('EventController@index') }}">
