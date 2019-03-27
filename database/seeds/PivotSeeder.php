@@ -256,5 +256,6 @@ class PivotSeeder extends Seeder
         $genre->boardgames()->attach([$boardgame->id]);
         }
         
+        
     }
 }
