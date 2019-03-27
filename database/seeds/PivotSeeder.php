@@ -257,10 +257,16 @@ class PivotSeeder extends Seeder
         $genre->boardgames()->attach([$boardgame->id]);
         }
 
-        $boardgames = Boardgame::all();
         $users = User::all();
-        foreach ($users as $user) {
-            $user->boardgames()->sync([(rand(1,$boardgames->count())),(rand(1,$boardgames->count())),(rand(1,$boardgames->count())),(rand(1,$boardgames->count())),(rand(1,$boardgames->count())),(rand(1,$boardgames->count()))]);
+        $locations = Location::all();
+        foreach ($locations as $location) {
+            foreach ($users as $user) {
+                $rating = new Rating;
+                $rating->location_id = $location->id;
+                $rating->rating = rand(3,5);
+                $rating->user_id = $user->id;
+                $rating->save();
+            }
         }
     }
 }

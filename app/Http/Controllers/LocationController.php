@@ -147,25 +147,25 @@ class LocationController extends Controller
     }
 
     public function rating(Request $request, $id)
-     {
-         $rate = Rating::where('location_id', $id)->where('user_id', \Auth::id())->first();
-         if($rate){
+    {
+        $rate = Rating::where('location_id', $id)->where('user_id', \Auth::id())->first();
+        if($rate){
+
+            $rate->location_id = $id;
+            $rate->rating = $request->rating;
+            $rate->user_id = \Auth::id();
+            $rate->update();
+            return back()->with('warning', 'You changed your vote to '.$request->rating);
+        } else {
+
+            $rate = new Rating;
+            $rate->location_id = $id;
+            $rate->rating = $request->rating;
+            $rate->user_id = \Auth::id();
+            $rate->save();
  
-             $rate->location_id = $id;
-             $rate->rating = $request->rating;
-             $rate->user_id = \Auth::id();
-             $rate->update();
-             return back()->with('warning', 'You changed your vote to '.$request->rating);
-         } else {
-         
-             $rate = new Rating;
-             $rate->location_id = $id;
-             $rate->rating = $request->rating;
-             $rate->user_id = \Auth::id();
-             $rate->save();
+        }
  
-         }
- 
-          return back()->with('success', 'You just voted '.$request->rating);; 
+        return back()->with('success', 'You just voted '.$request->rating);; 
      }
 }
