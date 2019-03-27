@@ -1,10 +1,12 @@
 <?php
 
 use Illuminate\Database\Seeder;
-use  App\Boardgame;
+use App\Boardgame;
 use App\User;
 use App\Genre;
 use App\Rating;
+use App\Location;
+use App\Event;
 
 class PivotSeeder extends Seeder
 {
@@ -257,10 +259,40 @@ class PivotSeeder extends Seeder
         $genre->boardgames()->attach([$boardgame->id]);
         }
 
-        $boardgames = Boardgame::all();
         $users = User::all();
-        foreach ($users as $user) {
-            $user->boardgames()->sync([(rand(1,$boardgames->count())),(rand(1,$boardgames->count())),(rand(1,$boardgames->count())),(rand(1,$boardgames->count())),(rand(1,$boardgames->count())),(rand(1,$boardgames->count()))]);
+        $locations = Location::all();
+        foreach ($locations as $location) {
+            foreach ($users as $user) {
+                $rating = new Rating;
+                $rating->location_id = $location->id;
+                $rating->rating = rand(2,5);
+                $rating->user_id = $user->id;
+                $rating->save();
+            }
+        }
+
+        $users = User::all();
+        $events = Event::all();
+        foreach ($events as $event) {
+            foreach ($users as $user) {
+                $rating = new Rating;
+                $rating->event_id = $event->id;
+                $rating->rating = rand(2,5);
+                $rating->user_id = $user->id;
+                $rating->save();
+            }
+        }
+
+        $users = User::all();
+        $games = Boardgame::all();
+        foreach ($games as $game) {
+            foreach ($users as $user) {
+                $rating = new Rating;
+                $rating->board_game_id = $game->id;
+                $rating->rating = rand(2,5);
+                $rating->user_id = $user->id;
+                $rating->save();
+            }
         }
     }
 }
