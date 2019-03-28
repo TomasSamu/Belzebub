@@ -49,6 +49,7 @@
             </div>
 
              <div class="form-group">
+                    <label>Date/Time</label>
                     <div class="input-group date" id="datetimepicker1" data-target-input="nearest">
                         <input type="text" name="date_time" class="form-control datetimepicker-input" data-target="#datetimepicker1"/>
                         <div class="input-group-append" data-target="#datetimepicker1" data-toggle="datetimepicker">
@@ -56,9 +57,16 @@
                         </div> 
                     </div>
             </div>
-          
 
- 
+            <div class="form-group">
+                    <label>Games played</label>
+                    <select multiple name="board_game_id[]" class="form-control">
+                        @foreach($games as $game)
+                            <option value="{{ $game->id }}">{{ $game->name }}</option>
+                        @endforeach
+                    </select>
+                </div>
+        
  
             <button type="submit" class="btn btn-primary">Submit</button>
         </form>

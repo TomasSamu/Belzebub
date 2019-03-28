@@ -8,6 +8,7 @@ use App\Location;
 use App\Comment;
 use App\User;
 use App\Rating;
+use App\BoardGame;
 
 class EventController extends Controller
 {
@@ -38,7 +39,8 @@ class EventController extends Controller
     public function create()
     {
         $locations = Location::all();
-        return view ('events.create', compact(['locations']));
+        $games = BoardGame::all();
+        return view ('events.create', compact(['locations', 'games']));
     }
 
     /**
@@ -70,6 +72,7 @@ class EventController extends Controller
         $event->time = $dateTime[1];
         $event->location_id = $request->location_id;
         $event->save();
+        $event->boardgames()->attach($request->board_game_id);
 
         return redirect(action('EventController@index'))->with('success','you successfully created a new event');
 

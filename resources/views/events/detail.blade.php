@@ -21,6 +21,11 @@
             <h5>Organizer: <a href a
                     href="{{action('UserController@show', $created_by->id )}}">{{$created_by->name}}</a></h5>
             <h5>Average rating: {{$avgRating}}</h5>
+            <h5> Games played:
+            @foreach ($event->boardgames as $game)
+                <a href="{{action('BoardGameController@show', $game->id)}}">{{$game->name}} | </a>
+            @endforeach
+            </h5>
         </div>
 
         <div class="rating">
