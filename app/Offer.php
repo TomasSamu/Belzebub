@@ -24,4 +24,9 @@ class Offer extends Model
     {
         return $this->hasMany('App\Comment');
     }
+    
+    public function mainComments()
+    {
+        return $this->comments()->whereNull('comment_id');
+    }
 }

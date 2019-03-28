@@ -42,7 +42,11 @@ Route::get('/add/{id}', 'FeaturesController@addGameToCollection');
 Route::post('/remove/game/{id}', 'FeaturesController@removeGameFromCollection');
 Route::post('/remove/genre/{id}', 'FeaturesController@removeGenreFromCollection');
 Route::get('/offer/offerIndex', 'FeaturesController@offersIndex');
+
+Route::get('/offer/offerIndex/{id}', 'FeaturesController@offersShow');
 Route::get('/offer/show/{id}', 'FeaturesController@offersShow');
+Route::get('/offer/show/{id}', 'CommentController@offerCommentStore');
+Route::post('/offer/show/{id}', 'CommentController@offerCommentStore');
 Route::post('/offer/{id}', 'FeaturesController@createOffer');
 
 Route::get('/users/{user}/unattend', 'FeaturesController@unattendEvent');

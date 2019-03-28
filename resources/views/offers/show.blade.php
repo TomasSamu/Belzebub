@@ -22,4 +22,26 @@
         <input type="submit" value="Edit"></form> --}}
     </div>
 
+    <div class="container">
+        @auth
+        <form action="{{action('CommentController@offerCommentStore', $offer->id)}}" method="post">
+            @csrf
+            <div class="form-group">
+                <label for="text">Your comment:</label><br>
+                <textarea name="text" id="comment"></textarea>
+            </div>
+    
+            <div class="form-group">
+                <input type="submit" value="submit comment" class="btn btn-sm btn-amber">
+            </div>
+        </form>
+        @endauth
+    
+        {{-- comment thread --}}
+        @foreach ($offer->mainComments as $comment)
+        @include('offers.comments')
+        @endforeach
+    
+    </div>
+
 @endsection
