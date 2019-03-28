@@ -52,7 +52,7 @@
 
     <div class="mycollection box">
         <h2>My Collection</h2>
-        <div class="grid-container scrolling-wrapper-flexbox ">
+        <div class="grid-container">
             @foreach ($user->boardgames as $boardgame)
             <div class="card mb-3">
                 <a href="{{action('BoardGameController@show',$boardgame->id )}}">
@@ -88,7 +88,7 @@
 
         <h2>My Favourite Genres</h2>
 
-        <div class="grid-container">
+        <div class="grid-container scrolling-wrapper-flexbox">
             @foreach ($user->genres as $genre)
             <div class="card card-event rounded-pill">
                 <div class="card-body">

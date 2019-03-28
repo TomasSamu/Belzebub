@@ -17,6 +17,14 @@
     grid-row-gap: 1rem;
     padding: 0 3rem;
 
+    a {
+        color: $primary;
+
+        &:hover {
+            color: $extra-dark;
+        }
+    }
+
     @media (max-width: 600px) {
         padding: 0.5em;
         }

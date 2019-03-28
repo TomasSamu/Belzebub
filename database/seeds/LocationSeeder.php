@@ -46,7 +46,7 @@ class LocationSeeder extends Seeder
                     "country" => "Czech Republic",
                     "web" => "http://www.paluba.cz/",
                     "rating" => "9.7",
-                    "image" => "https://maps.google.com/maps?q=Paluba&t=&z=13&ie=UTF8&iwloc=&output=embed",
+                    "map" => "https://maps.google.com/maps?q=veletrzni%2073%20prague&t=&z=13&ie=UTF8&iwloc=&output=embed",
                     "image" => "http://www.paluba.cz/resources/img/logo.svg",
                 ],
                 [
@@ -85,6 +85,7 @@ class LocationSeeder extends Seeder
                     "map" => "https://maps.google.com/maps?q=Boards%20and%20Brews&t=&z=13&ie=UTF8&iwloc=&output=embed",
                     "image" => "http://hrajeme.cz/wp-content/uploads/Bohemia-Boards-03-nahled.jpg",
                 ],
+                
                 [
                     "name" => "Restaurace U Pecků",
                     "description" => "Typical Czech Restaurant",

@@ -86,3 +86,33 @@
          flex-direction: column;
      }
     }
+
+
+    .top-3, .upcoming {
+        padding-bottom: 3em;
+    }
+
+
+    ////
+
+    .event-card {
+        h5 {
+            color: $primary;
+            font-family: $font-title;
+            font-size: 1.5em;
+        }
+        h4 {
+            color: $extra-dark;
+            font-weight: 700;  
+        }
+        p {
+            line-height: 0.6em;
+        }
+
+        a {
+            color: $primary;
+            &:hover{
+                color: $extra-dark;
+            }
+        }
+    }

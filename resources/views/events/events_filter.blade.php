@@ -36,7 +36,7 @@
     {{-- Pass to custom --}}
     {{-- or imgfluid in scss --}}
 
-    <div class="card">
+    <div class="card event-card">
         <div class="view overlay">
             <img class="card-img-top img-fluid"
                 src="https://geekandsundry.com/wp-content/uploads/2016/06/BoardGameGS24.jpg" alt="Card image cap" />

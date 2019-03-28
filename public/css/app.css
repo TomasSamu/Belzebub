@@ -80,6 +80,29 @@
     flex-direction: column;
   }
 }
+.top-3, .upcoming {
+  padding-bottom: 3em;
+}
+
+.event-card h5 {
+  color: #DB4D29;
+  font-family: "Poppins", sans-serif;
+  font-size: 1.5em;
+}
+.event-card h4 {
+  color: #212426;
+  font-weight: 700;
+}
+.event-card p {
+  line-height: 0.6em;
+}
+.event-card a {
+  color: #DB4D29;
+}
+.event-card a:hover {
+  color: #212426;
+}
+
 .footer {
   background-color: #212426;
   color: #D3D0CB;
@@ -243,17 +266,6 @@
 .user-profile-pic-big {
   max-width: 20em;
   height: auto;
-}
-
-@media only screen and (max-width: 400px) {
-  .scrolling-wrapper-flexbox {
-    overflow-x: scroll;
-    overflow-y: hidden;
-    white-space: nowrap;
-  }
-  .scrolling-wrapper-flexbox .card {
-    display: inline-block;
-  }
 }
 
 .user-card-body {
@@ -693,6 +705,12 @@ h6 {
   grid-row-gap: 1rem;
   padding: 0 3rem;
 }
+.location-detail a {
+  color: #DB4D29;
+}
+.location-detail a:hover {
+  color: #212426;
+}
 @media (max-width: 600px) {
   .location-detail {
     padding: 0.5em;
@@ -767,7 +785,7 @@ body .container {
   grid-template-columns: repeat(5, 1fr);
   grid-column-gap: 1.5em;
   grid-row-gap: 1.5em;
-  justify-items: space-between;
+  justify-content: space-between;
   padding: 1em 3em 1em 3em;
 }
 @media only screen and (max-width: 900px) {
@@ -787,13 +805,4 @@ body .container {
     grid-template-columns: 1fr;
     padding: 1em 1em 1em 1em;
   }
-}
-
-.scrolling-wrapper {
-  overflow-x: scroll;
-  overflow-y: hidden;
-  white-space: nowrap;
-}
-.scrolling-wrapper .card {
-  display: inline-block;
 }
