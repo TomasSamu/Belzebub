@@ -68,7 +68,7 @@
             @csrf
             <div class="form-group">
                 <label for="text">Your comment:</label><br>
-                <textarea name="text" id="comment" cols="50" rows="5"></textarea>
+                <textarea name="text" id="comment"></textarea>
             </div>
     
             <div class="form-group">

@@ -51,6 +51,11 @@ h6 {
     line-height: 1.6rem; 
 }
 
+.color-title {
+        color: $primary;
+        font-family: $font-title;
+        font-size: 1.2em;
+}
 // .lead {
 //     font-family: $font-text;
 //     font-size: 1em;

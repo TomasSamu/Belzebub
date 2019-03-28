@@ -13,10 +13,6 @@
     color:$extra-dark;
 }
 
-.card-body {
-    background-color: $extra-light;
-}
-
 //this affects all cards images
 .card-img-top {
     width: 100%;
@@ -31,8 +27,7 @@
 // Card genre and event
 
 .card-event {
-    background-color: $tertiary;
-
+    @include bg-user();
 
     .card-body {
         display: inline-flex;
@@ -41,8 +36,8 @@
         align-items: center;
         font-size: 1em; 
         font-family: $font-title;
-        background-color: transparent;
-        border-radius: 1em;
+
+
 
         a{
             text-decoration: none;
@@ -61,19 +56,3 @@
     }
    
 }
-
-
-// .card-genre {
-//     display: flex;
-//     flex-direction: row;
-
-
-//     .card-body {
-//         display: inline-flex;
-//         flex-direction: row;
-//         justify-content: space-between;
-//         align-items: center;
-//         font-size: 1em; 
-//         background-color: $tertiary;
-//  }
-//     }

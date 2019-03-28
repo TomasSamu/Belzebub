@@ -11,8 +11,8 @@
     <div class="location-detail">
     
         <h1 class="title">{{$location->name}}</h1>
-            <div class="mapouter">
-                <div class="gmap_canvas"><iframe id="gmap_canvas" src="{{$location->map}}" width="500px" height="400px"
+            <div class="mapouter embed-responsive embed-responsive-16by9">
+                <div class="gmap_canvas"><iframe id="gmap_canvas embed-responsive-item" src="{{$location->map}}" width="500px" height="400px"
                         frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe></div>
     
             </div>

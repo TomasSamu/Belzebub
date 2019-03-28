@@ -15,6 +15,18 @@ $green: #53DD6C;
 $yellow: #E6C229;
 $blue: #3E7CB1;
 
+@mixin bg-user {
+    background: rgb(219, 77, 41);
+    /* Old browsers */
+    background: -moz-linear-gradient(-45deg, rgba(219, 77, 41, 1) 1%, rgba(214, 99, 0, 1) 100%);
+    /* FF3.6-15 */
+    background: -webkit-linear-gradient(-45deg, rgba(219, 77, 41, 1) 1%, rgba(214, 99, 0, 1) 100%);
+    /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(135deg, rgba(219, 77, 41, 1) 1%, rgba(214, 99, 0, 1) 100%);
+    /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#db4d29', endColorstr='#d66300', GradientType=1);
+    /* IE6-9 fallback on horizontal gradient */
+}
 
 
 //Media queries

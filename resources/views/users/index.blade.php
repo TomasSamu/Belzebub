@@ -19,10 +19,10 @@
 
 
                 <div class="card-body user-card-body">
-                    <h5 class="card-title">{{ $user->name}}</h5>
-                    <h6 class="card-text">{{ $user->city}}</h6>
-                    <p class="card-text">{{ $user->gender}}</p>
-                    <p class="card-text">This is a short introduction of the user.</p>
+                    <h3>{{ $user->name}}</h3>
+                    <h4>{{ $user->city}}</h4>
+                    <p>{{ $user->gender}}</p>
+                    <p >This is a short introduction of the user.</p>
 
                     <div class="buttons-edit">
                         <form method="GET" action="{{action('UserController@show',$user->id)}}">

@@ -19,7 +19,7 @@
                 <div class="form-group reply" id="comment-reply">
     
                     <input type="hidden" name="comment_id" value={{$comment->id}}>
-                    <textarea name="text" id="comment" cols="50" rows="3"></textarea>
+                    <textarea name="text" id="comment"></textarea>
                     <button type="submit" value="submit comment" class="btn btn-xs btn-amber">Submit</button>
                 </div>        
             </form>

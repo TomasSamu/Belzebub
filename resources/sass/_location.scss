@@ -17,8 +17,13 @@
     grid-row-gap: 1rem;
     padding: 0 3rem;
 
+    @media (max-width: 600px) {
+        padding: 0.5em;
+        }
+
     .lead {
         margin-bottom: 2rem;
+        margin-top: 2em;
     }
 }
 
