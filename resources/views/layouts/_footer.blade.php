@@ -2,8 +2,8 @@
     <div class="footer_sections">
         <div class="footer_section">
             <h5>Product</h5>
-            <li><a href="{{ action('HomeController@faq') }}">FAQ</a></li>
-            <li><a href="{{ action('HomeController@tc') }}">Terms and Conditions</a></li>
+            <li><a href="{{ URL('faq') }}">FAQ</a></li>
+            <li><a href="{{ URL('tc') }}">Terms and Conditions</a></li>
 
         </div>
 
@@ -20,8 +20,8 @@
 
         <div class="footer_section">
             <h5>Team</h5>
-            <li><a href="{{ action('HomeController@contactus') }}">Contact us</a></li>
-            <li><a href="{{ action('HomeController@aboutus') }}">About us</a></li>
+            <li><a href="{{ URL('contactus') }}">Contact us</a></li>
+            <li><a href="{{ URL('aboutus') }}">About us</a></li>
 
         </div>
 

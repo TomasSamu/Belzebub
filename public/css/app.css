@@ -147,6 +147,57 @@
   margin-left: 0.5em;
 }
 
+.contact-us {
+  display: flex;
+  flex-direction: row;
+  min-height: 55vh;
+}
+.contact-us p {
+  font-size: 1.5em;
+}
+.contact-us p a {
+  color: #DB4D29;
+}
+.contact-us p a:hover {
+  color: #212426;
+}
+
+.about-us {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding-top: 2em;
+  text-align: justify;
+  -webkit-column-gap: 13em;
+          column-gap: 13em;
+  min-height: 57vh;
+}
+.about-us div {
+  width: 30%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.about-us h1 {
+  font-size: 2em;
+  background-color: #DB4D29;
+  color: #F4F1EB;
+  padding: 0.3em 2em;
+  margin-top: -2em;
+}
+.about-us p {
+  font-size: 1em;
+  line-height: 1.6em;
+  padding-top: 2em;
+}
+.about-us img {
+  border-radius: 50%;
+  width: 14em;
+  height: 14em;
+  margin: 2em;
+}
+
 /* Short Page */
 .shortpage {
   background-color: #F4F1EB;

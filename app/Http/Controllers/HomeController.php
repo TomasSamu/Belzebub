@@ -29,21 +29,4 @@ class HomeController extends Controller
     {
         return view('first');
     }
-    public function tc()
-    {
-        return view('footer/tc');
-    }
-    public function faq()
-    {
-        return view('footer/faq');
-    }
-
-    public function aboutus()
-    {
-        return view('footer/aboutus');
-    }
-    public function contactus()
-    {
-        return view('footer/contactus');
-    }
 }

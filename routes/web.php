@@ -61,10 +61,11 @@ Route::resource('/locations', 'LocationController');
 Route::resource('/users', 'UserController');
 
 
-Route::get('/footer/tc', 'HomeController@tc');
-Route::get('/footer/faq', 'HomeController@faq');
-Route::get('/footer/aboutsus', 'HomeController@aboutus');
-Route::get('/footer/contactus', 'HomeController@contactus');
+Route::view('/tc', 'footer.tc');
+Route::view('/faq', 'footer.faq');
+Route::view('/aboutus', 'footer.aboutus');
+Route::view('/contactus', 'footer.contactus');
+
 
 /* Route::get('logout', 'Auth\LoginController@logout'); */
 
