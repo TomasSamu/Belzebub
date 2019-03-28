@@ -32,7 +32,7 @@
                     <input type="radio" name="rating" value="3" id="rating-3" /> <label for="rating-3" title="text">3</label>
                     <input type="radio" name="rating" value="4" id="rating-4" /> <label for="rating-4" title="text">4</label>
                     <input type="radio" name="rating" value="5" id="rating-5" /> <label for="rating-5" title="text">5</label>
-                    <button type="submit" value="Rate">Rate</button>
+                    <button type="submit" class="btn btn-sm btn-amber" value="Rate">Rate</button>
                 </form>
             </div>
 
