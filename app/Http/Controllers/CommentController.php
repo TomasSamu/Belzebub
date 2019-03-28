@@ -52,5 +52,17 @@ class CommentController extends Controller
         return back()->with('success','you posted a new comment');
     }
 
+    public function offerCommentStore(Request $request, $id)
+    {
+        $comment = new Comment;
+        $comment->user_id = Auth::id();
+        $comment->text = $request->text;
+        $comment->offer_id = $id;
+        $comment->comment_id = $request->comment_id;
+        $comment->save();
+
+        return back()->with('success','you posted a new comment');
+    }
+
 
 }

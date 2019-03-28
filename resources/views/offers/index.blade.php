@@ -18,7 +18,7 @@
                     <h4 class="card-title">{{$offer->title}}</h4>
                     <h5 class="card-text">{{$offer->text}}</h5>
                     
-        <a href="{{action('FeaturesController@offersShow',$offer->id)}}">
+         <a href="{{action('FeaturesController@offersShow',$offer->id)}}">
                 More info...
             </a>
         
