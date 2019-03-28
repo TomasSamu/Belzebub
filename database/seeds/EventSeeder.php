@@ -2,6 +2,7 @@
 
 use Illuminate\Database\Seeder;
 use App\Event;
+use App\BoardGame;
 
 class EventSeeder extends Seeder
 {
@@ -24,5 +25,12 @@ class EventSeeder extends Seeder
                 "num_of_players" => rand(1,6)
             ]);
         }
+
+        $events = Event::all();
+        foreach ($events as $event) {
+            $boardgames = BoardGame::whereIn('id',[rand(1,48),rand(1,48)])->pluck('id')->toArray();
+            //dd($boardgames);
+            $event->boardgames()->attach($boardgames);
+        } 
     }
 }
