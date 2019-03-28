@@ -33,11 +33,11 @@
                         @csrf
                         <input type="radio" name="rating" value="1" id="rating-1" class="star star-1" /> <label for="rating-1"
                             title="text">1</label>
-                        <input type="radio" name="rating" value="2" id="rating-2" /> <label for="rating-2" title="text">2</label>
+                        <input type="radio" class="custom-control-input" name="rating" value="2" id="rating-2" /> <label for="rating-2" title="text">2</label>
                         <input type="radio" name="rating" value="3" id="rating-3" /> <label for="rating-3" title="text">3</label>
                         <input type="radio" name="rating" value="4" id="rating-4" /> <label for="rating-4" title="text">4</label>
                         <input type="radio" name="rating" value="5" id="rating-5" /> <label for="rating-5" title="text">5</label>
-                        <button type="submit" value="Rate">Rate</button>
+                        <button type="submit" class="btn btn-sm btn-amber" value="Rate">Rate</button>
                     </form>
                 </div>
     

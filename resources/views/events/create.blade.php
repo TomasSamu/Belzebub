@@ -7,28 +7,28 @@
 
 
 {{-- </head> --}}
-    <div class="container">
+<div class="container">
 
-        <form method="post" action="{{ action('EventController@store') }}">
+    <form method="post" action="{{ action('EventController@store') }}">
 
-            @csrf
+        @csrf
 
-            <div class="form-group">
-                <label>Title</label>
-                <input type="text" name="title" class="form-control">
-            </div>
+        <div class="form-group">
+            <label>Title</label>
+            <input type="text" name="title" class="form-control">
+        </div>
 
-             <div class="form-group">
-                <label>Description</label>
-                <input type="text" name="text" class="form-control">
-            </div>
+        <div class="form-group">
+            <label>Description</label>
+            <input type="text" name="text" class="form-control">
+        </div>
 
-            <div class="form-group">
-                <label>Number of players</label>
-                <input type="text" name="num_of_players" class="form-control">
-            </div>
+        <div class="form-group">
+            <label>Number of players</label>
+            <input type="text" name="num_of_players" class="form-control">
+        </div>
 
-{{--
+        {{--
             <div class="form-group">
                 <label>Date</label>
                 <input class="form-control" id="date" name="date" placeholder="YYYY-MM-DD" type="text"/>
@@ -39,14 +39,14 @@
                 <input class="form-control" id="time" name="time" placeholder="HH:MM" type="text"/>
             </div> --}}
 
-            <div class="form-group">
-                <label>Location</label>
-                <select name="location_id" class="form-control">
-                    @foreach($locations as $location)
-                        <option value="{{ $location->id }}">{{ $location->name }}</option>
-                    @endforeach
-                </select>
-            </div>
+        <div class="form-group">
+            <label>Location</label>
+            <select name="location_id" class="form-control">
+                @foreach($locations as $location)
+                <option value="{{ $location->id }}">{{ $location->name }}</option>
+                @endforeach
+            </select>
+        </div>
 
              <div class="form-group">
                     <label>Date/Time</label>
