@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Boardgame;
 use App\Rating;
+
 class BoardGameController extends Controller
 {
     // public function __construct()

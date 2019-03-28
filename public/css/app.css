@@ -149,8 +149,8 @@
 
 /* Short Page */
 .shortpage {
-  background-color: #D3D0CB;
-  min-height: 90vh;
+  background-color: #F4F1EB;
+  min-height: 40vh;
 }
 
 .user-profile {
@@ -771,7 +771,6 @@ body .container {
   flex-direction: column;
   justify-content: center;
   min-width: 95vw;
-  min-height: 82vh;
   margin: 0 auto;
 }
 
@@ -805,4 +804,8 @@ body .container {
     grid-template-columns: 1fr;
     padding: 1em 1em 1em 1em;
   }
+}
+
+.offers-cont {
+  min-height: 70vh;
 }

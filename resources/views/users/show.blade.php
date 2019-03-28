@@ -172,7 +172,7 @@
 
         @else
         <h2>I am not attending any events yet</h2>
-        <p><a href="{{action('EventController@index')}}"> Check out the coming events</a>
+        <p><a href="{{action('EventController@index')}}"> Check out the upcoming events</a>
             <p>
                 @endif
     </div>
