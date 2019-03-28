@@ -49059,6 +49059,9 @@ if (token) {
 //     encrypted: true
 // });
 
+
+console.log('hello');
+
 /***/ }),
 
 /***/ "./resources/js/components/ExampleComponent.vue":
