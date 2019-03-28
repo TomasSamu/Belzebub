@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Boardgame;
+use App\BoardGame;
 use App\Rating;
 
 class BoardGameController extends Controller
@@ -19,7 +19,7 @@ class BoardGameController extends Controller
      */
     public function index()
     {
-        $games = Boardgame::paginate(20);
+        $games = BoardGame::paginate(20);
         $list = view('games.list_of_games', compact('games'));
 
         return $list;
@@ -44,7 +44,7 @@ class BoardGameController extends Controller
      */
     public function store(Request $request)
     {
-        $game = new Boardgame;
+        $game = new BoardGame;
 
         $validator = $request->validate([
             'name' => 'required',
@@ -82,7 +82,7 @@ class BoardGameController extends Controller
     public function show($id)
     {
         $avgRating = round(Rating::where('board_game_id', $id)->avg('rating'), 2);
-        $game = Boardgame::find($id);
+        $game = BoardGame::find($id);
         $detail = view('games.detail',compact(['game', 'avgRating']));
         return $detail;
     }
@@ -97,7 +97,7 @@ class BoardGameController extends Controller
     {
 
 
-        $game = Boardgame::find($id);
+        $game = BoardGame::find($id);
         $form = view('games.edit',compact('game'));
         return $form;
     }
@@ -123,7 +123,7 @@ class BoardGameController extends Controller
             'image_url' => 'required|url',
         ]);
         
-        $game = Boardgame::findOrFail($id);
+        $game = BoardGame::findOrFail($id);
 
         $game->update($request->all());
 
@@ -138,7 +138,7 @@ class BoardGameController extends Controller
      */
     public function destroy($id)
     {
-        $game = Boardgame::findOrFail($id);
+        $game = BoardGame::findOrFail($id);
 
         $game->delete();
 
@@ -150,7 +150,7 @@ class BoardGameController extends Controller
 /* return 'abc'; */
 
         $search = $request->search;
-        $games = Boardgame::where('name', 'like', '%'.$search.'%')->get();
+        $games = BoardGame::where('name', 'like', '%'.$search.'%')->get();
         return $games;
      }
 

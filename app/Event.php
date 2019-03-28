@@ -22,7 +22,7 @@ class Event extends Model
     }
     public function boardgames()
     {
-        return $this->belongsToMany('App\Boardgame');
+        return $this->belongsToMany('App\BoardGame');
     }
 
     public function attendees()

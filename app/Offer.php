@@ -14,7 +14,7 @@ class Offer extends Model
     ];
     public function boardgame()
     {
-        return $this->belongsTo('App\Boardgame');
+        return $this->belongsTo('App\BoardGame');
     }
     public function user()
     {

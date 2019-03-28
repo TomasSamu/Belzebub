@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Http\Request;
-use App\Boardgame;
+use App\BoardGame;
 use App\User;
 use App\Event;
 use App\Offer;
@@ -13,7 +13,7 @@ class FeaturesController extends Controller
 {
     public function addGameToCollection($id)
     {
-        $game = Boardgame::find($id);
+        $game = BoardGame::find($id);
         $user = User::find(Auth::id());
         if($user->boardgames()->where('board_game_id', $game->id)->exists()) {
             return back();
@@ -27,7 +27,7 @@ class FeaturesController extends Controller
 
     public function removeGameFromCollection($id)
     {
-        $game = Boardgame::find($id);
+        $game = BoardGame::find($id);
         $user = User::find(Auth::id());
         $user->boardgames()->detach($game->id);
         return back();
@@ -55,7 +55,7 @@ class FeaturesController extends Controller
 
     public function createOffer($id, Request $request)
     {
-        $game = Boardgame::find($id);
+        $game = BoardGame::find($id);
         $user = User::find(Auth::id());
 
             $offer = new Offer;
