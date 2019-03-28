@@ -50,9 +50,9 @@
     </div>
 
 
-    <div class="container">
+    <div class="mycollection box">
         <h2>My Collection</h2>
-        <div class="grid-container">
+        <div class="grid-container scrolling-wrapper-flexbox ">
             @foreach ($user->boardgames as $boardgame)
             <div class="card mb-3">
                 <a href="{{action('BoardGameController@show',$boardgame->id )}}">
@@ -84,7 +84,7 @@
         </div>
     </div>
 
-    <div class="container">
+    <div class="mygenres box">
 
         <h2>My Favourite Genres</h2>
 
@@ -109,7 +109,7 @@
 
     </div>
 
-    <div class="container">
+    <div class="myevents box">
 
         @if ($user->events->count() > 0)
         <h2>I am organizing these events:</h2>
@@ -144,7 +144,7 @@
         </div>
     </div>
 
-    <div class="container">
+    <div class="myattends box">
         @if ($user->attend_events()->count() > 0)
         <h2>I am attending these events:</h2>
         <div class="grid-container">

@@ -207,6 +207,10 @@
   }
 }
 
+.box {
+  padding: 2em 0;
+}
+
 .user-img-circle {
   width: 10em;
   height: 10em;
@@ -241,13 +245,15 @@
   height: auto;
 }
 
-.scrolling-wrapper-flexbox {
-  display: flex;
-  flex-wrap: nowrap;
-  overflow-x: auto;
-}
-.scrolling-wrapper-flexbox .card {
-  flex: 0 0 auto;
+@media only screen and (max-width: 400px) {
+  .scrolling-wrapper-flexbox {
+    overflow-x: scroll;
+    overflow-y: hidden;
+    white-space: nowrap;
+  }
+  .scrolling-wrapper-flexbox .card {
+    display: inline-block;
+  }
 }
 
 .user-card-body {

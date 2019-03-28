@@ -75,6 +75,9 @@
 
 }
 
+.box {
+    padding: 2em 0;
+}
 /// Users profiles index
 
 .user-img-circle {
@@ -113,13 +116,15 @@
 
 
 .scrolling-wrapper-flexbox {
-    display: flex;
-    flex-wrap: nowrap;
-    overflow-x: auto;
-
-    .card {
-        flex: 0 0 auto;
-    }
+    @media only screen and (max-width: 400px) {
+        overflow-x: scroll;
+        overflow-y: hidden;
+        white-space: nowrap;
+      
+        .card {
+          display: inline-block;
+        }
+}
 }
 
 
