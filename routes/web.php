@@ -28,6 +28,8 @@ Route::post('/games/rating/{game}', 'BoardGameController@rating');
 Route::get('/locations/rating/{game}', 'LocationController@rating');
 Route::post('/locations/rating/{game}', 'LocationController@rating');
 
+Route::get('/games/filter', 'BoardGameController@search');
+
 Route::get('/events/{Event}', 'CommentController@eventCommentStore');
 Route::post('/events/{Event}', 'CommentController@eventCommentStore');
 Route::get('/games/{game}', 'CommentController@gameCommentStore');
@@ -55,7 +57,7 @@ Route::delete('/users/{user}/unattend', 'FeaturesController@unattendEvent');
 Route::get('/events/attend/{event}', 'FeaturesController@attendEvent');
 Route::post('/events/attend/{event}', 'FeaturesController@attendEvent');
 
-Route::get('/games/filter', 'BoardGameController@search');
+
 Route::resource('/games', 'BoardGameController');
 Route::resource('/locations', 'LocationController');
 Route::resource('/users', 'UserController');

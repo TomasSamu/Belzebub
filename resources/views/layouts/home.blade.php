@@ -73,12 +73,13 @@
             searchElm.addEventListener('keyup', e => {
                 if (e.target.value.length > 3) {
 
+
                     fetch('/games/filter?search=' + e.target.value)
                         .then(function (response) {
+                            console.log(response);
                             return response.json();
                         })
                         .then(function (myGames) {
-
 
                             let searchResult = document.querySelector('#search_results');
                             searchResult.innerHTML = '';
@@ -94,11 +95,7 @@
 
                             })
 
-
-
                             console.log(myGames);
-
-
                         });
                 }
             });
