@@ -587,8 +587,8 @@ div.modal div.modal-backdrop {
   color: #212426;
 }
 
-.offers img {
-  max-height: 20em;
+.offers {
+  max-height: 30em;
 }
 
 .comments {
