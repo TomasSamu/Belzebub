@@ -14,9 +14,9 @@
         @foreach ($offers as $offer)
         <div class="card">
                 <div class="card-body">
-                    <img src="{{action('BoardGameController@show',$offer->boardgame->image_url)}}" />
-                    <h4 class="card-title">{{$offer->title}}</h4>
-                    <h5 class="card-text">{{$offer->text}}</h5>
+                   <img src="{{$offer->boardgame->image_url}}" />
+                   <h4 class="card-title">{{$offer->title}}</h4>
+                   <h5 class="card-text">{{$offer->text}}</h5>
                     
          <a href="{{action('FeaturesController@offersShow',$offer->id)}}">
                 More info...
