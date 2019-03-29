@@ -12,7 +12,7 @@
             <h5>Game on Offer: <a
                     href="{{action('BoardGameController@show',$offer->boardgame->id)}}">{{$offer->boardgame->name}}</a>
             </h5>
-            <img src="{{action('BoardGameController@show',$offer->boardgame->image_url)}}" />
+            <img src="{{$offer->boardgame->image_url}}" class="img-fluid"/>
             {{-- <form method="GET" action="{{action('offersController@index',$offers->id)}}">
             @csrf
             <input type="submit" value="Back"></form>
@@ -31,7 +31,7 @@
                 @csrf
                 <div class="form-group">
                     <label for="text">Your comment:</label><br>
-                    <textarea name="text" id="comment"></textarea>
+                    <textarea name="text" id="comment" class="form-control"></textarea>
                 </div>
 
                 <div class="form-group">

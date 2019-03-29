@@ -7,7 +7,7 @@
         <input type="submit" value="Add a new game" class="btn btn-sm btn-amber"></form>
     <h2 class="title-bar">Games</h2>
     <input type="text" class="search">
-    <div id="search_results"></div>
+    <div id="search_results" class="search-result"></div>
 
 </div>
 

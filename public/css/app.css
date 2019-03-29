@@ -38,6 +38,7 @@
 .attendee img {
   width: 6em;
   height: auto;
+  margin-left: -5em;
 }
 
 .event-detail {
@@ -172,12 +173,26 @@
           column-gap: 13em;
   min-height: 57vh;
 }
+@media (max-width: 800px) {
+  .about-us {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+}
 .about-us div {
   width: 30%;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+@media (max-width: 800px) {
+  .about-us div {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
 }
 .about-us h1 {
   font-size: 2em;
@@ -563,6 +578,16 @@ div.modal div.modal-backdrop {
     padding: 0.5em;
   }
 }
+.search-result a {
+  color: #F4F1EB;
+}
+.search-result:active {
+  color: #D3D0CB;
+}
+.search-result:hover {
+  color: #212426;
+}
+
 .comments {
   display: flex;
   flex-direction: row;

@@ -8,13 +8,13 @@
 
 
 
-<div class="container offers-cont">
+<div class="container">
     <div class="grid-container">
     
         @foreach ($offers as $offer)
         <div class="card">
-                <div class="card-body">
-                   <img src="{{$offer->boardgame->image_url}}" />
+                <div class="card-body" class="offers">
+                   <img src="{{$offer->boardgame->image_url}}"  class="card-img-top" />
                    <h4 class="card-title">{{$offer->title}}</h4>
                    <h5 class="card-text">{{$offer->text}}</h5>
                     

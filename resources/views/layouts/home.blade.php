@@ -61,46 +61,35 @@
                 format: 'YYYY-MM-DD HH:mm'
             });
         });
-
         $(function () {
             $('#datetimepicker4').datetimepicker({
                 format: 'YYYY-MM-DD'
             });
         });
-
         $(function () {
             let searchElm = document.querySelector('.search');
             searchElm.addEventListener('keyup', e => {
                 if (e.target.value.length > 3) {
-
-
                     fetch('/games/filter?search=' + e.target.value)
                         .then(function (response) {
                             console.log(response);
                             return response.json();
                         })
                         .then(function (myGames) {
-
                             let searchResult = document.querySelector('#search_results');
                             searchResult.innerHTML = '';
-
                             myGames.forEach((game) => {
                                 console.log(game);
-
                                 let anchor = document.createElement('a');
                                 anchor.href = '/games/' + game.id;
                                 anchor.innerHTML = game.name;
-
                                 searchResult.appendChild(anchor);
-
                             })
-
                             console.log(myGames);
                         });
                 }
             });
         });
-
     </script>
     @yield('scripts')
 

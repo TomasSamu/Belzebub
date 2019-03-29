@@ -75,13 +75,26 @@
     column-gap: 13em;
     min-height: 57vh;
 
+    @media (max-width: 800px) {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+      }
+
     div {
         width: 30%;
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
+
+        @media (max-width: 800px) {
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+      }
     }
+    
 
     h1 {
         font-size: 2em;

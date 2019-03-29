@@ -49,3 +49,20 @@
          padding: 0.5em;
      }
     }
+
+    .search-result {
+        
+        a {
+            color: $extra-light;
+        }
+
+        &:active {
+            color: $light;
+        }
+
+        &:hover {
+            color: $extra-dark;
+        }
+
+    }
+
