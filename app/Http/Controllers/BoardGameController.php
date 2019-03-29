@@ -52,7 +52,7 @@ class BoardGameController extends Controller
             'min_players' => 'required|numeric',
             'max_players' => 'required|numeric',
             'age_range' => 'required|numeric',
-            'description' => 'required|max:250',
+            'description' => 'required',
             'play_time' => 'required|numeric',
             'image_url' => 'required|url',
         ]); 
