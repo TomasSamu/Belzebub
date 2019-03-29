@@ -38,7 +38,6 @@
 .attendee img {
   width: 6em;
   height: auto;
-  margin-left: -5em;
 }
 
 .event-detail {
@@ -586,6 +585,10 @@ div.modal div.modal-backdrop {
 }
 .search-result:hover {
   color: #212426;
+}
+
+.offers img {
+  max-height: 20em;
 }
 
 .comments {

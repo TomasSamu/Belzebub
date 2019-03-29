@@ -7,7 +7,7 @@
     <div class="game-detail">
         <h3 class="title">{{$offer->title}}</h3>
 
-        <img src="{{$offer->boardgame->image_url}}" class="img-fluid" />
+        <img src="{{$offer->boardgame->image_url}}" class="img-fluid offers" />
 
         <div class="game-info text">
 
