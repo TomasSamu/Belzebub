@@ -51,26 +51,26 @@ body {
 
 .grid-container {
     display: grid;
-    grid-template-columns: repeat(5, 1fr);
+    grid-template-columns: repeat(4, 1fr);
     grid-column-gap: 1.5em;
     grid-row-gap: 1.5em;
     justify-content: space-between;
-    padding: 1em 3em 1em 3em;
+    padding: 1em 2em 1em 2em;
   
-
-    @media only screen and (max-width: 900px) {
-        grid-template-columns: 1fr 1fr;
+      
+      @media only screen and (max-width: 900px) {
+        grid-template-columns: repeat(3, 1fr);
         padding: 1em 1em 1em 1em;
       }
-      
-      @media only screen and (max-width: 800px) {
-        grid-template-columns: 1fr 1fr;
+
+      @media only screen and (max-width: 700px) {
+        grid-template-columns: repeat(2, 1fr);
         padding: 1em 1em 1em 1em;
       }
 
       @media only screen and (max-width: 400px) {
         grid-template-columns: 1fr;
-        padding: 1em 1em 1em 1em;
+        padding: 0.5em;
       }
   }
 

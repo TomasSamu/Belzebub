@@ -13,7 +13,7 @@
     <div class="game-detail">
         <h1 class="title">{{$game->name}}</h1>
     
-        <img src="{{$game->image_url}}" alt="image" class="pic">
+        <img src="{{$game->image_url}}" alt="image" class="pic img-fluid">
     
         
         <div class="game-info text">
@@ -68,7 +68,7 @@
             @csrf
             <div class="form-group">
                 <label for="text">Your comment:</label><br>
-                <textarea name="text" id="comment"></textarea>
+                <textarea name="text" id="comment" class="form-control"></textarea></textarea>
             </div>
     
             <div class="form-group">

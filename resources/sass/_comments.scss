@@ -33,14 +33,14 @@
     justify-content: space-between;
     align-items: center;
     padding: 0.5em;
-    background-color: $dark;
-    color: $light;
+    background-color: $light;
+    color: $dark;
 }
 
 #comment-reply {
 
-    background-color: $light;
-    color: $dark;
+    background-color: $dark;
+    color: $extra-light;
     display: flex;
     justify-content: space-between;
     align-items: center;

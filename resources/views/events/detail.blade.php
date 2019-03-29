@@ -83,7 +83,7 @@
         @csrf
         <div class="form-group">
             <label for="text">Your comment:</label><br>
-            <textarea name="text" id="comment"></textarea>
+            <textarea name="text" id="comment" class="form-control"></textarea>
         </div>
 
         <div class="form-group">

@@ -29,6 +29,7 @@
 .card-event {
     @include bg-user();
 
+
     .card-body {
         display: inline-flex;
         flex-direction: row;
@@ -37,9 +38,7 @@
         font-size: 1em; 
         font-family: $font-title;
 
-
-
-        a{
+        a {
             text-decoration: none;
             margin: 0.2;
             font-size: 1em;

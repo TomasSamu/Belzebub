@@ -78,7 +78,7 @@
 </nav>
 
 <!-- Modal Login-->
-<div class="modal fade" id="loginmodal" tabindex="-1" role="dialog" aria-labelledby="loginmodal" aria-hidden="true">
+<div class="modal fade mt-4" id="loginmodal" tabindex="-1" role="dialog" aria-labelledby="loginmodal" aria-hidden="true">
     <div class="modal-dialog" role="document">
         <div class="modal-content">
             <div class="modal-header">
@@ -158,7 +158,7 @@
 </div>
 
 <!-- Modal Register-->
-<div class="modal fade" id="registermodal" tabindex="-1" role="dialog" aria-labelledby="registermodal"
+<div class="modal fade mt-4" id="registermodal" tabindex="-1" role="dialog" aria-labelledby="registermodal"
     aria-hidden="true">
     <div class="modal-dialog" role="document">
         <div class="modal-content">
@@ -230,17 +230,17 @@
                     </div>
 
                     <div class="form-group row mb-0">
-                        <div class="col-md-6 offset-md-4">
-                            <button type="submit" class="btn btn-info my-4 btn-block">
+                        <div class="col-md-6 offset-md-3">
+                            <button type="submit" class="btn btn-amber my-2 btn-block">
                                 {{ __('Register') }}
                             </button>
 
                         </div>
                         <hr>
 
-                        <p class="px-5">By clicking
+                        <p class="px-5 my-2">By clicking
                             <em>Register</em> you agree to our
-                            <a href="" target="_blank">terms of service</a>.
+                            <a href="{{ URL('tc') }}" target="_blank">terms of service</a>.
                         </p>
 
 

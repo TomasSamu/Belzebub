@@ -1,9 +1,9 @@
 .game-detail {
     display: grid;
-    grid-template-columns: 40% auto;
+    grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: auto auto;
-    grid-template-areas: "header header "
-                       "pic text";
+    grid-template-areas: "header header header "
+                       "pic text text";
 
     grid-column-gap: 2rem;
     grid-row-gap: 1rem;
@@ -15,7 +15,8 @@
     }
     
     img {
-        max-width: 35em;
+        max-width: 100%;
+        object-fit: cover;
     }
 }
 
@@ -23,9 +24,13 @@
     grid-area: header;
     margin-bottom: 1rem;
 
-    @media (max-width: 600px) {
-        font-size: 1.2em;
+    @media (max-width: 900px) {
+        font-size: 3em;
         }
+
+        @media (max-width: 600px) {
+            font-size: 2em;
+            }
 }
 
 .text {
